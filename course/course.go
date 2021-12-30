@@ -25,3 +25,8 @@ type CourseMeta struct {
 	PreviewLink    string   `json:"preview_link"`
 	Owner          Owner    `json:"owner"`
 }
+
+// type CourseContent is the content of a course
+type CourseContent struct {
+	CourseID string `json:"course_id"`
+}
