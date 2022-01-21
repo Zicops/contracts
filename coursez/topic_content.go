@@ -32,6 +32,7 @@ var TopicContentTableMeta = table.Metadata{
 		"nextShowtime",
 		"fromEndTime",
 		"url",
+		"is_deleted",
 	},
 	PartKey: []string{
 		"topicId",
@@ -55,4 +56,5 @@ type TopicContent struct {
 	NextShowtime int    `db:"nextShowtime"`
 	FromEndTime int    `db:"fromEndTime"`
 	Url        string `db:"url"`
+	IsDeleted  bool   `db:"is_deleted"`
 }

@@ -35,6 +35,7 @@ var TopicTableMeta = table.Metadata{
 		"updated_at",
 		"created_by",
 		"updated_by",
+		"is_deleted",
 	},
 	PartKey: []string{
 		"courseId",
@@ -63,4 +64,5 @@ type Topic struct {
 	UpdatedAt   string `db:"updated_at"`
 	CreatedBy   string `db:"created_by"`
 	UpdatedBy   string `db:"updated_by"`
+	IsDeleted   bool   `db:"is_deleted"`
 }

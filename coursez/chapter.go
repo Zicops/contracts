@@ -27,6 +27,7 @@ var ChapterTableMeta = table.Metadata{
 		"sequence",
 		"created_at",
 		"updated_at",
+		"is_deleted",
 	},
 	PartKey: []string{
 		"courseId",
@@ -50,4 +51,5 @@ type Chapter struct {
 	Sequence    int    `db:"sequence"`
 	CreatedAt   string `db:"created_at"`
 	UpdatedAt   string `db:"updated_at"`
+	IsDeleted   bool   `db:"is_deleted"`
 }

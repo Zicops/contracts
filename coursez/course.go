@@ -66,6 +66,8 @@ var CourseTableMeta = table.Metadata{
 		"set",
 		"created_by",
 		"updated_by",
+		"status",
+		"is_deleted",
 	},
 	PartKey: []string{
 		"id",
@@ -104,4 +106,6 @@ type Course struct {
 	MustFor      []string `db:"mustFor"`
 	CreatedBy    string   `db:"created_by"`
 	UpdatedBy    string   `db:"updated_by"`
+	Status       string   `db:"status"`
+	IsDeleted    bool     `db:"is_deleted"`
 }

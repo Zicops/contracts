@@ -19,6 +19,7 @@ var QuizMcqTableMeta = table.Metadata{
 		"options",
 		"correctOption",
 		"explanation",
+		"is_deleted",
 	},
 	PartKey: []string{
 		"quizId",
@@ -36,4 +37,5 @@ type QuizMcq struct {
 	Options    []string `db:"options"`
 	CorrectOption string `db:"correctOption"`
 	Explanation string `db:"explanation"`
+	IsDeleted  bool   `db:"is_deleted"`
 }
