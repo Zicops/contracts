@@ -41,3 +41,18 @@ var TopicContentTableMeta = table.Metadata{
 
 // TopicContentTable is the table for the topic_content table above.
 var TopicContentTable = table.New(TopicContentTableMeta)
+
+// define struct for topic_content table
+type TopicContent struct {
+	Language   string `db:"language"`
+	Set        string `db:"set"`
+	TopicId    string `db:"topicId"`
+	CreatedAt  string `db:"created_at"`
+	UpdatedAt  string `db:"updated_at"`
+	StartTime  int    `db:"startTime"`
+	Duration   int    `db:"duration"`
+	SkipIntro  bool   `db:"skipIntro"`
+	NextShowtime int    `db:"nextShowtime"`
+	FromEndTime int    `db:"fromEndTime"`
+	Url        string `db:"url"`
+}

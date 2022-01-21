@@ -26,3 +26,11 @@ var QuizFileTableMeta = table.Metadata{
 
 // QuizFileTable is the table for the quiz_file table above.
 var QuizFileTable = table.New(QuizFileTableMeta)
+
+// define struct for quiz_file table
+type QuizFile struct {
+	QuizId     string `db:"quizId"`
+	Type       string `db:"type"`
+	Name       string `db:"name"`
+	Path       string `db:"path"`
+}

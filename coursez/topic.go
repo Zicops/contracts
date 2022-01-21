@@ -48,3 +48,19 @@ var TopicTableMeta = table.Metadata{
 
 // TopicTable is the table for the topic table above.
 var TopicTable = table.New(TopicTableMeta)
+
+// define struct Topic for table coursez.topic
+type Topic struct {
+	ID          string `db:"id"`
+	Name        string `db:"name"`
+	Description string `db:"description"`
+	Type        string `db:"type"`
+	ModuleID    string `db:"moduleId"`
+	ChapterID   string `db:"chapterId"`
+	CourseID    string `db:"courseId"`
+	Sequence    int    `db:"sequence"`
+	CreatedAt   string `db:"created_at"`
+	UpdatedAt   string `db:"updated_at"`
+	CreatedBy   string `db:"created_by"`
+	UpdatedBy   string `db:"updated_by"`
+}

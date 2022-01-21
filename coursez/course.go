@@ -82,3 +82,26 @@ var CourseTableMeta = table.Metadata{
 
 // CourseTable is the table for the course table above.
 var CourseTable = table.New(CourseTableMeta)
+
+// define struct Course for table coursez.course
+type Course struct {
+	ID           string   `db:"id"`
+	Name         string   `db:"name"`
+	Description  string   `db:"description"`
+	Instructor   string   `db:"instructor"`
+	Image        string   `db:"image"`
+	PreviewVideo string   `db:"previewVideo"`
+	Owner        string   `db:"owner"`
+	Duration     int      `db:"duration"`
+	Level        string   `db:"level"`
+	Language     []string `db:"language"`
+	TakeAways    []string `db:"takeAways"`
+	CreatedAt    string   `db:"created_at"`
+	UpdatedAt    string   `db:"updated_at"`
+	Type         string   `db:"type"`
+	Prequisites  []string `db:"prequisites"`
+	GoodFor      []string `db:"goodFor"`
+	MustFor      []string `db:"mustFor"`
+	CreatedBy    string   `db:"created_by"`
+	UpdatedBy    string   `db:"updated_by"`
+}

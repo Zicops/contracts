@@ -28,3 +28,12 @@ var QuizMcqTableMeta = table.Metadata{
 
 // QuizMcqTable is the table for the quiz_mcq table above.
 var QuizMcqTable = table.New(QuizMcqTableMeta)
+
+// define struct for quiz_mcq table
+type QuizMcq struct {
+	QuizId     string `db:"quizId"`
+	Question   string `db:"question"`
+	Options    []string `db:"options"`
+	CorrectOption string `db:"correctOption"`
+	Explanation string `db:"explanation"`
+}

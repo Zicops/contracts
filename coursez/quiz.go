@@ -39,3 +39,17 @@ var QuizTableMeta = table.Metadata{
 
 // QuizTable is the table for the quiz table above.
 var QuizTable = table.New(QuizTableMeta)
+
+// define struct for quiz table
+type Quiz struct {
+	ID          string `db:"id"`
+	Name        string `db:"name"`
+	Category    string `db:"category"`
+	Type        string `db:"type"`
+	IsMandatory bool   `db:"isMandatory"`
+	CreatedAt   string `db:"created_at"`
+	UpdatedAt   string `db:"updated_at"`
+	TopicID     string `db:"topicId"`
+	StartTime   int    `db:"startTime"`
+	Sequence    int    `db:"sequence"`
+}

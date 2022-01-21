@@ -45,3 +45,18 @@ var ModuleTableMeta = table.Metadata{
 
 // ModuleTable is the table for the module table above.
 var ModuleTable = table.New(ModuleTableMeta)
+
+// define struct Module for table coursez.module
+type Module struct {
+	ID          string `db:"id"`
+	IsChapter   bool   `db:"isChapter"`
+	Name        string `db:"name"`
+	Description string `db:"description"`
+	CourseID    string `db:"courseId"`
+	Owner       string `db:"owner"`
+	CreatedAt   string `db:"created_at"`
+	UpdatedAt   string `db:"updated_at"`
+	Level       string `db:"level"`
+	Sequence    int    `db:"sequence"`
+	SetGlobal   bool   `db:"setGlobal"`
+}

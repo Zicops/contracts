@@ -39,3 +39,15 @@ var ChapterTableMeta = table.Metadata{
 
 // ChapterTable is the table for the chapter table above.
 var ChapterTable = table.New(ChapterTableMeta)
+
+// define struct Chapter for table coursez.chapter
+type Chapter struct {
+	ID          string `db:"id"`
+	Name        string `db:"name"`
+	Description string `db:"description"`
+	ModuleID    string `db:"moduleId"`
+	CourseID    string `db:"courseId"`
+	Sequence    int    `db:"sequence"`
+	CreatedAt   string `db:"created_at"`
+	UpdatedAt   string `db:"updated_at"`
+}

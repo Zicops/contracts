@@ -32,3 +32,14 @@ var ResourceTableMeta = table.Metadata{
 
 // ResourceTable is the table for the resource table above.
 var ResourceTable = table.New(ResourceTableMeta)
+
+// define struct for resource table
+type Resource struct {
+	Type       string `db:"type"`
+	Url        string `db:"url"`
+	TopicId    string `db:"topicId"`
+	CreatedAt  string `db:"created_at"`
+	UpdatedAt  string `db:"updated_at"`
+	CreatedBy  string `db:"created_by"`
+	UpdatedBy  string `db:"updated_by"`
+}

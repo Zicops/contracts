@@ -26,3 +26,11 @@ var QuizDescriptiveTableMeta = table.Metadata{
 
 // QuizDescriptiveTable is the table for the quiz_descriptive table above.
 var QuizDescriptiveTable = table.New(QuizDescriptiveTableMeta)
+
+// define struct for quiz_descriptive table
+type QuizDescriptive struct {
+	QuizId     string `db:"quizId"`
+	Question   string `db:"question"`
+	CorrectAnswer string `db:"correctAnswer"`
+	Explanation string `db:"explanation"`
+}
