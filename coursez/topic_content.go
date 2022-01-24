@@ -22,7 +22,6 @@ var TopicContentTableMeta = table.Metadata{
 	Name: "topic_content",
 	Columns: []string{
 		"language",
-		"set",
 		"topicId",
 		"created_at",
 		"updated_at",
@@ -46,7 +45,6 @@ var TopicContentTable = table.New(TopicContentTableMeta)
 // define struct for topic_content table
 type TopicContent struct {
 	Language   string `db:"language"`
-	Set        string `db:"set"`
 	TopicId    string `db:"topicId"`
 	CreatedAt  string `db:"created_at"`
 	UpdatedAt  string `db:"updated_at"`
