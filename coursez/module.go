@@ -9,8 +9,8 @@ import "github.com/scylladb/gocqlx/v2/table"
 //    description text,
 //    courseId varchar,
 //    owner text,
-//    created_at timestamp,
-//    updated_at timestamp,
+//    created_at bigint,
+//    updated_at bigint,
 //    level text,
 //    sequence int,
 //    setGlobal boolean,
@@ -55,8 +55,8 @@ type Module struct {
 	Description string `db:"description"`
 	CourseID    string `db:"courseId"`
 	Owner       string `db:"owner"`
-	CreatedAt   string `db:"created_at"`
-	UpdatedAt   string `db:"updated_at"`
+	CreatedAt   int64 `db:"created_at"`
+	UpdatedAt   int64 `db:"updated_at"`
 	Level       string `db:"level"`
 	Sequence    int    `db:"sequence"`
 	SetGlobal   bool   `db:"setGlobal"`

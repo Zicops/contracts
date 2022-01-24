@@ -6,8 +6,8 @@ import "github.com/scylladb/gocqlx/v2/table"
 //    type text,
 //    url text,
 //    topicId varchar,
-//    created_at timestamp,
-//    updated_at timestamp,
+//    created_at bigint,
+//    updated_at bigint,
 //    created_by text,
 //    updated_by text,
 //    PRIMARY KEY (topicId)
@@ -36,12 +36,12 @@ var ResourceTable = table.New(ResourceTableMeta)
 
 // define struct for resource table
 type Resource struct {
-	Type       string `db:"type"`
-	Url        string `db:"url"`
-	TopicId    string `db:"topicId"`
-	CreatedAt  string `db:"created_at"`
-	UpdatedAt  string `db:"updated_at"`
-	CreatedBy  string `db:"created_by"`
-	UpdatedBy  string `db:"updated_by"`
-	IsDeleted  bool   `db:"is_deleted"`
+	Type      string `db:"type"`
+	Url       string `db:"url"`
+	TopicId   string `db:"topicId"`
+	CreatedAt int64 `db:"created_at"`
+	UpdatedAt int64 `db:"updated_at"`
+	CreatedBy string `db:"created_by"`
+	UpdatedBy string `db:"updated_by"`
+	IsDeleted bool   `db:"is_deleted"`
 }

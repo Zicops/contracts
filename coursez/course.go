@@ -20,8 +20,8 @@ import (
 //        takeAways
 //    set
 //        < varchar >,
-//        created_at timestamp,
-//        updated_at timestamp,
+//        created_at bigint,
+//        updated_at bigint,
 //        type text,
 //        prequisites
 //    set
@@ -93,8 +93,8 @@ type Course struct {
 	Level        string   `db:"level"`
 	Language     []string `db:"language"`
 	TakeAways    []string `db:"takeAways"`
-	CreatedAt    string   `db:"created_at"`
-	UpdatedAt    string   `db:"updated_at"`
+	CreatedAt    int64   `db:"created_at"`
+	UpdatedAt    int64   `db:"updated_at"`
 	Type         string   `db:"type"`
 	Prequisites  []string `db:"prequisites"`
 	GoodFor      []string `db:"goodFor"`

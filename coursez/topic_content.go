@@ -7,8 +7,8 @@ import "github.com/scylladb/gocqlx/v2/table"
 //    set
 //        < text >,
 //        topicId varchar,
-//        created_at timestamp,
-//        updated_at timestamp,
+//        created_at bigint,
+//        updated_at bigint,
 //        startTime int,
 //        duration int,
 //        skipIntro boolean,
@@ -44,15 +44,15 @@ var TopicContentTable = table.New(TopicContentTableMeta)
 
 // define struct for topic_content table
 type TopicContent struct {
-	Language   string `db:"language"`
-	TopicId    string `db:"topicId"`
-	CreatedAt  string `db:"created_at"`
-	UpdatedAt  string `db:"updated_at"`
-	StartTime  int    `db:"startTime"`
-	Duration   int    `db:"duration"`
-	SkipIntro  bool   `db:"skipIntro"`
+	Language     string `db:"language"`
+	TopicId      string `db:"topicId"`
+	CreatedAt    int64 `db:"created_at"`
+	UpdatedAt    int64 `db:"updated_at"`
+	StartTime    int    `db:"startTime"`
+	Duration     int    `db:"duration"`
+	SkipIntro    bool   `db:"skipIntro"`
 	NextShowtime int    `db:"nextShowtime"`
-	FromEndTime int    `db:"fromEndTime"`
-	Url        string `db:"url"`
-	IsDeleted  bool   `db:"is_deleted"`
+	FromEndTime  int    `db:"fromEndTime"`
+	Url          string `db:"url"`
+	IsDeleted    bool   `db:"is_deleted"`
 }

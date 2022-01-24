@@ -8,8 +8,8 @@ import "github.com/scylladb/gocqlx/v2/table"
 //    category text,
 //    type text,
 //    isMandatory boolean,
-//    created_at timestamp,
-//    updated_at timestamp,
+//    created_at bigint,
+//    updated_at bigint,
 //    topicId varchar,
 //    startTime int,
 //    sequence int,
@@ -48,8 +48,8 @@ type Quiz struct {
 	Category    string `db:"category"`
 	Type        string `db:"type"`
 	IsMandatory bool   `db:"isMandatory"`
-	CreatedAt   string `db:"created_at"`
-	UpdatedAt   string `db:"updated_at"`
+	CreatedAt   int64 `db:"created_at"`
+	UpdatedAt   int64 `db:"updated_at"`
 	TopicID     string `db:"topicId"`
 	StartTime   int    `db:"startTime"`
 	Sequence    int    `db:"sequence"`

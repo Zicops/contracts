@@ -11,8 +11,8 @@ import "github.com/scylladb/gocqlx/v2/table"
 //    chapterId varchar,
 //    courseId varchar,
 //    sequence int,
-//    created_at timestamp,
-//    updated_at timestamp,
+//    created_at bigint,
+//    updated_at bigint,
 //    created_by text,
 //    updated_by text,
 //    PRIMARY KEY ((courseId, moduleId), id)
@@ -60,8 +60,8 @@ type Topic struct {
 	ChapterID   string `db:"chapterId"`
 	CourseID    string `db:"courseId"`
 	Sequence    int    `db:"sequence"`
-	CreatedAt   string `db:"created_at"`
-	UpdatedAt   string `db:"updated_at"`
+	CreatedAt   int64 `db:"created_at"`
+	UpdatedAt   int64 `db:"updated_at"`
 	CreatedBy   string `db:"created_by"`
 	UpdatedBy   string `db:"updated_by"`
 	IsDeleted   bool   `db:"is_deleted"`
