@@ -44,15 +44,16 @@ var TopicContentTable = table.New(TopicContentTableMeta)
 
 // define struct for topic_content table
 type TopicContent struct {
-	Language     string `db:"language"`
-	TopicId      string `db:"topicId"`
-	CreatedAt    int64 `db:"created_at"`
-	UpdatedAt    int64 `db:"updated_at"`
-	StartTime    int    `db:"startTime"`
-	Duration     int    `db:"duration"`
-	SkipIntro    bool   `db:"skipIntro"`
-	NextShowtime int    `db:"nextShowtime"`
-	FromEndTime  int    `db:"fromEndTime"`
-	Url          string `db:"url"`
-	IsDeleted    bool   `db:"is_deleted"`
+	Language           string `db:"language"`
+	TopicId            string `db:"topicId"`
+	CreatedAt          int64  `db:"created_at"`
+	UpdatedAt          int64  `db:"updated_at"`
+	StartTime          int    `db:"startTime"`
+	Duration           int    `db:"duration"`
+	SkipIntro          bool   `db:"skipIntro"`
+	NextShowtime       int    `db:"nextShowtime"`
+	FromEndTime        int    `db:"fromEndTime"`
+	TopicContentBucket string `db:"topicContentBucket"`
+	Url                string `db:"url"`
+	IsDeleted          bool   `db:"is_deleted"`
 }

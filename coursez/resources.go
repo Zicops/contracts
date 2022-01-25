@@ -36,12 +36,13 @@ var ResourceTable = table.New(ResourceTableMeta)
 
 // define struct for resource table
 type Resource struct {
-	Type      string `db:"type"`
-	Url       string `db:"url"`
-	TopicId   string `db:"topicId"`
-	CreatedAt int64 `db:"created_at"`
-	UpdatedAt int64 `db:"updated_at"`
-	CreatedBy string `db:"created_by"`
-	UpdatedBy string `db:"updated_by"`
-	IsDeleted bool   `db:"is_deleted"`
+	Type       string `db:"type"`
+	BucketPath string `db:"bucketPath"`
+	Url        string `db:"url"`
+	TopicId    string `db:"topicId"`
+	CreatedAt  int64  `db:"created_at"`
+	UpdatedAt  int64  `db:"updated_at"`
+	CreatedBy  string `db:"created_by"`
+	UpdatedBy  string `db:"updated_by"`
+	IsDeleted  bool   `db:"is_deleted"`
 }

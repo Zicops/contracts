@@ -33,6 +33,7 @@ type QuizFile struct {
 	QuizId     string `db:"quizId"`
 	Type       string `db:"type"`
 	Name       string `db:"name"`
+	BucketPath string `db:"bucketPath"`
 	Path       string `db:"path"`
 	IsDeleted  bool   `db:"is_deleted"`
 }
