@@ -49,7 +49,7 @@ type Chapter struct {
 	ModuleID    string `db:"moduleId"`
 	CourseID    string `db:"courseId"`
 	Sequence    int    `db:"sequence"`
-	CreatedAt   int64 `db:"created_at"`
-	UpdatedAt   int64 `db:"updated_at"`
+	CreatedAt   int64  `db:"created_at"`
+	UpdatedAt   int64  `db:"updated_at"`
 	IsDeleted   bool   `db:"is_deleted"`
 }
