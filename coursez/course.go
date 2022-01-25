@@ -68,9 +68,7 @@ var CourseTableMeta = table.Metadata{
 		"id",
 	},
 	SortKey: []string{
-		"created_at",
-		"type",
-		"level",
+		"id",
 	},
 }
 
