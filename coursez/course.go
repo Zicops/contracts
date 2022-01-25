@@ -53,22 +53,22 @@ var CourseTableMeta = table.Metadata{
 		"level",
 		"language",
 		"takeAways",
-		"created_at",
-		"updated_at",
+		createdAt,
+		updatedAt,
 		"type",
 		"prequisites",
 		"goodFor",
 		"mustFor",
-		"created_by",
-		"updated_by",
+		createdBy,
+		updatedBy,
 		"status",
-		"is_deleted",
+		isDeleted,
 	},
 	PartKey: []string{
 		"id",
 	},
 	SortKey: []string{
-		"created_at",
+		createdAt,
 		"type",
 		"level",
 	},
@@ -92,14 +92,14 @@ type Course struct {
 	Level              string   `db:"level"`
 	Language           []string `db:"language"`
 	TakeAways          []string `db:"takeAways"`
-	CreatedAt          int64    `db:"created_at"`
-	UpdatedAt          int64    `db:"updated_at"`
+	CreatedAt          int64    `db:"createdAt"`
+	UpdatedAt          int64    `db:updatedAt`
 	Type               string   `db:"type"`
 	Prequisites        []string `db:"prequisites"`
 	GoodFor            []string `db:"goodFor"`
 	MustFor            []string `db:"mustFor"`
-	CreatedBy          string   `db:"created_by"`
-	UpdatedBy          string   `db:"updated_by"`
+	CreatedBy          string   `db:createdBy`
+	UpdatedBy          string   `db:updatedBy`
 	Status             string   `db:"status"`
-	IsDeleted          bool     `db:"is_deleted"`
+	IsDeleted          bool     `db:isDeleted`
 }

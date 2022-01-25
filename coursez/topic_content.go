@@ -23,15 +23,15 @@ var TopicContentTableMeta = table.Metadata{
 	Columns: []string{
 		"language",
 		"topicId",
-		"created_at",
-		"updated_at",
+		createdAt,
+		updatedAt,
 		"startTime",
 		"duration",
 		"skipIntro",
 		"nextShowtime",
 		"fromEndTime",
 		"url",
-		"is_deleted",
+		isDeleted,
 	},
 	PartKey: []string{
 		"topicId",
@@ -46,8 +46,8 @@ var TopicContentTable = table.New(TopicContentTableMeta)
 type TopicContent struct {
 	Language           string `db:"language"`
 	TopicId            string `db:"topicId"`
-	CreatedAt          int64  `db:"created_at"`
-	UpdatedAt          int64  `db:"updated_at"`
+	CreatedAt          int64  `db:createdAt`
+	UpdatedAt          int64  `db:updatedAt`
 	StartTime          int    `db:"startTime"`
 	Duration           int    `db:"duration"`
 	SkipIntro          bool   `db:"skipIntro"`
@@ -55,5 +55,5 @@ type TopicContent struct {
 	FromEndTime        int    `db:"fromEndTime"`
 	TopicContentBucket string `db:"topicContentBucket"`
 	Url                string `db:"url"`
-	IsDeleted          bool   `db:"is_deleted"`
+	IsDeleted          bool   `db:isDeleted`
 }

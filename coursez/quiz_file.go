@@ -17,7 +17,7 @@ var QuizFileTableMeta = table.Metadata{
 		"type",
 		"name",
 		"path",
-		"is_deleted",
+		isDeleted,
 	},
 	PartKey: []string{
 		"quizId",
@@ -35,5 +35,5 @@ type QuizFile struct {
 	Name       string `db:"name"`
 	BucketPath string `db:"bucketPath"`
 	Path       string `db:"path"`
-	IsDeleted  bool   `db:"is_deleted"`
+	IsDeleted  bool   `db:isDeleted`
 }

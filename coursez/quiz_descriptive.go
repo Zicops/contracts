@@ -17,7 +17,7 @@ var QuizDescriptiveTableMeta = table.Metadata{
 		"question",
 		"correctAnswer",
 		"explanation",
-		"is_deleted",
+		isDeleted,
 	},
 	PartKey: []string{
 		"quizId",
@@ -30,9 +30,9 @@ var QuizDescriptiveTable = table.New(QuizDescriptiveTableMeta)
 
 // define struct for quiz_descriptive table
 type QuizDescriptive struct {
-	QuizId     string `db:"quizId"`
-	Question   string `db:"question"`
+	QuizId        string `db:"quizId"`
+	Question      string `db:"question"`
 	CorrectAnswer string `db:"correctAnswer"`
-	Explanation string `db:"explanation"`
-	IsDeleted  bool   `db:"is_deleted"`
+	Explanation   string `db:"explanation"`
+	IsDeleted     bool   `db:isDeleted`
 }

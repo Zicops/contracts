@@ -28,12 +28,12 @@ var ModuleTableMeta = table.Metadata{
 		"description",
 		"courseId",
 		"owner",
-		"created_at",
-		"updated_at",
+		createdAt,
+		updatedAt,
 		"level",
 		"sequence",
 		"setGlobal",
-		"is_deleted",
+		isDeleted,
 	},
 	PartKey: []string{
 		"courseId",
@@ -55,10 +55,10 @@ type Module struct {
 	Description string `db:"description"`
 	CourseID    string `db:"courseId"`
 	Owner       string `db:"owner"`
-	CreatedAt   int64 `db:"created_at"`
-	UpdatedAt   int64 `db:"updated_at"`
+	CreatedAt   int64  `db:createdAt`
+	UpdatedAt   int64  `db:updatedAt`
 	Level       string `db:"level"`
 	Sequence    int    `db:"sequence"`
 	SetGlobal   bool   `db:"setGlobal"`
-	IsDeleted   bool   `db:"is_deleted"`
+	IsDeleted   bool   `db:isDeleted`
 }

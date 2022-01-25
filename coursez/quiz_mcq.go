@@ -19,7 +19,7 @@ var QuizMcqTableMeta = table.Metadata{
 		"options",
 		"correctOption",
 		"explanation",
-		"is_deleted",
+		isDeleted,
 	},
 	PartKey: []string{
 		"quizId",
@@ -32,10 +32,10 @@ var QuizMcqTable = table.New(QuizMcqTableMeta)
 
 // define struct for quiz_mcq table
 type QuizMcq struct {
-	QuizId     string `db:"quizId"`
-	Question   string `db:"question"`
-	Options    []string `db:"options"`
-	CorrectOption string `db:"correctOption"`
-	Explanation string `db:"explanation"`
-	IsDeleted  bool   `db:"is_deleted"`
+	QuizId        string   `db:"quizId"`
+	Question      string   `db:"question"`
+	Options       []string `db:"options"`
+	CorrectOption string   `db:"correctOption"`
+	Explanation   string   `db:"explanation"`
+	IsDeleted     bool     `db:isDeleted`
 }
