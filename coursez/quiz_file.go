@@ -16,6 +16,7 @@ var QuizFileTableMeta = table.Metadata{
 		"quizId",
 		"type",
 		"name",
+		"bucketPath",
 		"path",
 		"is_deleted",
 	},

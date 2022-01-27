@@ -31,6 +31,7 @@ var TopicContentTableMeta = table.Metadata{
 		"nextShowtime",
 		"fromEndTime",
 		"url",
+		"topicContentBucket",
 		"is_deleted",
 	},
 	PartKey: []string{

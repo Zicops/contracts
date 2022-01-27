@@ -46,8 +46,12 @@ var CourseTableMeta = table.Metadata{
 		"name",
 		"description",
 		"instructor",
+		"imageBucket",
 		"image",
+		"previewVideoBucket",
 		"previewVideo",
+		"tileImageBucket",
+		"tileImage",
 		"owner",
 		"duration",
 		"level",
@@ -83,6 +87,8 @@ type Course struct {
 	Image              string   `db:"image"`
 	PreviewVideoBucket string   `db:"previewVideoBucket"`
 	PreviewVideo       string   `db:"previewVideo"`
+	TileImageBucket    string   `db:"tileImageBucket"`
+	TileImage          string   `db:"tileImage"`
 	Owner              string   `db:"owner"`
 	Duration           int      `db:"duration"`
 	Level              string   `db:"level"`

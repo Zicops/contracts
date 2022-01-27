@@ -28,6 +28,7 @@ var ModuleTableMeta = table.Metadata{
 		"description",
 		"courseId",
 		"owner",
+		"duration",
 		"created_at",
 		"updated_at",
 		"level",
@@ -55,8 +56,9 @@ type Module struct {
 	Description string `db:"description"`
 	CourseID    string `db:"courseId"`
 	Owner       string `db:"owner"`
-	CreatedAt   int64 `db:"created_at"`
-	UpdatedAt   int64 `db:"updated_at"`
+	Duration    int    `db:"duration"`
+	CreatedAt   int64  `db:"created_at"`
+	UpdatedAt   int64  `db:"updated_at"`
 	Level       string `db:"level"`
 	Sequence    int    `db:"sequence"`
 	SetGlobal   bool   `db:"setGlobal"`
