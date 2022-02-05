@@ -45,6 +45,7 @@ var CourseTableMeta = table.Metadata{
 		"id",
 		"name",
 		"description",
+		"summary",
 		"instructor",
 		"imageBucket",
 		"image",
@@ -54,19 +55,30 @@ var CourseTableMeta = table.Metadata{
 		"tileImage",
 		"owner",
 		"duration",
-		"level",
+		"expertise_level",
 		"language",
-		"takeAways",
+		"benefits",
 		"created_at",
 		"updated_at",
 		"type",
 		"prequisites",
 		"goodFor",
 		"mustFor",
+		"related_skills",
+		"publish_date",
+		"expiry_date",
+		"quality_control_check_reqd",
+		"approvers",
 		"created_by",
 		"updated_by",
 		"status",
-		"is_deleted",
+		"is_active",
+		"is_display",
+		"expected_completion_time",
+		"category",
+		"sub_category",
+		"sub_categories",
+
 	},
 	PartKey: []string{
 		"id",
@@ -77,11 +89,17 @@ var CourseTableMeta = table.Metadata{
 // CourseTable is the table for the course table above.
 var CourseTable = table.New(CourseTableMeta)
 
+type SubCat struct {
+	Name string `db:"name"`
+	Rank int    `db:"rank"`
+}
+
 // define struct Course for table coursez.course
 type Course struct {
 	ID                 string   `db:"id"`
 	Name               string   `db:"name"`
 	Description        string   `db:"description"`
+	Summary            string   `db:"summary"`
 	Instructor         string   `db:"instructor"`
 	ImageBucket        string   `db:"imageBucket"`
 	Image              string   `db:"image"`
@@ -91,17 +109,27 @@ type Course struct {
 	TileImage          string   `db:"tileImage"`
 	Owner              string   `db:"owner"`
 	Duration           int      `db:"duration"`
-	Level              string   `db:"level"`
+	ExpertiseLevel     string   `db:"expertise_level"`
 	Language           []string `db:"language"`
-	TakeAways          []string `db:"takeAways"`
+	Benefits           []string `db:"benefits"`
 	CreatedAt          int64    `db:"created_at"`
 	UpdatedAt          int64    `db:"updated_at"`
 	Type               string   `db:"type"`
 	Prequisites        []string `db:"prequisites"`
 	GoodFor            []string `db:"goodFor"`
 	MustFor            []string `db:"mustFor"`
+	RelatedSkills      []string `db:"related_skills"`
+	PublishDate        int64    `db:"publish_date"`
+	ExpiryDate         int64    `db:"expiry_date"`
+	QARequired         bool     `db:"quality_control_check_reqd"`
+	Approvers          []string `db:"approvers"`
 	CreatedBy          string   `db:"created_by"`
 	UpdatedBy          string   `db:"updated_by"`
 	Status             string   `db:"status"`
-	IsDeleted          bool     `db:"is_deleted"`
+	IsActive           bool     `db:"is_active"`
+	IsDisplay          bool     `db:"is_display"`
+	ExpectedCompletion int64    `db:"expected_completion_time"`
+	Category           string   `db:"category"`
+	SubCategory        string   `db:"sub_category"`
+	SubCategories      []SubCat `db:"sub_categories"`
 }

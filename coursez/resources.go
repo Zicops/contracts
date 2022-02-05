@@ -24,7 +24,7 @@ var ResourceTableMeta = table.Metadata{
 		"updated_at",
 		"created_by",
 		"updated_by",
-		"is_deleted",
+		"is_active",
 	},
 	PartKey: []string{
 		"topicId",
@@ -45,5 +45,5 @@ type Resource struct {
 	UpdatedAt  int64  `db:"updated_at"`
 	CreatedBy  string `db:"created_by"`
 	UpdatedBy  string `db:"updated_by"`
-	IsDeleted  bool   `db:"is_deleted"`
+	IsActive   bool   `db:"is_active"`
 }

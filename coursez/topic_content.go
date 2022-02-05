@@ -27,12 +27,15 @@ var TopicContentTableMeta = table.Metadata{
 		"updated_at",
 		"startTime",
 		"duration",
-		"skipIntro",
+		"skipIntroDuration",
 		"nextShowtime",
 		"fromEndTime",
 		"url",
 		"topicContentBucket",
-		"is_deleted",
+		"subtitleFile",
+		"subtitleFileBucket",
+		"is_active",
+		"type",
 	},
 	PartKey: []string{
 		"topicId",
@@ -51,10 +54,13 @@ type TopicContent struct {
 	UpdatedAt          int64  `db:"updated_at"`
 	StartTime          int    `db:"startTime"`
 	Duration           int    `db:"duration"`
-	SkipIntro          bool   `db:"skipIntro"`
+	SkipIntroDuration  int    `db:"skipIntroDuration"`
 	NextShowtime       int    `db:"nextShowtime"`
 	FromEndTime        int    `db:"fromEndTime"`
 	TopicContentBucket string `db:"topicContentBucket"`
 	Url                string `db:"url"`
-	IsDeleted          bool   `db:"is_deleted"`
+	SubtitleFile       string `db:"subtitleFile"`
+	SubtitleFileBucket string `db:"subtitleFileBucket"`
+	Type               string `db:"type"`
+	IsActive           bool   `db:"is_active"`
 }

@@ -35,7 +35,9 @@ var TopicTableMeta = table.Metadata{
 		"updated_at",
 		"created_by",
 		"updated_by",
-		"is_deleted",
+		"image",
+		"imageBucket",
+		"is_active",
 	},
 	PartKey: []string{
 		"courseId",
@@ -60,9 +62,11 @@ type Topic struct {
 	ChapterID   string `db:"chapterId"`
 	CourseID    string `db:"courseId"`
 	Sequence    int    `db:"sequence"`
-	CreatedAt   int64 `db:"created_at"`
-	UpdatedAt   int64 `db:"updated_at"`
+	CreatedAt   int64  `db:"created_at"`
+	UpdatedAt   int64  `db:"updated_at"`
 	CreatedBy   string `db:"created_by"`
 	UpdatedBy   string `db:"updated_by"`
-	IsDeleted   bool   `db:"is_deleted"`
+	Image       string `db:"image"`
+	ImageBucket string `db:"imageBucket"`
+	IsActive    bool   `db:"is_active"`
 }
