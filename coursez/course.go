@@ -78,7 +78,6 @@ var CourseTableMeta = table.Metadata{
 		"category",
 		"sub_category",
 		"sub_categories",
-
 	},
 	PartKey: []string{
 		"id",
@@ -119,8 +118,8 @@ type Course struct {
 	GoodFor            []string `db:"goodFor"`
 	MustFor            []string `db:"mustFor"`
 	RelatedSkills      []string `db:"related_skills"`
-	PublishDate        int64    `db:"publish_date"`
-	ExpiryDate         int64    `db:"expiry_date"`
+	PublishDate        string   `db:"publish_date"`
+	ExpiryDate         string   `db:"expiry_date"`
 	QARequired         bool     `db:"quality_control_check_reqd"`
 	Approvers          []string `db:"approvers"`
 	CreatedBy          string   `db:"created_by"`
