@@ -127,7 +127,7 @@ type Course struct {
 	Status             string   `db:"status"`
 	IsActive           bool     `db:"is_active"`
 	IsDisplay          bool     `db:"is_display"`
-	ExpectedCompletion string    `db:"expected_completion_time"`
+	ExpectedCompletion string   `db:"expected_completion_time"`
 	Category           string   `db:"category"`
 	SubCategory        string   `db:"sub_category"`
 	SubCategories      []SubCat `db:"sub_categories"`
