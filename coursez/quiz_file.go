@@ -13,10 +13,10 @@ import "github.com/scylladb/gocqlx/v2/table"
 var QuizFileTableMeta = table.Metadata{
 	Name: "quiz_file",
 	Columns: []string{
-		"quizId",
+		"quizid",
 		"type",
 		"name",
-		"bucketPath",
+		"bucketpath",
 		"path",
 		"is_active",
 	},
@@ -31,10 +31,10 @@ var QuizFileTable = table.New(QuizFileTableMeta)
 
 // define struct for quiz_file table
 type QuizFile struct {
-	QuizId     string `db:"quizId"`
+	QuizId     string `db:"quizid"`
 	Type       string `db:"type"`
 	Name       string `db:"name"`
-	BucketPath string `db:"bucketPath"`
+	BucketPath string `db:"bucketpath"`
 	Path       string `db:"path"`
 	IsActive   bool   `db:"is_active"`
 }

@@ -23,21 +23,21 @@ var ModuleTableMeta = table.Metadata{
 	Name: "module",
 	Columns: []string{
 		"id",
-		"isChapter",
+		"ischapter",
 		"name",
 		"description",
-		"courseId",
+		"courseid",
 		"owner",
 		"duration",
 		"created_at",
 		"updated_at",
 		"level",
 		"sequence",
-		"setGlobal",
+		"setglobal",
 		"is_active",
 	},
 	PartKey: []string{
-		"courseId",
+		"courseid",
 		"id",
 	},
 	SortKey: []string{
@@ -51,16 +51,16 @@ var ModuleTable = table.New(ModuleTableMeta)
 // define struct Module for table coursez.module
 type Module struct {
 	ID          string `db:"id"`
-	IsChapter   bool   `db:"isChapter"`
+	IsChapter   bool   `db:"ischapter"`
 	Name        string `db:"name"`
 	Description string `db:"description"`
-	CourseID    string `db:"courseId"`
+	CourseID    string `db:"courseid"`
 	Owner       string `db:"owner"`
 	Duration    int    `db:"duration"`
 	CreatedAt   int64  `db:"created_at"`
 	UpdatedAt   int64  `db:"updated_at"`
 	Level       string `db:"level"`
 	Sequence    int    `db:"sequence"`
-	SetGlobal   bool   `db:"setGlobal"`
+	SetGlobal   bool   `db:"setglobal"`
 	IsActive    bool   `db:"is_active"`
 }

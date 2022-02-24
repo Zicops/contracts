@@ -14,10 +14,10 @@ import "github.com/scylladb/gocqlx/v2/table"
 var QuizMcqTableMeta = table.Metadata{
 	Name: "quiz_mcq",
 	Columns: []string{
-		"quizId",
+		"quizid",
 		"question",
 		"options",
-		"correctOption",
+		"correctoption",
 		"explanation",
 		"is_active",
 	},
@@ -32,10 +32,10 @@ var QuizMcqTable = table.New(QuizMcqTableMeta)
 
 // define struct for quiz_mcq table
 type QuizMcq struct {
-	QuizId        string   `db:"quizId"`
+	QuizId        string   `db:"quizid"`
 	Question      string   `db:"question"`
 	Options       []string `db:"options"`
-	CorrectOption string   `db:"correctOption"`
+	CorrectOption string   `db:"correctoption"`
 	Explanation   string   `db:"explanation"`
 	IsActive      bool     `db:"is_active"`
 }

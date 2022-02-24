@@ -27,21 +27,21 @@ var TopicTableMeta = table.Metadata{
 		"name",
 		"description",
 		"type",
-		"moduleId",
-		"chapterId",
-		"courseId",
+		"moduleid",
+		"chapterid",
+		"courseid",
 		"sequence",
 		"created_at",
 		"updated_at",
 		"created_by",
 		"updated_by",
 		"image",
-		"imageBucket",
+		"imagebucket",
 		"is_active",
 	},
 	PartKey: []string{
-		"courseId",
-		"moduleId",
+		"courseid",
+		"moduleid",
 		"id",
 	},
 	SortKey: []string{
@@ -58,15 +58,15 @@ type Topic struct {
 	Name        string `db:"name"`
 	Description string `db:"description"`
 	Type        string `db:"type"`
-	ModuleID    string `db:"moduleId"`
-	ChapterID   string `db:"chapterId"`
-	CourseID    string `db:"courseId"`
+	ModuleID    string `db:"moduleid"`
+	ChapterID   string `db:"chapterid"`
+	CourseID    string `db:"courseid"`
 	Sequence    int    `db:"sequence"`
 	CreatedAt   int64  `db:"created_at"`
 	UpdatedAt   int64  `db:"updated_at"`
 	CreatedBy   string `db:"created_by"`
 	UpdatedBy   string `db:"updated_by"`
 	Image       string `db:"image"`
-	ImageBucket string `db:"imageBucket"`
+	ImageBucket string `db:"imagebucket"`
 	IsActive    bool   `db:"is_active"`
 }

@@ -23,16 +23,16 @@ var QuizTableMeta = table.Metadata{
 		"name",
 		"category",
 		"type",
-		"isMandatory",
+		"ismandatory",
 		"created_at",
 		"updated_at",
-		"topicId",
-		"startTime",
+		"topicid",
+		"starttime",
 		"sequence",
 		"is_active",
 	},
 	PartKey: []string{
-		"topicId",
+		"topicid",
 		"id",
 	},
 	SortKey: []string{},
@@ -47,11 +47,11 @@ type Quiz struct {
 	Name        string `db:"name"`
 	Category    string `db:"category"`
 	Type        string `db:"type"`
-	IsMandatory bool   `db:"isMandatory"`
+	IsMandatory bool   `db:"ismandatory"`
 	CreatedAt   int64  `db:"created_at"`
 	UpdatedAt   int64  `db:"updated_at"`
-	TopicID     string `db:"topicId"`
-	StartTime   int    `db:"startTime"`
+	TopicID     string `db:"topicid"`
+	StartTime   int    `db:"starttime"`
 	Sequence    int    `db:"sequence"`
 	IsActive    bool   `db:"is_active"`
 }

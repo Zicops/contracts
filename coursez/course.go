@@ -47,12 +47,12 @@ var CourseTableMeta = table.Metadata{
 		"description",
 		"summary",
 		"instructor",
-		"imageBucket",
+		"imagebucket",
 		"image",
-		"previewVideoBucket",
-		"previewVideo",
-		"tileImageBucket",
-		"tileImage",
+		"previewvideobucket",
+		"previewvideo",
+		"tileimagebucket",
+		"tileimage",
 		"owner",
 		"duration",
 		"expertise_level",
@@ -62,8 +62,8 @@ var CourseTableMeta = table.Metadata{
 		"updated_at",
 		"type",
 		"prequisites",
-		"goodFor",
-		"mustFor",
+		"goodfor",
+		"mustfor",
 		"related_skills",
 		"publish_date",
 		"expiry_date",
@@ -100,12 +100,12 @@ type Course struct {
 	Description        string   `db:"description"`
 	Summary            string   `db:"summary"`
 	Instructor         string   `db:"instructor"`
-	ImageBucket        string   `db:"imageBucket"`
+	ImageBucket        string   `db:"imagebucket"`
 	Image              string   `db:"image"`
-	PreviewVideoBucket string   `db:"previewVideoBucket"`
-	PreviewVideo       string   `db:"previewVideo"`
-	TileImageBucket    string   `db:"tileImageBucket"`
-	TileImage          string   `db:"tileImage"`
+	PreviewVideoBucket string   `db:"previewvideobucket"`
+	PreviewVideo       string   `db:"previewvideo"`
+	TileImageBucket    string   `db:"tileimagebucket"`
+	TileImage          string   `db:"tileimage"`
 	Owner              string   `db:"owner"`
 	Duration           int      `db:"duration"`
 	ExpertiseLevel     string   `db:"expertise_level"`
@@ -115,8 +115,8 @@ type Course struct {
 	UpdatedAt          int64    `db:"updated_at"`
 	Type               string   `db:"type"`
 	Prequisites        []string `db:"prequisites"`
-	GoodFor            []string `db:"goodFor"`
-	MustFor            []string `db:"mustFor"`
+	GoodFor            []string `db:"goodfor"`
+	MustFor            []string `db:"mustfor"`
 	RelatedSkills      []string `db:"related_skills"`
 	PublishDate        string   `db:"publish_date"`
 	ExpiryDate         string   `db:"expiry_date"`

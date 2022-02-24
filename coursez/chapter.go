@@ -22,8 +22,8 @@ var ChapterTableMeta = table.Metadata{
 		"id",
 		"name",
 		"description",
-		"moduleId",
-		"courseId",
+		"moduleid",
+		"courseid",
 		"sequence",
 		"created_at",
 		"updated_at",
@@ -46,8 +46,8 @@ type Chapter struct {
 	ID          string `db:"id"`
 	Name        string `db:"name"`
 	Description string `db:"description"`
-	ModuleID    string `db:"moduleId"`
-	CourseID    string `db:"courseId"`
+	ModuleID    string `db:"moduleid"`
+	CourseID    string `db:"courseid"`
 	Sequence    int    `db:"sequence"`
 	CreatedAt   int64  `db:"created_at"`
 	UpdatedAt   int64  `db:"updated_at"`

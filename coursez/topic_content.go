@@ -22,23 +22,23 @@ var TopicContentTableMeta = table.Metadata{
 	Name: "topic_content",
 	Columns: []string{
 		"language",
-		"topicId",
+		"topicid",
 		"created_at",
 		"updated_at",
-		"startTime",
+		"starttime",
 		"duration",
-		"skipIntroDuration",
-		"nextShowtime",
-		"fromEndTime",
+		"skipintroduration",
+		"nextshowtime",
+		"fromendTime",
 		"url",
-		"topicContentBucket",
-		"subtitleFile",
-		"subtitleFileBucket",
+		"topiccontentbucket",
+		"subtitlefile",
+		"subtitlefilebucket",
 		"is_active",
 		"type",
 	},
 	PartKey: []string{
-		"topicId",
+		"topicid",
 	},
 	SortKey: []string{},
 }
@@ -49,18 +49,18 @@ var TopicContentTable = table.New(TopicContentTableMeta)
 // define struct for topic_content table
 type TopicContent struct {
 	Language           string `db:"language"`
-	TopicId            string `db:"topicId"`
+	TopicId            string `db:"topicid"`
 	CreatedAt          int64  `db:"created_at"`
 	UpdatedAt          int64  `db:"updated_at"`
-	StartTime          int    `db:"startTime"`
+	StartTime          int    `db:"starttime"`
 	Duration           int    `db:"duration"`
-	SkipIntroDuration  int    `db:"skipIntroDuration"`
-	NextShowtime       int    `db:"nextShowtime"`
-	FromEndTime        int    `db:"fromEndTime"`
-	TopicContentBucket string `db:"topicContentBucket"`
+	SkipIntroDuration  int    `db:"skipintroduration"`
+	NextShowtime       int    `db:"nextshowtime"`
+	FromEndTime        int    `db:"fromendtime"`
+	TopicContentBucket string `db:"topiccontentbucket"`
 	Url                string `db:"url"`
-	SubtitleFile       string `db:"subtitleFile"`
-	SubtitleFileBucket string `db:"subtitleFileBucket"`
+	SubtitleFile       string `db:"subtitlefile"`
+	SubtitleFileBucket string `db:"subtitlefilebucket"`
 	Type               string `db:"type"`
 	IsActive           bool   `db:"is_active"`
 }
