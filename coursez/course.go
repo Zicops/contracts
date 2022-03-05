@@ -58,6 +58,7 @@ var CourseTableMeta = table.Metadata{
 		"expertise_level",
 		"language",
 		"benefits",
+		"outcomes",
 		"created_at",
 		"updated_at",
 		"type",
@@ -111,6 +112,7 @@ type Course struct {
 	ExpertiseLevel     string   `db:"expertise_level"`
 	Language           []string `db:"language"`
 	Benefits           []string `db:"benefits"`
+	Outcomes           []string `db:"outcomes"`
 	CreatedAt          int64    `db:"created_at"`
 	UpdatedAt          int64    `db:"updated_at"`
 	Type               string   `db:"type"`
