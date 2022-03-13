@@ -17,7 +17,7 @@ var ResourceTableMeta = table.Metadata{
 	Name: "resource",
 	Columns: []string{
 		"type",
-		"bucketpath",
+		"buckerPath",
 		"url",
 		"topicid",
 		"created_at",
@@ -38,7 +38,7 @@ var ResourceTable = table.New(ResourceTableMeta)
 // define struct for resource table
 type Resource struct {
 	Type       string `db:"type"`
-	BucketPath string `db:"bucketPath"`
+	BucketPath string `db:"buckerPath"`
 	Url        string `db:"url"`
 	TopicId    string `db:"topicid"`
 	CreatedAt  int64  `db:"created_at"`
