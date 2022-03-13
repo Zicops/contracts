@@ -38,7 +38,7 @@ var ResourceTable = table.New(ResourceTableMeta)
 // define struct for resource table
 type Resource struct {
 	Type       string `db:"type"`
-	BucketPath string `db:"buckerPath"`
+	BucketPath string `db:"bucketPath"`
 	Url        string `db:"url"`
 	TopicId    string `db:"topicid"`
 	CreatedAt  int64  `db:"created_at"`
