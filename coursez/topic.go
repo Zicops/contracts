@@ -43,7 +43,6 @@ var TopicTableMeta = table.Metadata{
 		"id",
 	},
 	SortKey: []string{
-		"id",
 	},
 }
 
