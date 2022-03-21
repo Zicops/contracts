@@ -29,7 +29,7 @@ var TopicContentTableMeta = table.Metadata{
 		"duration",
 		"skipintroduration",
 		"nextshowtime",
-		"fromendTime",
+		"fromendtime",
 		"url",
 		"topiccontentbucket",
 		"subtitlefile",
