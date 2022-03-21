@@ -40,8 +40,6 @@ var TopicTableMeta = table.Metadata{
 		"is_active",
 	},
 	PartKey: []string{
-		"courseid",
-		"moduleid",
 		"id",
 	},
 	SortKey: []string{

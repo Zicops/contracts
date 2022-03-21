@@ -32,7 +32,6 @@ var QuizTableMeta = table.Metadata{
 		"is_active",
 	},
 	PartKey: []string{
-		"topicid",
 		"id",
 	},
 	SortKey: []string{},

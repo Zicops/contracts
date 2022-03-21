@@ -37,12 +37,9 @@ var ModuleTableMeta = table.Metadata{
 		"is_active",
 	},
 	PartKey: []string{
-		"courseid",
 		"id",
 	},
-	SortKey: []string{
-		"id",
-	},
+	SortKey: []string{},
 }
 
 // ModuleTable is the table for the module table above.

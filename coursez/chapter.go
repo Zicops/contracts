@@ -30,11 +30,9 @@ var ChapterTableMeta = table.Metadata{
 		"is_active",
 	},
 	PartKey: []string{
-		"courseId",
 		"id",
 	},
 	SortKey: []string{
-		"id",
 	},
 }
 
