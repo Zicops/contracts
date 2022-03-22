@@ -83,7 +83,7 @@ var CourseTableMeta = table.Metadata{
 	PartKey: []string{
 		"id",
 	},
-	SortKey: []string{"status", "is_active", "updated_at"},
+	SortKey: []string{},
 }
 
 // CourseTable is the table for the course table above.
