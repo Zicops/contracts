@@ -140,13 +140,13 @@ type Course struct {
 }
 
 // MarshalUDT implements UDTMarshaler.
-func (u Course) MarshalUDT(name string, info gocql.TypeInfo) ([]byte, error) {
+func (u SubCat) MarshalUDT(name string, info gocql.TypeInfo) ([]byte, error) {
 	f := gocqlx.DefaultMapper.FieldByName(reflect.ValueOf(u), name)
 	return gocql.Marshal(info, f.Interface())
 }
 
 // UnmarshalUDT implements UDTUnmarshaler.
-func (u *Course) UnmarshalUDT(name string, info gocql.TypeInfo, data []byte) error {
+func (u *SubCat) UnmarshalUDT(name string, info gocql.TypeInfo, data []byte) error {
 	f := gocqlx.DefaultMapper.FieldByName(reflect.ValueOf(u), name)
 	return gocql.Unmarshal(info, data, f.Addr().Interface())
 }
