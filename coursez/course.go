@@ -94,8 +94,8 @@ var CourseTableMeta = table.Metadata{
 var CourseTable = table.New(CourseTableMeta)
 
 type SubCat struct {
-	Name string `db:"name"`
-	Rank int    `db:"rank"`
+	Name string `cql:"name"`
+	Rank int    `cql:"rank"`
 }
 
 // define struct Course for table coursez.course
