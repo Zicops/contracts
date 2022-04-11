@@ -1,6 +1,10 @@
 package coursez
 
 import (
+	"reflect"
+
+	"github.com/gocql/gocql"
+	"github.com/scylladb/gocqlx"
 	"github.com/scylladb/gocqlx/v2/table"
 )
 
@@ -133,4 +137,16 @@ type Course struct {
 	Category           string   `db:"category"`
 	SubCategory        string   `db:"sub_category"`
 	SubCategories      []SubCat `db:"sub_categories"`
+}
+
+// MarshalUDT implements UDTMarshaler.
+func (u Course) MarshalUDT(name string, info gocql.TypeInfo) ([]byte, error) {
+	f := gocqlx.DefaultMapper.FieldByName(reflect.ValueOf(u), name)
+	return gocql.Marshal(info, f.Interface())
+}
+
+// UnmarshalUDT implements UDTUnmarshaler.
+func (u *Course) UnmarshalUDT(name string, info gocql.TypeInfo, data []byte) error {
+	f := gocqlx.DefaultMapper.FieldByName(reflect.ValueOf(u), name)
+	return gocql.Unmarshal(info, data, f.Addr().Interface())
 }
