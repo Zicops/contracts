@@ -16,6 +16,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 var ResourceTableMeta = table.Metadata{
 	Name: "resource",
 	Columns: []string{
+		"id",
 		"type",
 		"bucketpath",
 		"url",
@@ -27,7 +28,7 @@ var ResourceTableMeta = table.Metadata{
 		"is_active",
 	},
 	PartKey: []string{
-		"topicid",
+		"id",
 	},
 	SortKey: []string{},
 }
@@ -37,6 +38,7 @@ var ResourceTable = table.New(ResourceTableMeta)
 
 // define struct for resource table
 type Resource struct {
+	ID         string `db:"id"`
 	Name       string `db:"name"`
 	Type       string `db:"type"`
 	BucketPath string `db:"bucketpath"`

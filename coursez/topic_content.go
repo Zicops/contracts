@@ -21,6 +21,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 var TopicContentTableMeta = table.Metadata{
 	Name: "topic_content",
 	Columns: []string{
+		"id",
 		"language",
 		"topicid",
 		"created_at",
@@ -38,7 +39,7 @@ var TopicContentTableMeta = table.Metadata{
 		"type",
 	},
 	PartKey: []string{
-		"topicid",
+		"id",
 	},
 	SortKey: []string{},
 }
@@ -48,6 +49,7 @@ var TopicContentTable = table.New(TopicContentTableMeta)
 
 // define struct for topic_content table
 type TopicContent struct {
+	ID                 string `db:"id"`
 	Language           string `db:"language"`
 	TopicId            string `db:"topicid"`
 	CreatedAt          int64  `db:"created_at"`
