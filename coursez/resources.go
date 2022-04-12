@@ -17,6 +17,7 @@ var ResourceTableMeta = table.Metadata{
 	Name: "resource",
 	Columns: []string{
 		"id",
+		"name",
 		"type",
 		"bucketpath",
 		"url",
