@@ -1,4 +1,4 @@
-package contracts
+package qbankz
 
 import "github.com/scylladb/gocqlx/table"
 

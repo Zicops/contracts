@@ -1,4 +1,4 @@
-package contracts
+package qbankz
 
 import "github.com/scylladb/gocqlx/table"
 
@@ -53,4 +53,3 @@ type ExamSchedule struct {
 	UpdatedAt  int64  `db:"updated_at"`
 	IsActive   bool   `db:"is_active"`
 }
-
