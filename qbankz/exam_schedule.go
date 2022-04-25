@@ -22,8 +22,8 @@ var ExamScheduleTableMeta = table.Metadata{
 	Columns: []string{
 		"id",
 		"exam_id",
-		"start_date",
-		"end_date",
+		"start",
+		"end",
 		"buffer_time",
 		"created_by",
 		"updated_by",
@@ -44,8 +44,8 @@ var ExamScheduleTable = table.New(ExamScheduleTableMeta)
 type ExamSchedule struct {
 	ID         string `db:"id"`
 	ExamID     string `db:"exam_id"`
-	StartDate  int64  `db:"start_date"`
-	EndDate    int64  `db:"end_date"`
+	Start      int64  `db:"start"`
+	End        int64  `db:"end"`
 	BufferTime int    `db:"buffer_time"`
 	CreatedBy  string `db:"created_by"`
 	UpdatedBy  string `db:"updated_by"`

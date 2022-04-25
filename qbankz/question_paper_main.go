@@ -24,6 +24,9 @@ var QuestionPaperMainTableMeta = table.Metadata{
 		"id",
 		"name",
 		"description",
+		"section_wise",
+		"difficulty_level",
+		"suggested_duration",
 		"category",
 		"sub_category",
 		"is_active",
@@ -46,6 +49,9 @@ type QuestionPaperMain struct {
 	ID          string `db:"id"`
 	Name        string `db:"name"`
 	Description string `db:"description"`
+	SectionWise string `db:"section_wise"`
+	DifficultyLevel string `db:"difficulty_level"`
+	SuggestedDuration string `db:"suggested_duration"`
 	Category    string `db:"category"`
 	SubCategory string `db:"sub_category"`
 	IsActive    bool   `db:"is_active"`

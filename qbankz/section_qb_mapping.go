@@ -27,6 +27,7 @@ var SectionQBMappingTableMeta = table.Metadata{
 		"section_id",
 		"difficulty_level",
 		"total_questions",
+		"question_marks",
 		"question_type",
 		"retrieval_type",
 		"created_by",
@@ -51,6 +52,7 @@ type SectionQBMapping struct {
 	SectionID       string `db:"section_id"`
 	DifficultyLevel string `db:"difficulty_level"`
 	TotalQuestions  int    `db:"total_questions"`
+	QuestionMarks   string `db:"question_marks"`
 	QuestionType    string `db:"question_type"`
 	RetrievalType   string `db:"retrieval_type"`
 	CreatedBy       string `db:"created_by"`

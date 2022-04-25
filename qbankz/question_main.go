@@ -9,6 +9,8 @@ import "github.com/scylladb/gocqlx/table"
 //     difficulty_score int,
 //     attachment_url text,
 //     attachment_type varchar,
+//	   attachment_bucket text,
+//     hint text,
 //     qbm_id varchar,
 //     status varchar,
 //     created_by varchar,
@@ -28,6 +30,8 @@ var QuestionMainTableMeta = table.Metadata{
 		"difficulty_score",
 		"attachment_url",
 		"attachment_type",
+		"attachment_bucket",
+		"hint",
 		"qbm_id",
 		"status",
 		"created_by",
@@ -46,16 +50,18 @@ var QuestionMainTable = table.New(QuestionMainTableMeta)
 
 // define struct for question_main table
 type QuestionMain struct {
-	ID             string `db:"id"`
-	Description    string `db:"description"`
-	Type           string `db:"type"`
-	Difficulty     int    `db:"difficulty_score"`
-	Attachment     string `db:"attachment_url"`
-	AttachmentType string `db:"attachment_type"`
-	QbmId          string `db:"qbm_id"`
-	Status         string `db:"status"`
-	CreatedBy      string `db:"created_by"`
-	UpdatedBy      string `db:"updated_by"`
-	CreatedAt      int64  `db:"created_at"`
-	UpdatedAt      int64  `db:"updated_at"`
+	ID               string `db:"id"`
+	Description      string `db:"description"`
+	Type             string `db:"type"`
+	Difficulty       int    `db:"difficulty_score"`
+	Attachment       string `db:"attachment_url"`
+	AttachmentType   string `db:"attachment_type"`
+	AttachmentBucket string `db:"attachment_bucket"`
+	Hint             string `db:"hint"`
+	QbmId            string `db:"qbm_id"`
+	Status           string `db:"status"`
+	CreatedBy        string `db:"created_by"`
+	UpdatedBy        string `db:"updated_by"`
+	CreatedAt        int64  `db:"created_at"`
+	UpdatedAt        int64  `db:"updated_at"`
 }

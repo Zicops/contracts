@@ -29,6 +29,7 @@ var ExamTableMeta = table.Metadata{
 		"id",
 		"name",
 		"description",
+		"code",
 		"qp_id",
 		"type",
 		"schedule_type",
@@ -36,7 +37,6 @@ var ExamTableMeta = table.Metadata{
 		"status",
 		"category",
 		"sub_category",
-		"is_active",
 		"created_by",
 		"updated_by",
 		"created_at",
@@ -57,6 +57,7 @@ type Exam struct {
 	ID           string `db:"id"`
 	Name         string `db:"name"`
 	Description  string `db:"description"`
+	Code         string `db:"code"`
 	QPID         string `db:"qp_id"`
 	Type         string `db:"type"`
 	ScheduleType string `db:"schedule_type"`
