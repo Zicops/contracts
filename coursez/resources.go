@@ -22,6 +22,7 @@ var ResourceTableMeta = table.Metadata{
 		"bucketpath",
 		"url",
 		"topicid",
+		"courseid",
 		"created_at",
 		"updated_at",
 		"created_by",
@@ -45,6 +46,7 @@ type Resource struct {
 	BucketPath string `db:"bucketpath"`
 	Url        string `db:"url"`
 	TopicId    string `db:"topicid"`
+	CourseId   string `db:"courseid"`
 	CreatedAt  int64  `db:"created_at"`
 	UpdatedAt  int64  `db:"updated_at"`
 	CreatedBy  string `db:"created_by"`
