@@ -38,6 +38,7 @@ var TopicContentTableMeta = table.Metadata{
 		"subtitlefilebucket",
 		"is_active",
 		"type",
+		"is_default",
 	},
 	PartKey: []string{
 		"id",
@@ -67,4 +68,5 @@ type TopicContent struct {
 	SubtitleFileBucket string `db:"subtitlefilebucket"`
 	Type               string `db:"type"`
 	IsActive           bool   `db:"is_active"`
+	IsDefault          bool   `db:"is_default"`
 }
