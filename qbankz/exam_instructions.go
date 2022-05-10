@@ -45,6 +45,7 @@ type ExamInstructions struct {
 	PassingCriteria string `db:"passing_criteria"`
 	NoAttempts      int    `db:"no_attempts"`
 	AccessType      string `db:"access_type"`
+	CreatedBy       string `db:"created_by"`
 	UpdatedBy       string `db:"updated_by"`
 	CreatedAt       int64  `db:"created_at"`
 	UpdatedAt       int64  `db:"updated_at"`
