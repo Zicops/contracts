@@ -46,17 +46,17 @@ var QuestionPaperMainTable = table.New(QuestionPaperMainTableMeta)
 
 // define struct for question_paper_main table
 type QuestionPaperMain struct {
-	ID          string `db:"id"`
-	Name        string `db:"name"`
-	Description string `db:"description"`
-	SectionWise string `db:"section_wise"`
-	DifficultyLevel string `db:"difficulty_level"`
+	ID                string `db:"id"`
+	Name              string `db:"name"`
+	Description       string `db:"description"`
+	SectionWise       string `db:"section_wise"`
+	DifficultyLevel   string `db:"difficulty_level"`
 	SuggestedDuration string `db:"suggested_duration"`
-	Category    string `db:"category"`
-	SubCategory string `db:"sub_category"`
-	IsActive    bool   `db:"is_active"`
-	CreatedBy   string `db:"created_by"`
-	UpdatedBy   string `db:"updated_by"`
-	CreatedAt   int64  `db:"created_at"`
-	UpdatedAt   int64  `db:"updated_at"`
+	Category          string `db:"category"`
+	SubCategory       string `db:"sub_category"`
+	IsActive          bool   `db:"is_active"`
+	CreatedBy         string `db:"created_by"`
+	UpdatedBy         string `db:"updated_by"`
+	CreatedAt         int64  `db:"created_at"`
+	UpdatedAt         int64  `db:"updated_at"`
 }
