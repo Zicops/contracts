@@ -49,7 +49,7 @@ type QuestionPaperMain struct {
 	ID                string `db:"id"`
 	Name              string `db:"name"`
 	Description       string `db:"description"`
-	SectionWise       string `db:"section_wise"`
+	SectionWise       bool   `db:"section_wise"`
 	DifficultyLevel   string `db:"difficulty_level"`
 	SuggestedDuration string `db:"suggested_duration"`
 	Category          string `db:"category"`
