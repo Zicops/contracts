@@ -23,6 +23,7 @@ var QuestionBankMainTableMeta = table.Metadata{
 	Columns: []string{
 		"id",
 		"name",
+		"description",
 		"category",
 		"sub_category",
 		"owner",
@@ -46,6 +47,7 @@ var QuestionBankMainTable = table.New(QuestionBankMainTableMeta)
 type QuestionBankMain struct {
 	ID          string `db:"id"`
 	Name        string `db:"name"`
+	Description string `db:"description"`
 	Category    string `db:"category"`
 	SubCategory string `db:"sub_category"`
 	Owner       string `db:"owner"`
