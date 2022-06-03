@@ -21,6 +21,7 @@ var ExamInstructionsTableMeta = table.Metadata{
 	Columns: []string{
 		"id",
 		"exam_id",
+		"instructions",
 		"passing_criteria",
 		"no_attempts",
 		"access_type",
@@ -42,6 +43,7 @@ var ExamInstructionsTable = table.New(ExamInstructionsTableMeta)
 type ExamInstructions struct {
 	ID              string `db:"id"`
 	ExamID          string `db:"exam_id"`
+	Instructions    string `db:"instructions"`
 	PassingCriteria string `db:"passing_criteria"`
 	NoAttempts      int    `db:"no_attempts"`
 	AccessType      string `db:"access_type"`
