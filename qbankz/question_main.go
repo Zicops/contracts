@@ -25,6 +25,7 @@ var QuestionMainTableMeta = table.Metadata{
 	Name: "question_main",
 	Columns: []string{
 		"id",
+		"name",
 		"description",
 		"type",
 		"difficulty_score",
@@ -51,6 +52,7 @@ var QuestionMainTable = table.New(QuestionMainTableMeta)
 // define struct for question_main table
 type QuestionMain struct {
 	ID               string `db:"id"`
+	Name             string `db:"name"`
 	Description      string `db:"description"`
 	Type             string `db:"type"`
 	Difficulty       int    `db:"difficulty_score"`
