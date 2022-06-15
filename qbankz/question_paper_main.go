@@ -14,7 +14,7 @@ import "github.com/scylladb/gocqlx/table"
 //     created_at bigint,
 //     updated_at bigint,
 //     is_active boolean,
-
+//	   status varchar,
 //     PRIMARY KEY (id)
 // );
 // QuestionPaperMainTableMeta is the table metadata for the question_paper_main table above.
@@ -30,6 +30,7 @@ var QuestionPaperMainTableMeta = table.Metadata{
 		"category",
 		"sub_category",
 		"is_active",
+		"status",
 		"created_by",
 		"updated_by",
 		"created_at",
@@ -55,6 +56,7 @@ type QuestionPaperMain struct {
 	Category          string `db:"category"`
 	SubCategory       string `db:"sub_category"`
 	IsActive          bool   `db:"is_active"`
+	Status            string `db:"status"`
 	CreatedBy         string `db:"created_by"`
 	UpdatedBy         string `db:"updated_by"`
 	CreatedAt         int64  `db:"created_at"`
