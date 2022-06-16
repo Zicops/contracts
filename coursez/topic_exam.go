@@ -30,6 +30,7 @@ var TopicExamTableMeta = table.Metadata{
 	},
 	SortKey: []string{},
 }
+var TopicExamTable = table.New(TopicExamTableMeta)
 
 type TopicExam struct {
 	ID        string `db:"id"`
