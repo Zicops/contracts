@@ -17,8 +17,9 @@ var TopicExamTableMeta = table.Metadata{
 	Name: "topic_exam",
 	Columns: []string{
 		"id",
-		"examId",
-		"topicId",
+		"examid",
+		"topicid",
+		"courseid",
 		"language",
 		"created_at",
 		"updated_at",
@@ -31,11 +32,12 @@ var TopicExamTableMeta = table.Metadata{
 }
 
 type TopicExam struct {
-	ID                 string `db:"id"`
-	ExamId             string `db:"examId"`
-	TopicId            string `db:"topicId"`
-	Language           string `db:"language"`
-	CreatedAt          int64  `db:"created_at"`
-	UpdatedAt          int64  `db:"updated_at"`
-	IsActive           bool   `db:"is_active"`
+	ID        string `db:"id"`
+	ExamId    string `db:"examid"`
+	TopicId   string `db:"topicid"`
+	CourseId  string `db:"courseid"`
+	Language  string `db:"language"`
+	CreatedAt int64  `db:"created_at"`
+	UpdatedAt int64  `db:"updated_at"`
+	IsActive  bool   `db:"is_active"`
 }
