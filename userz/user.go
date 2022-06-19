@@ -23,8 +23,8 @@ var UserTableMeta = table.Metadata{
 	Name: "users",
 	Columns: []string{
 		"id",
-		"firstname",
-		"lastname",
+		"first_name",
+		"last_name",
 		"email",
 		"status",
 		"role",
@@ -46,8 +46,8 @@ var UserTable = table.New(UserTableMeta)
 
 type User struct {
 	ID          string `db:"id"`
-	FirstName   string `db::"firstname"`
-	LastName    string `db::"lastname"`
+	FirstName   string `db::"first_name"`
+	LastName    string `db::"last_name"`
 	Email       string `db::"email"`
 	Status      string `db::"status"`
 	Role        string `db::"role"`
