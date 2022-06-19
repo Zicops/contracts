@@ -45,17 +45,19 @@ var UserTableMeta = table.Metadata{
 var UserTable = table.New(UserTableMeta)
 
 type User struct {
-	ID         string `db:"id"`
-	FirstName  string `db::"firstname"`
-	LastName   string `db::"lastname"`
-	Email      string `db::"email"`
-	Status     string `db::"status"`
-	Role       string `db::"role"`
-	IsVerified bool   `db::"is_verified"`
-	IsActive   bool   `db::"is_active"`
-	Gender     string `db::"gender"`
-	CreatedBy  string `db:"created_by"`
-	UpdatedBy  string `db:"updated_by"`
-	CreatedAt  int64  `db:"created_at"`
-	UpdatedAt  int64  `db:"updated_at"`
+	ID          string `db:"id"`
+	FirstName   string `db::"firstname"`
+	LastName    string `db::"lastname"`
+	Email       string `db::"email"`
+	Status      string `db::"status"`
+	Role        string `db::"role"`
+	IsVerified  bool   `db::"is_verified"`
+	IsActive    bool   `db::"is_active"`
+	Gender      string `db::"gender"`
+	CreatedBy   string `db:"created_by"`
+	UpdatedBy   string `db:"updated_by"`
+	CreatedAt   int64  `db:"created_at"`
+	UpdatedAt   int64  `db:"updated_at"`
+	PhotoBucket string `db:"photo_bucket"`
+	PhotoURL    string `db:"photo_url"`
 }
