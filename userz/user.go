@@ -46,14 +46,14 @@ var UserTable = table.New(UserTableMeta)
 
 type User struct {
 	ID          string `db:"id"`
-	FirstName   string `db::"first_name"`
-	LastName    string `db::"last_name"`
-	Email       string `db::"email"`
-	Status      string `db::"status"`
-	Role        string `db::"role"`
-	IsVerified  bool   `db::"is_verified"`
-	IsActive    bool   `db::"is_active"`
-	Gender      string `db::"gender"`
+	FirstName   string `db:"first_name"`
+	LastName    string `db:"last_name"`
+	Email       string `db:"email"`
+	Status      string `db:"status"`
+	Role        string `db:"role"`
+	IsVerified  bool   `db:"is_verified"`
+	IsActive    bool   `db:"is_active"`
+	Gender      string `db:"gender"`
 	CreatedBy   string `db:"created_by"`
 	UpdatedBy   string `db:"updated_by"`
 	CreatedAt   int64  `db:"created_at"`
