@@ -50,6 +50,7 @@ type UserExamAttempts struct {
 	UserID           string `db:"user_id"`
 	UserLspID        string `db:"user_lsp_id"`
 	UserCpID         string `db:"user_cp_id"`
+	UserCmID         string `db:"user_cm_id"`
 	ExamID           string `db:"exam_id"`
 	AttemptNo        int64  `db:"attempt_no"`
 	AttemptStatus    string `db:"attempt_status"`
