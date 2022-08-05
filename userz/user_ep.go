@@ -38,6 +38,7 @@ var UserExamProgressTableMeta = table.Metadata{
 		"q_attempt_status",
 		"total_time_spent",
 		"correct_answer",
+		"section_id",
 		"created_at",
 		"updated_at",
 		"created_by",
@@ -64,6 +65,7 @@ type UserExamProgress struct {
 	QAttemptStatus string `db:"q_attempt_status"`
 	TotalTimeSpent int64  `db:"total_time_spent"`
 	CorrectAnswer  string `db:"correct_answer"`
+	SectionID      string `db:"section_id"`
 	CreatedAt      int64  `db:"created_at"`
 	UpdatedAt      int64  `db:"updated_at"`
 	CreatedBy      string `db:"created_by"`

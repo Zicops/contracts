@@ -28,6 +28,7 @@ var UserBookmarksTableMeta = table.Metadata{
 		"user_lsp_id",
 		"course_id",
 		"module_id",
+		"topic_id",
 		"user_cp_id",
 		"name",
 		"time_stamp",
@@ -51,6 +52,7 @@ type UserBookmarks struct {
 	UserLspID string `db:"user_lsp_id"`
 	CourseID  string `db:"course_id"`
 	ModuleID  string `db:"module_id"`
+	TopicID   string `db:"topic_id"`
 	UserCPID  string `db:"user_cp_id"`
 	Name      string `db:"name"`
 	TimeStamp int64  `db:"time_stamp"`

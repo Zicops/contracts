@@ -28,6 +28,7 @@ var UserCourseMapTableMeta = table.Metadata{
 		"course_type",
 		"added_by",
 		"is_mandatory",
+		"end_date",
 		"course_status",
 		"created_at",
 		"updated_at",
@@ -50,6 +51,7 @@ type UserCourse struct {
 	CourseType   string `db:"course_type"`
 	AddedBy      string `db:"added_by"`
 	IsMandatory  bool   `db:"is_mandatory"`
+	EndDate      int64  `db:"end_date"`
 	CourseStatus string `db:"course_status"`
 	CreatedAt    int64  `db:"created_at"`
 	UpdatedAt    int64  `db:"updated_at"`

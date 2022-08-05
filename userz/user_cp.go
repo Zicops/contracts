@@ -26,6 +26,7 @@ var UserCourseProgressTableMeta = table.Metadata{
 		"topic_id",
 		"topic_type",
 		"status",
+		"video_progress",
 		"time_stamp",
 		"created_at",
 		"updated_at",
@@ -41,15 +42,16 @@ var UserCourseProgressTableMeta = table.Metadata{
 var UserCourseProgressTable = table.New(UserCourseProgressTableMeta)
 
 type UserCourseProgress struct {
-	ID        string `db:"id"`
-	UserID    string `db:"user_id"`
-	UserCmID  string `db:"user_cm_id"`
-	TopicID   string `db:"topic_id"`
-	TopicType string `db:"topic_type"`
-	Status    string `db:"status"`
-	TimeStamp int64  `db:"time_stamp"`
-	CreatedAt int64  `db:"created_at"`
-	UpdatedAt int64  `db:"updated_at"`
-	CreatedBy string `db:"created_by"`
-	UpdatedBy string `db:"updated_by"`
+	ID            string `db:"id"`
+	UserID        string `db:"user_id"`
+	UserCmID      string `db:"user_cm_id"`
+	TopicID       string `db:"topic_id"`
+	TopicType     string `db:"topic_type"`
+	Status        string `db:"status"`
+	VideoProgress string `db:"video_progress"`
+	TimeStamp     int64  `db:"time_stamp"`
+	CreatedAt     int64  `db:"created_at"`
+	UpdatedAt     int64  `db:"updated_at"`
+	CreatedBy     string `db:"created_by"`
+	UpdatedBy     string `db:"updated_by"`
 }

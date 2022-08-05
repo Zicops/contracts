@@ -27,8 +27,10 @@ var UserNotesTableMeta = table.Metadata{
 		"user_lsp_id",
 		"course_id",
 		"module_id",
+		"topic_id",
 		"details",
 		"status",
+		"sequence",
 		"is_active",
 		"created_at",
 		"updated_at",
@@ -49,8 +51,10 @@ type UserNotes struct {
 	UserLspID string `db:"user_lsp_id"`
 	CourseID  string `db:"course_id"`
 	ModuleID  string `db:"module_id"`
+	TopicID   string `db:"topic_id"`
 	Details   string `db:"details"`
 	Status    string `db:"status"`
+	Sequence  int    `db:"sequence"`
 	IsActive  bool   `db:"is_active"`
 	CreatedAt int64  `db:"created_at"`
 	UpdatedAt int64  `db:"updated_at"`
