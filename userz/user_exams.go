@@ -55,7 +55,7 @@ type UserExamAttempts struct {
 	AttemptNo        int64  `db:"attempt_no"`
 	AttemptStatus    string `db:"attempt_status"`
 	AttemptStartTime int64  `db:"attempt_start_time"`
-	AttemptDuration  int64  `db:"attempt_duration"`
+	AttemptDuration  string  `db:"attempt_duration"`
 	CreatedAt        int64  `db:"created_at"`
 	UpdatedAt        int64  `db:"updated_at"`
 	CreatedBy        string `db:"created_by"`
