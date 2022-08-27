@@ -25,6 +25,7 @@ var UserCohortMapTableMeta = table.Metadata{
 		"cohort_id",
 		"added_by",
 		"membership_status",
+		"role",
 		"created_at",
 		"updated_at",
 		"created_by",
@@ -45,6 +46,7 @@ type UserCohort struct {
 	CohortID         string `db:"cohort_id"`
 	AddedBy          string `db:"added_by"`
 	MembershipStatus string `db:"membership_status"`
+	Role             string `db:"role"`
 	CreatedAt        int64  `db:"created_at"`
 	UpdatedAt        int64  `db:"updated_at"`
 	CreatedBy        string `db:"created_by"`
