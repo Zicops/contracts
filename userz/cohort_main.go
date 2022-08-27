@@ -33,6 +33,7 @@ var CohortMain = table.Metadata{
 		"status",
 		"imageBucket",
 		"imageUrl",
+		"size",
 		"created_at",
 		"updated_at",
 		"created_by",
@@ -57,6 +58,7 @@ type Cohort struct {
 	Status      string `db:"status"`
 	ImageBucket string `db:"imageBucket"`
 	ImageUrl    string `db:"imageUrl"`
+	Size        int    `db:"size"`
 	CreatedAt   int64  `db:"created_at"`
 	UpdatedAt   int64  `db:"updated_at"`
 	CreatedBy   string `db:"created_by"`
