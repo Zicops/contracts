@@ -13,6 +13,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 //    topicId varchar,
 //    courseId varchar,
 //    questionId varchar,
+//	  qb_id varchar,
 //    weightage int,
 //    startTime int,
 //    sequence int,
@@ -35,6 +36,7 @@ var QuizTableMeta = table.Metadata{
 		"courseid",
 		"questionid",
 		"weightage",
+		"qb_id",
 		"starttime",
 		"sequence",
 		"is_active",
@@ -60,6 +62,7 @@ type Quiz struct {
 	TopicID     string `db:"topicid"`
 	CourseID    string `db:"courseid"`
 	QuestionID  string `db:"questionid"`
+	QbId		string `db:"qb_id"`
 	Weightage   int    `db:"weightage"`
 	StartTime   int    `db:"starttime"`
 	Sequence    int    `db:"sequence"`
