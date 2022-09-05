@@ -36,7 +36,7 @@ var QuizTableMeta = table.Metadata{
 		"courseid",
 		"questionid",
 		"weightage",
-		"qb_id",
+		"qbid",
 		"starttime",
 		"sequence",
 		"is_active",
@@ -62,7 +62,7 @@ type Quiz struct {
 	TopicID     string `db:"topicid"`
 	CourseID    string `db:"courseid"`
 	QuestionID  string `db:"questionid"`
-	QbId		string `db:"qb_id"`
+	QbId		string `db:"qbid"`
 	Weightage   int    `db:"weightage"`
 	StartTime   int    `db:"starttime"`
 	Sequence    int    `db:"sequence"`
