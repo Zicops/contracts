@@ -56,7 +56,7 @@ type Cohort struct {
 	Description string `db:"description"`
 	IsActive    bool   `db:"is_active"`
 	Status      string `db:"status"`
-	ImageBucket string `db:"imageBucket"`
+	ImageBucket string `db:"imagebucket"`
 	ImageUrl    string `db:"imageUrl"`
 	Size        int    `db:"size"`
 	CreatedAt   int64  `db:"created_at"`
