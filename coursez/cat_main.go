@@ -14,6 +14,9 @@ import "github.com/scylladb/gocqlx/v2/table"
 //    updated_at bigint,
 //    created_by varchar,
 //    updated_by varchar,
+//    lsps
+//		set
+//		< varchar >,
 //    PRIMARY KEY (id)
 //);
 //
@@ -31,6 +34,7 @@ var CatMainMeta = table.Metadata{
 		"updated_at",
 		"created_by",
 		"updated_by",
+		"lsps",
 	},
 	PartKey: []string{
 		"id",
@@ -41,15 +45,16 @@ var CatMainMeta = table.Metadata{
 var CatMainTable = table.New(CatMainMeta)
 
 type CatMain struct {
-	ID          string `db:"id"`
-	Name        string `db:"name"`
-	Description string `db:"description"`
-	ImageBucket string `db:"image_bucket"`
-	ImageURL    string `db:"image_url"`
-	Code        string `db:"code"`
-	IsActive    bool   `db:"is_active"`
-	CreatedAt   int64  `db:"created_at"`
-	UpdatedAt   int64  `db:"updated_at"`
-	CreatedBy   string `db:"created_by"`
-	UpdatedBy   string `db:"updated_by"`
+	ID          string   `db:"id"`
+	Name        string   `db:"name"`
+	Description string   `db:"description"`
+	ImageBucket string   `db:"image_bucket"`
+	ImageURL    string   `db:"image_url"`
+	Code        string   `db:"code"`
+	IsActive    bool     `db:"is_active"`
+	CreatedAt   int64    `db:"created_at"`
+	UpdatedAt   int64    `db:"updated_at"`
+	CreatedBy   string   `db:"created_by"`
+	UpdatedBy   string   `db:"updated_by"`
+	LspIDs      []string `db:"lsps"`
 }

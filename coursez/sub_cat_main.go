@@ -34,6 +34,7 @@ var SubCatMainMeta = table.Metadata{
 		"updated_at",
 		"created_by",
 		"updated_by",
+		"lsps",
 	},
 	PartKey: []string{
 		"id",
@@ -44,16 +45,17 @@ var SubCatMainMeta = table.Metadata{
 var SubCatMainTable = table.New(SubCatMainMeta)
 
 type SubCatMain struct {
-	ID          string `db:"id"`
-	Name        string `db:"name"`
-	Description string `db:"description"`
-	ParentID    string `db:"parent_id"`
-	ImageBucket string `db:"image_bucket"`
-	ImageURL    string `db:"image_url"`
-	Code        string `db:"code"`
-	IsActive    bool   `db:"is_active"`
-	CreatedAt   int64  `db:"created_at"`
-	UpdatedAt   int64  `db:"updated_at"`
-	CreatedBy   string `db:"created_by"`
-	UpdatedBy   string `db:"updated_by"`
+	ID          string   `db:"id"`
+	Name        string   `db:"name"`
+	Description string   `db:"description"`
+	ParentID    string   `db:"parent_id"`
+	ImageBucket string   `db:"image_bucket"`
+	ImageURL    string   `db:"image_url"`
+	Code        string   `db:"code"`
+	IsActive    bool     `db:"is_active"`
+	CreatedAt   int64    `db:"created_at"`
+	UpdatedAt   int64    `db:"updated_at"`
+	CreatedBy   string   `db:"created_by"`
+	UpdatedBy   string   `db:"updated_by"`
+	LspIDs      []string `db:"lsps"`
 }
