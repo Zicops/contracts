@@ -14,15 +14,19 @@ var QuizDescriptiveTableMeta = table.Metadata{
 	Name: "quiz_descriptive",
 	Columns: []string{
 		"quizid",
+		"lsp_id",
 		"question",
 		"correctanswer",
 		"explanation",
 		"is_active",
 	},
 	PartKey: []string{
-		"quizid",
+		"lsp_id",
+		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"question",
+	},
 }
 
 // QuizDescriptiveTable is the table for the quiz_descriptive table above.
@@ -31,6 +35,7 @@ var QuizDescriptiveTable = table.New(QuizDescriptiveTableMeta)
 // define struct for quiz_descriptive table
 type QuizDescriptive struct {
 	QuizId        string `db:"quizid"`
+	LspId         string `db:"lsp_id"`
 	Question      string `db:"question"`
 	CorrectAnswer string `db:"correctanswer"`
 	Explanation   string `db:"explanation"`

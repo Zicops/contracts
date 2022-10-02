@@ -27,6 +27,7 @@ var ModuleTableMeta = table.Metadata{
 		"name",
 		"description",
 		"courseid",
+		"lsp_id",
 		"owner",
 		"duration",
 		"created_at",
@@ -37,9 +38,12 @@ var ModuleTableMeta = table.Metadata{
 		"is_active",
 	},
 	PartKey: []string{
-		"id",
+		"lsp_id",
+		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"sequence",
+	},
 }
 
 // ModuleTable is the table for the module table above.
@@ -52,6 +56,7 @@ type Module struct {
 	Name        string `db:"name"`
 	Description string `db:"description"`
 	CourseID    string `db:"courseid"`
+	LspID       string `db:"lsp_id"`
 	Owner       string `db:"owner"`
 	Duration    int    `db:"duration"`
 	CreatedAt   int64  `db:"created_at"`

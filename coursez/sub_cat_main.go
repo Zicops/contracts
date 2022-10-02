@@ -12,10 +12,10 @@ import "github.com/scylladb/gocqlx/v2/table"
 //    code varchar,
 //    is_active boolean,
 //    created_at bigint,
+//    PRIMARY KEY (id)
 //    updated_at bigint,
 //    created_by varchar,
 //    updated_by varchar,
-//    PRIMARY KEY (id)
 //);
 //
 
@@ -38,6 +38,7 @@ var SubCatMainMeta = table.Metadata{
 	},
 	PartKey: []string{
 		"id",
+		"is_active",
 	},
 	SortKey: []string{},
 }

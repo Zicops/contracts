@@ -38,6 +38,7 @@ var CatMainMeta = table.Metadata{
 	},
 	PartKey: []string{
 		"id",
+		"is_active",
 	},
 	SortKey: []string{},
 }

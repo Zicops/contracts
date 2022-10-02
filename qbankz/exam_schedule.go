@@ -22,6 +22,7 @@ var ExamScheduleTableMeta = table.Metadata{
 	Columns: []string{
 		"id",
 		"exam_id",
+		"lsp_id",
 		"start",
 		"end",
 		"buffer_time",
@@ -32,9 +33,12 @@ var ExamScheduleTableMeta = table.Metadata{
 		"is_active",
 	},
 	PartKey: []string{
-		"id",
+		"lsp_id",
+		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // ExamScheduleTable is the table for the exam_schedule table above.
@@ -44,6 +48,7 @@ var ExamScheduleTable = table.New(ExamScheduleTableMeta)
 type ExamSchedule struct {
 	ID         string `db:"id"`
 	ExamID     string `db:"exam_id"`
+	LspID      string `db:"lsp_id"`
 	Start      int64  `db:"start"`
 	End        int64  `db:"end"`
 	BufferTime int    `db:"buffer_time"`

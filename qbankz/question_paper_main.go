@@ -22,6 +22,7 @@ var QuestionPaperMainTableMeta = table.Metadata{
 	Name: "question_paper_main",
 	Columns: []string{
 		"id",
+		"lsp_id",
 		"name",
 		"description",
 		"section_wise",
@@ -37,9 +38,12 @@ var QuestionPaperMainTableMeta = table.Metadata{
 		"updated_at",
 	},
 	PartKey: []string{
-		"id",
+		"lsp_id",
+		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // QuestionPaperMainTable is the table for the question_paper_main table above.
@@ -48,6 +52,7 @@ var QuestionPaperMainTable = table.New(QuestionPaperMainTableMeta)
 // define struct for question_paper_main table
 type QuestionPaperMain struct {
 	ID                string `db:"id"`
+	LspID             string `db:"lsp_id"`
 	Name              string `db:"name"`
 	Description       string `db:"description"`
 	SectionWise       bool   `db:"section_wise"`

@@ -42,9 +42,12 @@ var CourseCohortMappingTableMeta = table.Metadata{
 		"expected_completion_days",
 	},
 	PartKey: []string{
-		"id",
+		"lsp_id",
+		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 var CourseCohortTable = table.New(CourseCohortMappingTableMeta)

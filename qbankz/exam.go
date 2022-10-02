@@ -27,6 +27,7 @@ var ExamTableMeta = table.Metadata{
 	Name: "exam",
 	Columns: []string{
 		"id",
+		"lsp_id",
 		"name",
 		"description",
 		"code",
@@ -44,9 +45,12 @@ var ExamTableMeta = table.Metadata{
 		"is_active",
 	},
 	PartKey: []string{
-		"id",
+		"lsp_id",
+		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // ExamTable is the table for the exam table above.
@@ -55,6 +59,7 @@ var ExamTable = table.New(ExamTableMeta)
 // define struct for exam table
 type Exam struct {
 	ID           string `db:"id"`
+	LSPID        string `db:"lsp_id"`
 	Name         string `db:"name"`
 	Description  string `db:"description"`
 	Code         string `db:"code"`

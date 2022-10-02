@@ -26,6 +26,7 @@ var SectionMainTableMeta = table.Metadata{
 		"name",
 		"description",
 		"qp_id",
+		"lsp_id",
 		"type",
 		"difficulty_level",
 		"total_questions",
@@ -36,9 +37,12 @@ var SectionMainTableMeta = table.Metadata{
 		"is_active",
 	},
 	PartKey: []string{
-		"id",
+		"lsp_id",
+		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // SectionMainTable is the table for the section_main table above.
@@ -50,6 +54,7 @@ type SectionMain struct {
 	Name            string `db:"name"`
 	Description     string `db:"description"`
 	QPID            string `db:"qp_id"`
+	LSPID           string `db:"lsp_id"`
 	Type            string `db:"type"`
 	DifficultyLevel string `db:"difficulty_level"`
 	TotalQuestions  int    `db:"total_questions"`

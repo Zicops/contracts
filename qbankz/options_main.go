@@ -26,6 +26,7 @@ var OptionsMainTableMeta = table.Metadata{
 		"description",
 		"is_correct",
 		"qm_id",
+		"lsp_id",
 		"created_by",
 		"updated_by",
 		"created_at",
@@ -36,9 +37,12 @@ var OptionsMainTableMeta = table.Metadata{
 		"is_active",
 	},
 	PartKey: []string{
-		"id",
+		"lsp_id",
+		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // OptionsMainTable is the table for the options_main table above.
@@ -50,6 +54,7 @@ type OptionsMain struct {
 	Description      string `db:"description"`
 	IsCorrect        bool   `db:"is_correct"`
 	QmId             string `db:"qm_id"`
+	LspId            string `db:"lsp_id"`
 	CreatedBy        string `db:"created_by"`
 	UpdatedBy        string `db:"updated_by"`
 	CreatedAt        int64  `db:"created_at"`

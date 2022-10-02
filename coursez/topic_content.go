@@ -25,6 +25,7 @@ var TopicContentTableMeta = table.Metadata{
 		"language",
 		"topicid",
 		"courseid",
+		"lsp_id",
 		"created_at",
 		"updated_at",
 		"starttime",
@@ -41,9 +42,12 @@ var TopicContentTableMeta = table.Metadata{
 		"is_default",
 	},
 	PartKey: []string{
-		"id",
+		"lsp_id",
+		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"duration",
+	},
 }
 
 // TopicContentTable is the table for the topic_content table above.
@@ -55,6 +59,7 @@ type TopicContent struct {
 	Language           string `db:"language"`
 	TopicId            string `db:"topicid"`
 	CourseId           string `db:"courseid"`
+	LspId              string `db:"lsp_id"`
 	CreatedAt          int64  `db:"created_at"`
 	UpdatedAt          int64  `db:"updated_at"`
 	StartTime          int    `db:"starttime"`

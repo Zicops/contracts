@@ -87,9 +87,12 @@ var CourseTableMeta = table.Metadata{
 		"sub_categories",
 	},
 	PartKey: []string{
-		"id",
+		"lsp_id",
+		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // CourseTable is the table for the course table above.

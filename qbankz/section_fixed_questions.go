@@ -20,6 +20,7 @@ var SectionFixedQuestionsTableMeta = table.Metadata{
 	Columns: []string{
 		"id",
 		"sqb_id",
+		"lsp_id",
 		"question_id",
 		"created_by",
 		"updated_by",
@@ -28,9 +29,12 @@ var SectionFixedQuestionsTableMeta = table.Metadata{
 		"is_active",
 	},
 	PartKey: []string{
-		"id",
+		"lsp_id",
+		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // SectionFixedQuestionsTable is the table for the section_fixed_questions table above.
@@ -40,6 +44,7 @@ var SectionFixedQuestionsTable = table.New(SectionFixedQuestionsTableMeta)
 type SectionFixedQuestions struct {
 	ID         string `db:"id"`
 	SQBId      string `db:"sqb_id"`
+	LspID      string `db:"lsp_id"`
 	QuestionID string `db:"question_id"`
 	CreatedBy  string `db:"created_by"`
 	UpdatedBy  string `db:"updated_by"`

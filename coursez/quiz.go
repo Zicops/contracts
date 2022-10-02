@@ -34,6 +34,7 @@ var QuizTableMeta = table.Metadata{
 		"updated_at",
 		"topicid",
 		"courseid",
+		"lsp_id",
 		"questionid",
 		"weightage",
 		"qbid",
@@ -42,9 +43,12 @@ var QuizTableMeta = table.Metadata{
 		"is_active",
 	},
 	PartKey: []string{
-		"id",
+		"lsp_id",
+		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"sequence",
+	},
 }
 
 // QuizTable is the table for the quiz table above.
@@ -61,6 +65,7 @@ type Quiz struct {
 	UpdatedAt   int64  `db:"updated_at"`
 	TopicID     string `db:"topicid"`
 	CourseID    string `db:"courseid"`
+	LspID       string `db:"lsp_id"`
 	QuestionID  string `db:"questionid"`
 	QbId		string `db:"qbid"`
 	Weightage   int    `db:"weightage"`

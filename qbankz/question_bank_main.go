@@ -22,6 +22,7 @@ var QuestionBankMainTableMeta = table.Metadata{
 	Name: "question_bank_main",
 	Columns: []string{
 		"id",
+		"lsp_id",
 		"name",
 		"description",
 		"category",
@@ -35,9 +36,12 @@ var QuestionBankMainTableMeta = table.Metadata{
 		"is_default",
 	},
 	PartKey: []string{
-		"id",
+		"lsp_id",
+		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // QuestionBankMainTable is the table for the question_bank_main table above.
@@ -46,6 +50,7 @@ var QuestionBankMainTable = table.New(QuestionBankMainTableMeta)
 // define struct for question_bank_main table
 type QuestionBankMain struct {
 	ID          string `db:"id"`
+	LspID       string `db:"lsp_id"`
 	Name        string `db:"name"`
 	Description string `db:"description"`
 	Category    string `db:"category"`

@@ -25,6 +25,7 @@ var SectionQBMappingTableMeta = table.Metadata{
 		"id",
 		"qb_id",
 		"section_id",
+		"lsp_id",
 		"difficulty_level",
 		"total_questions",
 		"question_marks",
@@ -37,9 +38,12 @@ var SectionQBMappingTableMeta = table.Metadata{
 		"is_active",
 	},
 	PartKey: []string{
-		"id",
+		"lsp_id",
+		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // SectionQBMappingTable is the table for the section_qb_mapping table above.
@@ -49,6 +53,7 @@ var SectionQBMappingTable = table.New(SectionQBMappingTableMeta)
 type SectionQBMapping struct {
 	ID              string `db:"id"`
 	QBId            string `db:"qb_id"`
+	LspID           string `db:"lsp_id"`
 	SectionID       string `db:"section_id"`
 	DifficultyLevel string `db:"difficulty_level"`
 	TotalQuestions  int    `db:"total_questions"`

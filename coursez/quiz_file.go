@@ -14,6 +14,7 @@ var QuizFileTableMeta = table.Metadata{
 	Name: "quiz_file",
 	Columns: []string{
 		"quizid",
+		"lsp_id",
 		"type",
 		"name",
 		"bucketpath",
@@ -21,9 +22,12 @@ var QuizFileTableMeta = table.Metadata{
 		"is_active",
 	},
 	PartKey: []string{
-		"quizId",
+		"lsp_id",
+		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"name",
+	},
 }
 
 // QuizFileTable is the table for the quiz_file table above.
@@ -32,6 +36,7 @@ var QuizFileTable = table.New(QuizFileTableMeta)
 // define struct for quiz_file table
 type QuizFile struct {
 	QuizId     string `db:"quizid"`
+	LspId      string `db:"lsp_id"`
 	Type       string `db:"type"`
 	Name       string `db:"name"`
 	BucketPath string `db:"bucketpath"`

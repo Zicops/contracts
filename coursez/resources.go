@@ -23,6 +23,7 @@ var ResourceTableMeta = table.Metadata{
 		"url",
 		"topicid",
 		"courseid",
+		"lsp_id",
 		"created_at",
 		"updated_at",
 		"created_by",
@@ -30,9 +31,12 @@ var ResourceTableMeta = table.Metadata{
 		"is_active",
 	},
 	PartKey: []string{
-		"id",
+		"lsp_id",
+		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // ResourceTable is the table for the resource table above.
@@ -47,6 +51,7 @@ type Resource struct {
 	Url        string `db:"url"`
 	TopicId    string `db:"topicid"`
 	CourseId   string `db:"courseid"`
+	LspId      string `db:"lsp_id"`
 	CreatedAt  int64  `db:"created_at"`
 	UpdatedAt  int64  `db:"updated_at"`
 	CreatedBy  string `db:"created_by"`

@@ -15,6 +15,7 @@ var QuizMcqTableMeta = table.Metadata{
 	Name: "quiz_mcq",
 	Columns: []string{
 		"quizid",
+		"lsp_id",
 		"question",
 		"options",
 		"correctoption",
@@ -22,9 +23,12 @@ var QuizMcqTableMeta = table.Metadata{
 		"is_active",
 	},
 	PartKey: []string{
-		"quizId",
+		"lsp_id",
+		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"question",
+	},
 }
 
 // QuizMcqTable is the table for the quiz_mcq table above.
@@ -33,6 +37,7 @@ var QuizMcqTable = table.New(QuizMcqTableMeta)
 // define struct for quiz_mcq table
 type QuizMcq struct {
 	QuizId        string   `db:"quizid"`
+	LspId         string   `db:"lsp_id"`
 	Question      string   `db:"question"`
 	Options       []string `db:"options"`
 	CorrectOption string   `db:"correctoption"`

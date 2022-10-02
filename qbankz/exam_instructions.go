@@ -21,6 +21,7 @@ var ExamInstructionsTableMeta = table.Metadata{
 	Columns: []string{
 		"id",
 		"exam_id",
+		"lsp_id",
 		"instructions",
 		"passing_criteria",
 		"no_attempts",
@@ -31,9 +32,12 @@ var ExamInstructionsTableMeta = table.Metadata{
 		"is_active",
 	},
 	PartKey: []string{
-		"id",
+		"lsp_id",
+		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // ExamInstructionsTable is the table for the exam_instructions table above.
@@ -43,6 +47,7 @@ var ExamInstructionsTable = table.New(ExamInstructionsTableMeta)
 type ExamInstructions struct {
 	ID              string `db:"id"`
 	ExamID          string `db:"exam_id"`
+	LspID           string `db:"lsp_id"`
 	Instructions    string `db:"instructions"`
 	PassingCriteria string `db:"passing_criteria"`
 	NoAttempts      int    `db:"no_attempts"`

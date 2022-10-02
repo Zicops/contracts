@@ -20,6 +20,7 @@ var ExamCohortTableMeta = table.Metadata{
 	Columns: []string{
 		"id",
 		"exam_id",
+		"lsp_id",
 		"cohort_id",
 		"created_by",
 		"updated_by",
@@ -28,9 +29,12 @@ var ExamCohortTableMeta = table.Metadata{
 		"is_active",
 	},
 	PartKey: []string{
-		"id",
+		"lsp_id",
+		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // ExamCohortTable is the table for the exam_cohort table above.
@@ -40,6 +44,7 @@ var ExamCohortTable = table.New(ExamCohortTableMeta)
 type ExamCohort struct {
 	ID        string `db:"id"`
 	ExamID    string `db:"exam_id"`
+	LspID     string `db:"lsp_id"`
 	CohortID  string `db:"cohort_id"`
 	CreatedBy string `db:"created_by"`
 	UpdatedBy string `db:"updated_by"`

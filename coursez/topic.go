@@ -30,6 +30,7 @@ var TopicTableMeta = table.Metadata{
 		"moduleid",
 		"chapterid",
 		"courseid",
+		"lsp_id",
 		"sequence",
 		"created_at",
 		"updated_at",
@@ -40,9 +41,11 @@ var TopicTableMeta = table.Metadata{
 		"is_active",
 	},
 	PartKey: []string{
-		"id",
+		"lsp_id",
+		"is_active",
 	},
 	SortKey: []string{
+		"sequence",
 	},
 }
 
@@ -58,6 +61,7 @@ type Topic struct {
 	ModuleID    string `db:"moduleid"`
 	ChapterID   string `db:"chapterid"`
 	CourseID    string `db:"courseid"`
+	LspID       string `db:"lsp_id"`
 	Sequence    int    `db:"sequence"`
 	CreatedAt   int64  `db:"created_at"`
 	UpdatedAt   int64  `db:"updated_at"`
