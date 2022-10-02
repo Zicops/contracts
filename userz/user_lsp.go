@@ -27,9 +27,11 @@ var UserLSPMapTableMeta = table.Metadata{
 		"updated_by",
 	},
 	PartKey: []string{
-		"id",
+		"user_id",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 var UserLspTable = table.New(UserLSPMapTableMeta)

@@ -45,9 +45,11 @@ var UserExamProgressTableMeta = table.Metadata{
 		"updated_by",
 	},
 	PartKey: []string{
-		"id",
+		"user_id",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 var UserExamProgressTable = table.New(UserExamProgressTableMeta)

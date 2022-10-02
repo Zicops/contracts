@@ -40,9 +40,11 @@ var CohortMain = table.Metadata{
 		"updated_by",
 	},
 	PartKey: []string{
-		"id",
+		"lsp_id",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 var CohortTable = table.New(CohortMain)

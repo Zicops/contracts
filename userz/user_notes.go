@@ -38,9 +38,11 @@ var UserNotesTableMeta = table.Metadata{
 		"updated_by",
 	},
 	PartKey: []string{
-		"id",
+		"user_id",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 var UserNotesTable = table.New(UserNotesTableMeta)

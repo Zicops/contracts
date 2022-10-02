@@ -37,9 +37,11 @@ var UserQuizAttemptsTableMeta = table.Metadata{
 		"updated_by",
 	},
 	PartKey: []string{
-		"id",
+		"user_id",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 var UserQuizAttemptsTable = table.New(UserQuizAttemptsTableMeta)

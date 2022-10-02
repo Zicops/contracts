@@ -36,9 +36,11 @@ var UserCourseMapTableMeta = table.Metadata{
 		"updated_by",
 	},
 	PartKey: []string{
-		"id",
+		"user_id",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 var UserCourseTable = table.New(UserCourseMapTableMeta)
