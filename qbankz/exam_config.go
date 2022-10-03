@@ -51,7 +51,7 @@ var ExamConfigTable = table.New(ExamConfigTableMeta)
 type ExamConfig struct {
 	ID           string `db:"id"`
 	ExamID       string `db:"exam_id"`
-	LspID        string `db:"lsp_id" json:"lsp_id"`
+	LspId        string `db:"lsp_id" json:"lsp_id"`
 	Shuffle      bool   `db:"shuffle_questions"`
 	DisplayHints bool   `db:"display_hints"`
 	ShowAnswer   bool   `db:"show_answer"`

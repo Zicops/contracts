@@ -51,7 +51,7 @@ var QuestionBankMainTable = table.New(QuestionBankMainTableMeta)
 // define struct for question_bank_main table
 type QuestionBankMain struct {
 	ID          string `db:"id"`
-	LspID       string `db:"lsp_id" json:"lsp_id"`
+	LspId       string `db:"lsp_id" json:"lsp_id"`
 	Name        string `db:"name"`
 	Description string `db:"description"`
 	Category    string `db:"category"`

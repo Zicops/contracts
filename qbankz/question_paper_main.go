@@ -53,7 +53,7 @@ var QuestionPaperMainTable = table.New(QuestionPaperMainTableMeta)
 // define struct for question_paper_main table
 type QuestionPaperMain struct {
 	ID                string `db:"id"`
-	LspID             string `db:"lsp_id" json:"lsp_id"`
+	LspId             string `db:"lsp_id" json:"lsp_id"`
 	Name              string `db:"name"`
 	Description       string `db:"description"`
 	SectionWise       bool   `db:"section_wise"`

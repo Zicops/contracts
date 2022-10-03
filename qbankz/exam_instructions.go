@@ -48,7 +48,7 @@ var ExamInstructionsTable = table.New(ExamInstructionsTableMeta)
 type ExamInstructions struct {
 	ID              string `db:"id"`
 	ExamID          string `db:"exam_id"`
-	LspID           string `db:"lsp_id" json:"lsp_id"`
+	LspId           string `db:"lsp_id" json:"lsp_id"`
 	Instructions    string `db:"instructions"`
 	PassingCriteria string `db:"passing_criteria"`
 	NoAttempts      int    `db:"no_attempts"`

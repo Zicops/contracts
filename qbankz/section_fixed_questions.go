@@ -45,7 +45,7 @@ var SectionFixedQuestionsTable = table.New(SectionFixedQuestionsTableMeta)
 type SectionFixedQuestions struct {
 	ID         string `db:"id"`
 	SQBId      string `db:"sqb_id"`
-	LspID      string `db:"lsp_id" json:"lsp_id"`
+	LspId      string `db:"lsp_id" json:"lsp_id"`
 	QuestionID string `db:"question_id"`
 	CreatedBy  string `db:"created_by"`
 	UpdatedBy  string `db:"updated_by"`

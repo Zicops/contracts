@@ -49,7 +49,7 @@ var ExamScheduleTable = table.New(ExamScheduleTableMeta)
 type ExamSchedule struct {
 	ID         string `db:"id"`
 	ExamID     string `db:"exam_id"`
-	LspID      string `db:"lsp_id" json:"lsp_id"`
+	LspId      string `db:"lsp_id" json:"lsp_id"`
 	Start      int64  `db:"start"`
 	End        int64  `db:"end"`
 	BufferTime int    `db:"buffer_time"`

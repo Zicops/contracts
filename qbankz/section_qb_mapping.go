@@ -54,7 +54,7 @@ var SectionQBMappingTable = table.New(SectionQBMappingTableMeta)
 type SectionQBMapping struct {
 	ID              string `db:"id"`
 	QBId            string `db:"qb_id"`
-	LspID           string `db:"lsp_id" json:"lsp_id"`
+	LspId           string `db:"lsp_id" json:"lsp_id"`
 	SectionID       string `db:"section_id"`
 	DifficultyLevel string `db:"difficulty_level"`
 	TotalQuestions  int    `db:"total_questions"`

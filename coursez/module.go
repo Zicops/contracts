@@ -57,7 +57,7 @@ type Module struct {
 	Name        string `db:"name"`
 	Description string `db:"description"`
 	CourseID    string `db:"courseid"`
-	LspID       string `db:"lsp_id" json:"lsp_id"`
+	LspId       string `db:"lsp_id" json:"lsp_id"`
 	Owner       string `db:"owner"`
 	Duration    int    `db:"duration"`
 	CreatedAt   int64  `db:"created_at"`

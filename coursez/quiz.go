@@ -66,7 +66,7 @@ type Quiz struct {
 	UpdatedAt   int64  `db:"updated_at"`
 	TopicID     string `db:"topicid"`
 	CourseID    string `db:"courseid"`
-	LspID       string `db:"lsp_id" json:"lsp_id"`
+	LspId       string `db:"lsp_id" json:"lsp_id"`
 	QuestionID  string `db:"questionid"`
 	QbId        string `db:"qbid"`
 	Weightage   int    `db:"weightage"`

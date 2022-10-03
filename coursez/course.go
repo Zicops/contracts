@@ -108,7 +108,7 @@ type SubCat struct {
 type Course struct {
 	ID                 string   `db:"id"`
 	Name               string   `db:"name"`
-	LspID              string   `db:"lsp_id" json:"lsp_id"`
+	LspId              string   `db:"lsp_id" json:"lsp_id"`
 	Publisher          string   `db:"publisher"`
 	Description        string   `db:"description"`
 	Summary            string   `db:"summary"`

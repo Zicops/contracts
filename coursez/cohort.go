@@ -59,7 +59,7 @@ type CourseCohortMapping struct {
 	CourseID               string `db:"courseid"`
 	CohortID               string `db:"cohortid"`
 	CourseType             string `db:"course_type"`
-	LspID                  string `db:"lsp_id" json:"lsp_id"`
+	LspId                  string `db:"lsp_id" json:"lsp_id"`
 	CohortCode             string `db:"cohort_code"`
 	IsMandatory            bool   `db:"is_mandatory"`
 	CourseStatus           string `db:"course_status"`

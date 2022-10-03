@@ -52,7 +52,7 @@ var CohortTable = table.New(CohortMain)
 
 type Cohort struct {
 	ID          string `db:"id"`
-	LspID       string `db:"lsp_id" json:"lsp_id"`
+	LspId       string `db:"lsp_id" json:"lsp_id"`
 	Code        string `db:"code"`
 	Name        string `db:"name"`
 	Type        string `db:"type"`
