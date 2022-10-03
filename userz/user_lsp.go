@@ -40,7 +40,7 @@ var UserLspTable = table.New(UserLSPMapTableMeta)
 type UserLsp struct {
 	ID        string `db:"id"`
 	UserID    string `db:"user_id"`
-	LspID     string `db:"lsp_id"`
+	LspID     string `db:"lsp_id" json:"lsp_id"`
 	Status    string `db:"status"`
 	CreatedAt int64  `db:"created_at"`
 	UpdatedAt int64  `db:"updated_at"`

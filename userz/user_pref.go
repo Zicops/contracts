@@ -47,7 +47,7 @@ type UserPreferences struct {
 	UserLspID   string `db:"user_lsp_id"`
 	SubCategory string `db:"sub_category"`
 	IsBase      bool   `db:"is_base"`
-	IsActive    bool   `db:"is_active"`
+	IsActive    bool   `db:"is_active" json:"is_active"`
 	CreatedAt   int64  `db:"created_at"`
 	UpdatedAt   int64  `db:"updated_at"`
 	CreatedBy   string `db:"created_by"`

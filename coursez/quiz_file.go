@@ -39,10 +39,10 @@ var QuizFileTable = table.New(QuizFileTableMeta)
 type QuizFile struct {
 	ID         string `db:"id"`
 	QuizId     string `db:"quizid"`
-	LspId      string `db:"lsp_id"`
+	LspId      string `db:"lsp_id" json:"lsp_id"`
 	Type       string `db:"type"`
 	Name       string `db:"name"`
 	BucketPath string `db:"bucketpath"`
 	Path       string `db:"path"`
-	IsActive   bool   `db:"is_active"`
+	IsActive   bool   `db:"is_active" json:"is_active"`
 }

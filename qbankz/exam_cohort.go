@@ -45,11 +45,11 @@ var ExamCohortTable = table.New(ExamCohortTableMeta)
 type ExamCohort struct {
 	ID        string `db:"id"`
 	ExamID    string `db:"exam_id"`
-	LspID     string `db:"lsp_id"`
+	LspID     string `db:"lsp_id" json:"lsp_id"`
 	CohortID  string `db:"cohort_id"`
 	CreatedBy string `db:"created_by"`
 	UpdatedBy string `db:"updated_by"`
 	CreatedAt int64  `db:"created_at"`
 	UpdatedAt int64  `db:"updated_at"`
-	IsActive  bool   `db:"is_active"`
+	IsActive  bool   `db:"is_active" json:"is_active"`
 }

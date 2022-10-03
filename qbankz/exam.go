@@ -60,7 +60,7 @@ var ExamTable = table.New(ExamTableMeta)
 // define struct for exam table
 type Exam struct {
 	ID           string `db:"id"`
-	LSPID        string `db:"lsp_id"`
+	LSPID        string `db:"lsp_id" json:"lsp_id"`
 	Name         string `db:"name"`
 	Description  string `db:"description"`
 	Code         string `db:"code"`
@@ -71,7 +71,7 @@ type Exam struct {
 	Status       string `db:"status"`
 	Category     string `db:"category"`
 	SubCategory  string `db:"sub_category"`
-	IsActive     bool   `db:"is_active"`
+	IsActive     bool   `db:"is_active" json:"is_active"`
 	CreatedBy    string `db:"created_by"`
 	UpdatedBy    string `db:"updated_by"`
 	CreatedAt    int64  `db:"created_at"`

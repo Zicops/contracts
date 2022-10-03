@@ -55,7 +55,7 @@ type SectionMain struct {
 	Name            string `db:"name"`
 	Description     string `db:"description"`
 	QPID            string `db:"qp_id"`
-	LSPID           string `db:"lsp_id"`
+	LSPID           string `db:"lsp_id" json:"lsp_id"`
 	Type            string `db:"type"`
 	DifficultyLevel string `db:"difficulty_level"`
 	TotalQuestions  int    `db:"total_questions"`
@@ -63,5 +63,5 @@ type SectionMain struct {
 	UpdatedBy       string `db:"updated_by"`
 	CreatedAt       int64  `db:"created_at"`
 	UpdatedAt       int64  `db:"updated_at"`
-	IsActive        bool   `db:"is_active"`
+	IsActive        bool   `db:"is_active" json:"is_active"`
 }

@@ -50,9 +50,9 @@ type Chapter struct {
 	Description string `db:"description"`
 	ModuleID    string `db:"moduleid"`
 	CourseID    string `db:"courseid"`
-	LspID       string `db:"lsp_id"`
+	LspID       string `db:"lsp_id" json:"lsp_id"`
 	Sequence    int    `db:"sequence"`
 	CreatedAt   int64  `db:"created_at"`
 	UpdatedAt   int64  `db:"updated_at"`
-	IsActive    bool   `db:"is_active"`
+	IsActive    bool   `db:"is_active" json:"is_active"`
 }

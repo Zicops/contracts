@@ -108,7 +108,7 @@ type SubCat struct {
 type Course struct {
 	ID                 string   `db:"id"`
 	Name               string   `db:"name"`
-	LspID              string   `db:"lsp_id"`
+	LspID              string   `db:"lsp_id" json:"lsp_id"`
 	Publisher          string   `db:"publisher"`
 	Description        string   `db:"description"`
 	Summary            string   `db:"summary"`
@@ -139,7 +139,7 @@ type Course struct {
 	CreatedBy          string   `db:"created_by"`
 	UpdatedBy          string   `db:"updated_by"`
 	Status             string   `db:"status"`
-	IsActive           bool     `db:"is_active"`
+	IsActive           bool     `db:"is_active" json:"is_active"`
 	IsDisplay          bool     `db:"is_display"`
 	ExpectedCompletion string   `db:"expected_completion_time"`
 	Category           string   `db:"category"`

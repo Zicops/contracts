@@ -66,11 +66,11 @@ type Quiz struct {
 	UpdatedAt   int64  `db:"updated_at"`
 	TopicID     string `db:"topicid"`
 	CourseID    string `db:"courseid"`
-	LspID       string `db:"lsp_id"`
+	LspID       string `db:"lsp_id" json:"lsp_id"`
 	QuestionID  string `db:"questionid"`
-	QbId		string `db:"qbid"`
+	QbId        string `db:"qbid"`
 	Weightage   int    `db:"weightage"`
 	StartTime   int    `db:"starttime"`
 	Sequence    int    `db:"sequence"`
-	IsActive    bool   `db:"is_active"`
+	IsActive    bool   `db:"is_active" json:"is_active"`
 }

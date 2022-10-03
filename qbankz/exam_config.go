@@ -51,7 +51,7 @@ var ExamConfigTable = table.New(ExamConfigTableMeta)
 type ExamConfig struct {
 	ID           string `db:"id"`
 	ExamID       string `db:"exam_id"`
-	LspID        string `db:"lsp_id"`
+	LspID        string `db:"lsp_id" json:"lsp_id"`
 	Shuffle      bool   `db:"shuffle_questions"`
 	DisplayHints bool   `db:"display_hints"`
 	ShowAnswer   bool   `db:"show_answer"`
@@ -60,5 +60,5 @@ type ExamConfig struct {
 	UpdatedBy    string `db:"updated_by"`
 	CreatedAt    int64  `db:"created_at"`
 	UpdatedAt    int64  `db:"updated_at"`
-	IsActive     bool   `db:"is_active"`
+	IsActive     bool   `db:"is_active" json:"is_active"`
 }

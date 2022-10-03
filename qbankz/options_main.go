@@ -55,7 +55,7 @@ type OptionsMain struct {
 	Description      string `db:"description"`
 	IsCorrect        bool   `db:"is_correct"`
 	QmId             string `db:"qm_id"`
-	LspId            string `db:"lsp_id"`
+	LspId            string `db:"lsp_id" json:"lsp_id"`
 	CreatedBy        string `db:"created_by"`
 	UpdatedBy        string `db:"updated_by"`
 	CreatedAt        int64  `db:"created_at"`
@@ -63,5 +63,5 @@ type OptionsMain struct {
 	AttachmentType   string `db:"attachment_type"`
 	Attachment       string `db:"attachment_url"`
 	AttachmentBucket string `db:"attachment_bucket"`
-	IsActive         bool   `db:"is_active"`
+	IsActive         bool   `db:"is_active" json:"is_active"`
 }

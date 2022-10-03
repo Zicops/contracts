@@ -58,8 +58,8 @@ type UserBookmarks struct {
 	TopicID   string `db:"topic_id"`
 	UserCPID  string `db:"user_cp_id"`
 	Name      string `db:"name"`
-	TimeStamp string  `db:"time_stamp"`
-	IsActive  bool   `db:"is_active"`
+	TimeStamp string `db:"time_stamp"`
+	IsActive  bool   `db:"is_active" json:"is_active"`
 	CreatedAt int64  `db:"created_at"`
 	UpdatedAt int64  `db:"updated_at"`
 	CreatedBy string `db:"created_by"`

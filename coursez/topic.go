@@ -62,7 +62,7 @@ type Topic struct {
 	ModuleID    string `db:"moduleid"`
 	ChapterID   string `db:"chapterid"`
 	CourseID    string `db:"courseid"`
-	LspID       string `db:"lsp_id"`
+	LspID       string `db:"lsp_id" json:"lsp_id"`
 	Sequence    int    `db:"sequence"`
 	CreatedAt   int64  `db:"created_at"`
 	UpdatedAt   int64  `db:"updated_at"`
@@ -70,5 +70,5 @@ type Topic struct {
 	UpdatedBy   string `db:"updated_by"`
 	Image       string `db:"image"`
 	ImageBucket string `db:"imagebucket"`
-	IsActive    bool   `db:"is_active"`
+	IsActive    bool   `db:"is_active" json:"is_active"`
 }

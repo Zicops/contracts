@@ -49,7 +49,7 @@ type UserOrg struct {
 	UserLspID string `db:"user_lsp_id"`
 	OrgID     string `db:"org_id"`
 	OrgRole   string `db:"org_role"`
-	IsActive  bool   `db:"is_active"`
+	IsActive  bool   `db:"is_active" json:"is_active"`
 	EmpID     string `db:"emp_id"`
 	CreatedAt int64  `db:"created_at"`
 	UpdatedAt int64  `db:"updated_at"`

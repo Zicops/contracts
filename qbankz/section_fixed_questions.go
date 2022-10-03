@@ -45,11 +45,11 @@ var SectionFixedQuestionsTable = table.New(SectionFixedQuestionsTableMeta)
 type SectionFixedQuestions struct {
 	ID         string `db:"id"`
 	SQBId      string `db:"sqb_id"`
-	LspID      string `db:"lsp_id"`
+	LspID      string `db:"lsp_id" json:"lsp_id"`
 	QuestionID string `db:"question_id"`
 	CreatedBy  string `db:"created_by"`
 	UpdatedBy  string `db:"updated_by"`
 	CreatedAt  int64  `db:"created_at"`
 	UpdatedAt  int64  `db:"updated_at"`
-	IsActive   bool   `db:"is_active"`
+	IsActive   bool   `db:"is_active" json:"is_active"`
 }

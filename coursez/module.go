@@ -57,7 +57,7 @@ type Module struct {
 	Name        string `db:"name"`
 	Description string `db:"description"`
 	CourseID    string `db:"courseid"`
-	LspID       string `db:"lsp_id"`
+	LspID       string `db:"lsp_id" json:"lsp_id"`
 	Owner       string `db:"owner"`
 	Duration    int    `db:"duration"`
 	CreatedAt   int64  `db:"created_at"`
@@ -65,5 +65,5 @@ type Module struct {
 	Level       string `db:"level"`
 	Sequence    int    `db:"sequence"`
 	SetGlobal   bool   `db:"setglobal"`
-	IsActive    bool   `db:"is_active"`
+	IsActive    bool   `db:"is_active" json:"is_active"`
 }

@@ -38,9 +38,9 @@ var QuizDescriptiveTable = table.New(QuizDescriptiveTableMeta)
 type QuizDescriptive struct {
 	ID            string `db:"id"`
 	QuizId        string `db:"quizid"`
-	LspId         string `db:"lsp_id"`
+	LspId         string `db:"lsp_id" json:"lsp_id"`
 	Question      string `db:"question"`
 	CorrectAnswer string `db:"correctanswer"`
 	Explanation   string `db:"explanation"`
-	IsActive      bool   `db:"is_active"`
+	IsActive      bool   `db:"is_active" json:"is_active"`
 }

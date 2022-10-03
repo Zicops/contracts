@@ -59,7 +59,7 @@ type CourseCohortMapping struct {
 	CourseID               string `db:"courseid"`
 	CohortID               string `db:"cohortid"`
 	CourseType             string `db:"course_type"`
-	LspID                  string `db:"lsp_id"`
+	LspID                  string `db:"lsp_id" json:"lsp_id"`
 	CohortCode             string `db:"cohort_code"`
 	IsMandatory            bool   `db:"is_mandatory"`
 	CourseStatus           string `db:"course_status"`
@@ -68,6 +68,6 @@ type CourseCohortMapping struct {
 	UpdatedAt              int64  `db:"updated_at"`
 	CreatedBy              string `db:"created_by"`
 	UpdatedBy              string `db:"updated_by"`
-	IsActive               bool   `db:"is_active"`
+	IsActive               bool   `db:"is_active" json:"is_active"`
 	ExpectedCompletionDays int    `db:"expected_completion_days"`
 }

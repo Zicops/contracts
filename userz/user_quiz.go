@@ -56,7 +56,7 @@ type UserQuizAttempts struct {
 	QuizID      string `db:"quiz_id"`
 	QuizAttempt int64  `db:"quiz_attempt"`
 	Result      string `db:"result"`
-	IsActive    bool   `db:"is_active"`
+	IsActive    bool   `db:"is_active" json:"is_active"`
 	CreatedAt   int64  `db:"created_at"`
 	UpdatedAt   int64  `db:"updated_at"`
 	CreatedBy   string `db:"created_by"`

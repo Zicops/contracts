@@ -67,11 +67,11 @@ type QuestionMain struct {
 	AttachmentBucket string `db:"attachment_bucket"`
 	Hint             string `db:"hint"`
 	QbmId            string `db:"qbm_id"`
-	LspId            string `db:"lsp_id"`
+	LspId            string `db:"lsp_id" json:"lsp_id"`
 	Status           string `db:"status"`
 	CreatedBy        string `db:"created_by"`
 	UpdatedBy        string `db:"updated_by"`
 	CreatedAt        int64  `db:"created_at"`
 	UpdatedAt        int64  `db:"updated_at"`
-	IsActive         bool   `db:"is_active"`
+	IsActive         bool   `db:"is_active" json:"is_active"`
 }

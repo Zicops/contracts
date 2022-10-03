@@ -52,7 +52,7 @@ type User struct {
 	Status      string `db:"status"`
 	Role        string `db:"role"`
 	IsVerified  bool   `db:"is_verified"`
-	IsActive    bool   `db:"is_active"`
+	IsActive    bool   `db:"is_active" json:"is_active"`
 	Gender      string `db:"gender"`
 	CreatedBy   string `db:"created_by"`
 	UpdatedBy   string `db:"updated_by"`

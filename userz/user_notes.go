@@ -58,7 +58,7 @@ type UserNotes struct {
 	Details   string `db:"details"`
 	Status    string `db:"status"`
 	Sequence  int    `db:"sequence"`
-	IsActive  bool   `db:"is_active"`
+	IsActive  bool   `db:"is_active" json:"is_active"`
 	CreatedAt int64  `db:"created_at"`
 	UpdatedAt int64  `db:"updated_at"`
 	CreatedBy string `db:"created_by"`

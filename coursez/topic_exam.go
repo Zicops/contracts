@@ -42,9 +42,9 @@ type TopicExam struct {
 	ExamId    string `db:"examid"`
 	TopicId   string `db:"topicid"`
 	CourseId  string `db:"courseid"`
-	LspId     string `db:"lsp_id"`
+	LspId     string `db:"lsp_id" json:"lsp_id"`
 	Language  string `db:"language"`
 	CreatedAt int64  `db:"created_at"`
 	UpdatedAt int64  `db:"updated_at"`
-	IsActive  bool   `db:"is_active"`
+	IsActive  bool   `db:"is_active" json:"is_active"`
 }

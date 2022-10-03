@@ -44,7 +44,7 @@ type UserRole struct {
 	Role      string `db:"role"`
 	UserID    string `db:"user_id"`
 	UserLspID string `db:"user_lsp_id"`
-	IsActive  bool   `db:"is_active"`
+	IsActive  bool   `db:"is_active" json:"is_active"`
 	CreatedAt int64  `db:"created_at"`
 	UpdatedAt int64  `db:"updated_at"`
 	CreatedBy string `db:"created_by"`

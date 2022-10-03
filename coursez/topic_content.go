@@ -60,7 +60,7 @@ type TopicContent struct {
 	Language           string `db:"language"`
 	TopicId            string `db:"topicid"`
 	CourseId           string `db:"courseid"`
-	LspId              string `db:"lsp_id"`
+	LspId              string `db:"lsp_id" json:"lsp_id"`
 	CreatedAt          int64  `db:"created_at"`
 	UpdatedAt          int64  `db:"updated_at"`
 	StartTime          int    `db:"starttime"`
@@ -73,6 +73,6 @@ type TopicContent struct {
 	SubtitleFile       string `db:"subtitlefile"`
 	SubtitleFileBucket string `db:"subtitlefilebucket"`
 	Type               string `db:"type"`
-	IsActive           bool   `db:"is_active"`
+	IsActive           bool   `db:"is_active" json:"is_active"`
 	IsDefault          bool   `db:"is_default"`
 }

@@ -52,7 +52,7 @@ type CatMain struct {
 	ImageBucket string   `db:"image_bucket"`
 	ImageURL    string   `db:"image_url"`
 	Code        string   `db:"code"`
-	IsActive    bool     `db:"is_active"`
+	IsActive    bool     `db:"is_active" json:"is_active"`
 	CreatedAt   int64    `db:"created_at"`
 	UpdatedAt   int64    `db:"updated_at"`
 	CreatedBy   string   `db:"created_by"`
