@@ -13,6 +13,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 var QuizDescriptiveTableMeta = table.Metadata{
 	Name: "quiz_descriptive",
 	Columns: []string{
+		"id",
 		"quizid",
 		"lsp_id",
 		"question",
@@ -22,6 +23,7 @@ var QuizDescriptiveTableMeta = table.Metadata{
 	},
 	PartKey: []string{
 		"lsp_id",
+		"id",
 		"is_active",
 	},
 	SortKey: []string{
@@ -34,6 +36,7 @@ var QuizDescriptiveTable = table.New(QuizDescriptiveTableMeta)
 
 // define struct for quiz_descriptive table
 type QuizDescriptive struct {
+	ID            string `db:"id"`
 	QuizId        string `db:"quizid"`
 	LspId         string `db:"lsp_id"`
 	Question      string `db:"question"`

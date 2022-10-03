@@ -32,6 +32,7 @@ var UserPreferencesTableMeta = table.Metadata{
 	},
 	PartKey: []string{
 		"user_id",
+		"id",
 	},
 	SortKey: []string{
 		"created_at",

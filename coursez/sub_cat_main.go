@@ -37,6 +37,7 @@ var SubCatMainMeta = table.Metadata{
 		"lsps",
 	},
 	PartKey: []string{
+		"parent_id",
 		"id",
 		"is_active",
 	},

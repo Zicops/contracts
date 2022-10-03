@@ -37,6 +37,7 @@ var QuestionBankMainTableMeta = table.Metadata{
 	},
 	PartKey: []string{
 		"lsp_id",
+		"id",
 		"is_active",
 	},
 	SortKey: []string{

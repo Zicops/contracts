@@ -41,6 +41,7 @@ var CohortMain = table.Metadata{
 	},
 	PartKey: []string{
 		"lsp_id",
+		"id",
 	},
 	SortKey: []string{
 		"created_at",
