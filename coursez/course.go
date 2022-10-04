@@ -142,7 +142,7 @@ type Course struct {
 	ExpectedCompletion string   `db:"expected_completion_time"`
 	Category           string   `db:"category"`
 	SubCategory        string   `db:"sub_category"`
-	SubCategories      []string `db:"sub_categories"`
+	SubCategories      []SubCat `db:"sub_categories"`
 }
 
 // MarshalUDT implements UDTMarshaler.
