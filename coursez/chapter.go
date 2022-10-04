@@ -35,9 +35,7 @@ var ChapterTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{
-		"sequence",
-	},
+	SortKey: []string{},
 }
 
 // ChapterTable is the table for the chapter table above.

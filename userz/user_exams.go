@@ -41,9 +41,7 @@ var UserExamAttemptsTableMeta = table.Metadata{
 		"user_id",
 		"id",
 	},
-	SortKey: []string{
-		"created_at",
-	},
+	SortKey: []string{},
 }
 
 var UserExamAttemptsTable = table.New(UserExamAttemptsTableMeta)
@@ -58,7 +56,7 @@ type UserExamAttempts struct {
 	AttemptNo        int64  `db:"attempt_no"`
 	AttemptStatus    string `db:"attempt_status"`
 	AttemptStartTime int64  `db:"attempt_start_time"`
-	AttemptDuration  string  `db:"attempt_duration"`
+	AttemptDuration  string `db:"attempt_duration"`
 	CreatedAt        int64  `db:"created_at"`
 	UpdatedAt        int64  `db:"updated_at"`
 	CreatedBy        string `db:"created_by"`

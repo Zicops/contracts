@@ -46,9 +46,7 @@ var CourseCohortMappingTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{
-		"created_at",
-	},
+	SortKey: []string{},
 }
 
 var CourseCohortTable = table.New(CourseCohortMappingTableMeta)

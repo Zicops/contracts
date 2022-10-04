@@ -26,9 +26,7 @@ var QuizDescriptiveTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{
-		"question",
-	},
+	SortKey: []string{},
 }
 
 // QuizDescriptiveTable is the table for the quiz_descriptive table above.

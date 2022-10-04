@@ -42,9 +42,7 @@ var UserBookmarksTableMeta = table.Metadata{
 		"user_id",
 		"id",
 	},
-	SortKey: []string{
-		"created_at",
-	},
+	SortKey: []string{},
 }
 
 var UserBookmarksTable = table.New(UserBookmarksTableMeta)

@@ -27,9 +27,7 @@ var QuizFileTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{
-		"name",
-	},
+	SortKey: []string{},
 }
 
 // QuizFileTable is the table for the quiz_file table above.

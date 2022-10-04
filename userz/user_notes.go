@@ -41,9 +41,7 @@ var UserNotesTableMeta = table.Metadata{
 		"user_id",
 		"id",
 	},
-	SortKey: []string{
-		"created_at",
-	},
+	SortKey: []string{},
 }
 
 var UserNotesTable = table.New(UserNotesTableMeta)

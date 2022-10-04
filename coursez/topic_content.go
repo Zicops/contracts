@@ -46,9 +46,7 @@ var TopicContentTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{
-		"duration",
-	},
+	SortKey: []string{},
 }
 
 // TopicContentTable is the table for the topic_content table above.

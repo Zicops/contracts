@@ -35,9 +35,7 @@ var UserCohortMapTableMeta = table.Metadata{
 		"user_id",
 		"id",
 	},
-	SortKey: []string{
-		"created_at",
-	},
+	SortKey: []string{},
 }
 
 var UserCohortTable = table.New(UserCohortMapTableMeta)

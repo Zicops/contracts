@@ -30,9 +30,7 @@ var UserLSPMapTableMeta = table.Metadata{
 		"user_id",
 		"id",
 	},
-	SortKey: []string{
-		"created_at",
-	},
+	SortKey: []string{},
 }
 
 var UserLspTable = table.New(UserLSPMapTableMeta)

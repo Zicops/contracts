@@ -37,9 +37,7 @@ var UserCourseProgressTableMeta = table.Metadata{
 		"user_id",
 		"id",
 	},
-	SortKey: []string{
-		"created_at",
-	},
+	SortKey: []string{},
 }
 
 var UserCourseProgressTable = table.New(UserCourseProgressTableMeta)

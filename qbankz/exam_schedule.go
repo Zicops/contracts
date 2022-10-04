@@ -37,9 +37,7 @@ var ExamScheduleTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{
-		"created_at",
-	},
+	SortKey: []string{},
 }
 
 // ExamScheduleTable is the table for the exam_schedule table above.

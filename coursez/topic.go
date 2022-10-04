@@ -45,9 +45,7 @@ var TopicTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{
-		"sequence",
-	},
+	SortKey: []string{},
 }
 
 // TopicTable is the table for the topic table above.

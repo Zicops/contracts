@@ -35,9 +35,7 @@ var ResourceTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{
-		"created_at",
-	},
+	SortKey: []string{},
 }
 
 // ResourceTable is the table for the resource table above.

@@ -47,9 +47,7 @@ var QuizTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{
-		"sequence",
-	},
+	SortKey: []string{},
 }
 
 // QuizTable is the table for the quiz table above.

@@ -33,9 +33,7 @@ var SectionFixedQuestionsTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{
-		"created_at",
-	},
+	SortKey: []string{},
 }
 
 // SectionFixedQuestionsTable is the table for the section_fixed_questions table above.

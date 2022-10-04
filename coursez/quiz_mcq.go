@@ -28,9 +28,7 @@ var QuizMcqTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{
-		"question",
-	},
+	SortKey: []string{},
 }
 
 // QuizMcqTable is the table for the quiz_mcq table above.

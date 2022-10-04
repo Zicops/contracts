@@ -40,9 +40,7 @@ var QuestionBankMainTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{
-		"created_at",
-	},
+	SortKey: []string{},
 }
 
 // QuestionBankMainTable is the table for the question_bank_main table above.

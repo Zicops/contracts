@@ -10,9 +10,7 @@ var CatMeta = table.Metadata{
 	PartKey: []string{
 		"name",
 	},
-	SortKey: []string{
-		"name",
-	},
+	SortKey: []string{},
 }
 
 var SubCatMeta = table.Metadata{
@@ -23,9 +21,7 @@ var SubCatMeta = table.Metadata{
 	PartKey: []string{
 		"name",
 	},
-	SortKey: []string{
-		"name",
-	},
+	SortKey: []string{},
 }
 
 // CatTable is the table for the category table above.

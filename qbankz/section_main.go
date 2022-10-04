@@ -41,9 +41,7 @@ var SectionMainTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{
-		"created_at",
-	},
+	SortKey: []string{},
 }
 
 // SectionMainTable is the table for the section_main table above.
