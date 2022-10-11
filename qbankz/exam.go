@@ -32,6 +32,7 @@ var ExamTableMeta = table.Metadata{
 		"description",
 		"code",
 		"qp_id",
+		"question_ids",
 		"type",
 		"schedule_type",
 		"duration",
@@ -57,21 +58,22 @@ var ExamTable = table.New(ExamTableMeta)
 
 // define struct for exam table
 type Exam struct {
-	ID           string `db:"id"`
-	LSPID        string `db:"lsp_id" json:"lsp_id"`
-	Name         string `db:"name"`
-	Description  string `db:"description"`
-	Code         string `db:"code"`
-	QPID         string `db:"qp_id"`
-	Type         string `db:"type"`
-	ScheduleType string `db:"schedule_type"`
-	Duration     int    `db:"duration"`
-	Status       string `db:"status"`
-	Category     string `db:"category"`
-	SubCategory  string `db:"sub_category"`
-	IsActive     bool   `db:"is_active" json:"is_active"`
-	CreatedBy    string `db:"created_by"`
-	UpdatedBy    string `db:"updated_by"`
-	CreatedAt    int64  `db:"created_at"`
-	UpdatedAt    int64  `db:"updated_at"`
+	ID           string   `db:"id"`
+	LSPID        string   `db:"lsp_id" json:"lsp_id"`
+	Name         string   `db:"name"`
+	Description  string   `db:"description"`
+	Code         string   `db:"code"`
+	QPID         string   `db:"qp_id"`
+	QuestionIDs  []string `db:"question_ids"`
+	Type         string   `db:"type"`
+	ScheduleType string   `db:"schedule_type"`
+	Duration     int      `db:"duration"`
+	Status       string   `db:"status"`
+	Category     string   `db:"category"`
+	SubCategory  string   `db:"sub_category"`
+	IsActive     bool     `db:"is_active" json:"is_active"`
+	CreatedBy    string   `db:"created_by"`
+	UpdatedBy    string   `db:"updated_by"`
+	CreatedAt    int64    `db:"created_at"`
+	UpdatedAt    int64    `db:"updated_at"`
 }
