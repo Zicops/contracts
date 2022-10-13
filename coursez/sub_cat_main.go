@@ -24,6 +24,7 @@ var SubCatMainMeta = table.Metadata{
 	Columns: []string{
 		"id",
 		"name",
+		"words",
 		"description",
 		"parent_id",
 		"image_bucket",
@@ -49,6 +50,7 @@ var SubCatMainTable = table.New(SubCatMainMeta)
 type SubCatMain struct {
 	ID          string   `db:"id"`
 	Name        string   `db:"name"`
+	Words       []string `db:"words"`
 	Description string   `db:"description"`
 	ParentID    string   `db:"parent_id"`
 	ImageBucket string   `db:"image_bucket"`

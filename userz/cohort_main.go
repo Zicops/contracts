@@ -27,6 +27,7 @@ var CohortMain = table.Metadata{
 		"lsp_id",
 		"code",
 		"name",
+		"words",
 		"type",
 		"description",
 		"is_active",
@@ -53,6 +54,7 @@ type Cohort struct {
 	LspId       string `db:"lsp_id" json:"lsp_id"`
 	Code        string `db:"code"`
 	Name        string `db:"name"`
+	Words       string `db:"words"`
 	Type        string `db:"type"`
 	Description string `db:"description"`
 	IsActive    bool   `db:"is_active" json:"is_active"`

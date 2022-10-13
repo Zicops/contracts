@@ -48,6 +48,7 @@ var CourseTableMeta = table.Metadata{
 	Columns: []string{
 		"id",
 		"name",
+		"words",
 		"lsp_id",
 		"publisher",
 		"description",
@@ -106,6 +107,7 @@ type SubCat struct {
 type Course struct {
 	ID                 string   `db:"id"`
 	Name               string   `db:"name"`
+	Words              []string `db:"words"`
 	LspId              string   `db:"lsp_id" json:"lsp_id"`
 	Publisher          string   `db:"publisher"`
 	Description        string   `db:"description"`

@@ -25,6 +25,7 @@ var CatMainMeta = table.Metadata{
 	Columns: []string{
 		"id",
 		"name",
+		"words",
 		"description",
 		"image_bucket",
 		"image_url",
@@ -48,6 +49,7 @@ var CatMainTable = table.New(CatMainMeta)
 type CatMain struct {
 	ID          string   `db:"id"`
 	Name        string   `db:"name"`
+	Words       []string `db:"words"`
 	Description string   `db:"description"`
 	ImageBucket string   `db:"image_bucket"`
 	ImageURL    string   `db:"image_url"`

@@ -29,6 +29,7 @@ var ExamTableMeta = table.Metadata{
 		"id",
 		"lsp_id",
 		"name",
+		"words",
 		"description",
 		"code",
 		"qp_id",
@@ -61,6 +62,7 @@ type Exam struct {
 	ID           string   `db:"id"`
 	LSPID        string   `db:"lsp_id" json:"lsp_id"`
 	Name         string   `db:"name"`
+	Words        []string `db:"words"`
 	Description  string   `db:"description"`
 	Code         string   `db:"code"`
 	QPID         string   `db:"qp_id"`
