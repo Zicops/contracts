@@ -24,6 +24,7 @@ var QuestionBankMainTableMeta = table.Metadata{
 		"id",
 		"lsp_id",
 		"name",
+		"words",
 		"description",
 		"category",
 		"sub_category",
@@ -51,6 +52,7 @@ type QuestionBankMain struct {
 	ID          string `db:"id"`
 	LspId       string `db:"lsp_id" json:"lsp_id"`
 	Name        string `db:"name"`
+	Words       string `db:"words"`
 	Description string `db:"description"`
 	Category    string `db:"category"`
 	SubCategory string `db:"sub_category"`
