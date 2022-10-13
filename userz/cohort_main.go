@@ -50,20 +50,20 @@ var CohortMain = table.Metadata{
 var CohortTable = table.New(CohortMain)
 
 type Cohort struct {
-	ID          string `db:"id"`
-	LspId       string `db:"lsp_id" json:"lsp_id"`
-	Code        string `db:"code"`
-	Name        string `db:"name"`
-	Words       string `db:"words"`
-	Type        string `db:"type"`
-	Description string `db:"description"`
-	IsActive    bool   `db:"is_active" json:"is_active"`
-	Status      string `db:"status"`
-	ImageBucket string `db:"imagebucket"`
-	ImageUrl    string `db:"imageurl"`
-	Size        int    `db:"size"`
-	CreatedAt   int64  `db:"created_at"`
-	UpdatedAt   int64  `db:"updated_at"`
-	CreatedBy   string `db:"created_by"`
-	UpdatedBy   string `db:"updated_by"`
+	ID          string   `db:"id"`
+	LspId       string   `db:"lsp_id" json:"lsp_id"`
+	Code        string   `db:"code"`
+	Name        string   `db:"name"`
+	Words       []string `db:"words"`
+	Type        string   `db:"type"`
+	Description string   `db:"description"`
+	IsActive    bool     `db:"is_active" json:"is_active"`
+	Status      string   `db:"status"`
+	ImageBucket string   `db:"imagebucket"`
+	ImageUrl    string   `db:"imageurl"`
+	Size        int      `db:"size"`
+	CreatedAt   int64    `db:"created_at"`
+	UpdatedAt   int64    `db:"updated_at"`
+	CreatedBy   string   `db:"created_by"`
+	UpdatedBy   string   `db:"updated_by"`
 }
