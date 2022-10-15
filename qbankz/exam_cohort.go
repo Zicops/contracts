@@ -33,7 +33,9 @@ var ExamCohortTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // ExamCohortTable is the table for the exam_cohort table above.

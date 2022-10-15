@@ -42,7 +42,9 @@ var SectionQBMappingTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // SectionQBMappingTable is the table for the section_qb_mapping table above.

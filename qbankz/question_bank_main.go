@@ -41,7 +41,9 @@ var QuestionBankMainTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // QuestionBankMainTable is the table for the question_bank_main table above.
@@ -49,18 +51,18 @@ var QuestionBankMainTable = table.New(QuestionBankMainTableMeta)
 
 // define struct for question_bank_main table
 type QuestionBankMain struct {
-	ID          string `db:"id"`
-	LspId       string `db:"lsp_id" json:"lsp_id"`
-	Name        string `db:"name"`
+	ID          string   `db:"id"`
+	LspId       string   `db:"lsp_id" json:"lsp_id"`
+	Name        string   `db:"name"`
 	Words       []string `db:"words"`
-	Description string `db:"description"`
-	Category    string `db:"category"`
-	SubCategory string `db:"sub_category"`
-	Owner       string `db:"owner"`
-	IsActive    bool   `db:"is_active" json:"is_active"`
-	CreatedBy   string `db:"created_by"`
-	UpdatedBy   string `db:"updated_by"`
-	CreatedAt   int64  `db:"created_at"`
-	UpdatedAt   int64  `db:"updated_at"`
-	IsDefault   bool   `db:"is_default"`
+	Description string   `db:"description"`
+	Category    string   `db:"category"`
+	SubCategory string   `db:"sub_category"`
+	Owner       string   `db:"owner"`
+	IsActive    bool     `db:"is_active" json:"is_active"`
+	CreatedBy   string   `db:"created_by"`
+	UpdatedBy   string   `db:"updated_by"`
+	CreatedAt   int64    `db:"created_at"`
+	UpdatedAt   int64    `db:"updated_at"`
+	IsDefault   bool     `db:"is_default"`
 }

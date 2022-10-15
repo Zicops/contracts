@@ -34,7 +34,9 @@ var UserPreferencesTableMeta = table.Metadata{
 		"user_id",
 		"id",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 var UserPreferencesTable = table.New(UserPreferencesTableMeta)

@@ -31,7 +31,9 @@ var TopicExamTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 var TopicExamTable = table.New(TopicExamTableMeta)
 

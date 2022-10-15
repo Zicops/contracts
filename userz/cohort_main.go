@@ -44,7 +44,9 @@ var CohortMain = table.Metadata{
 		"lsp_id",
 		"id",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 var CohortTable = table.New(CohortMain)

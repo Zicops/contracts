@@ -39,7 +39,9 @@ var ExamConfigTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // ExamConfigTable is the table for the exam_config table above.

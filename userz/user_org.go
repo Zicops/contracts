@@ -36,7 +36,9 @@ var UserOrgMapTableMeta = table.Metadata{
 		"user_id",
 		"id",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 var UserOrgTable = table.New(UserOrgMapTableMeta)

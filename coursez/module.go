@@ -42,7 +42,9 @@ var ModuleTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // ModuleTable is the table for the module table above.

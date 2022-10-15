@@ -41,7 +41,9 @@ var CatMainMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 var CatMainTable = table.New(CatMainMeta)

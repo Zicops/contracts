@@ -51,7 +51,9 @@ var ExamTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // ExamTable is the table for the exam table above.

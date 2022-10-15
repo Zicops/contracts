@@ -41,7 +41,9 @@ var UserExamAttemptsTableMeta = table.Metadata{
 		"user_id",
 		"id",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 var UserExamAttemptsTable = table.New(UserExamAttemptsTableMeta)

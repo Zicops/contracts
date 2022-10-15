@@ -36,7 +36,9 @@ var ExamInstructionsTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // ExamInstructionsTable is the table for the exam_instructions table above.

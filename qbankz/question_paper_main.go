@@ -42,7 +42,9 @@ var QuestionPaperMainTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // QuestionPaperMainTable is the table for the question_paper_main table above.

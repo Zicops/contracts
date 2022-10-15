@@ -34,7 +34,9 @@ var UserLangMapTableMeta = table.Metadata{
 		"user_id",
 		"id",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 var UserLangTable = table.New(UserLangMapTableMeta)

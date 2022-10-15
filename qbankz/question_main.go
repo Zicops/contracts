@@ -47,7 +47,9 @@ var QuestionMainTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // QuestionMainTable is the table for the question_main table above.

@@ -41,7 +41,9 @@ var OptionsMainTableMeta = table.Metadata{
 		"id",
 		"is_active",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 // OptionsMainTable is the table for the options_main table above.

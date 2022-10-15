@@ -39,7 +39,9 @@ var UserTableMeta = table.Metadata{
 	PartKey: []string{
 		"id",
 	},
-	SortKey: []string{},
+	SortKey: []string{
+		"created_at",
+	},
 }
 
 var UserTable = table.New(UserTableMeta)
