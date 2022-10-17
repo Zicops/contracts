@@ -45,6 +45,7 @@ var ExamTableMeta = table.Metadata{
 		"created_at",
 		"updated_at",
 		"is_active",
+		"total_count",
 	},
 	PartKey: []string{
 		"lsp_id",
@@ -80,4 +81,5 @@ type Exam struct {
 	UpdatedBy    string   `db:"updated_by"`
 	CreatedAt    int64    `db:"created_at"`
 	UpdatedAt    int64    `db:"updated_at"`
+	TotalCount   int      `db:"total_count"`
 }
