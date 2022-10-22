@@ -25,6 +25,7 @@ var TopicContentTableMeta = table.Metadata{
 		"language",
 		"topicid",
 		"courseid",
+		"moduleid",
 		"lsp_id",
 		"created_at",
 		"updated_at",
@@ -60,6 +61,7 @@ type TopicContent struct {
 	Language           string `db:"language"`
 	TopicId            string `db:"topicid"`
 	CourseId           string `db:"courseid"`
+	ModuleId           string `db:"moduleid"`
 	LspId              string `db:"lsp_id" json:"lsp_id"`
 	CreatedAt          int64  `db:"created_at"`
 	UpdatedAt          int64  `db:"updated_at"`
