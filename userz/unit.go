@@ -24,7 +24,7 @@ var OrganizationUnitsTableMeta = table.Metadata{
 	Columns: []string{
 		"id",
 		"org_id",
-		"org_unit_emp_count",
+		"emp_count",
 		"address",
 		"country",
 		"state",
@@ -46,17 +46,17 @@ var OrganizationUnitsTableMeta = table.Metadata{
 var OrganizationUnitsTable = table.New(OrganizationUnitsTableMeta)
 
 type OrganizationUnits struct {
-	ID              string `db:"id"`
-	OrgID           string `db:"org_id"`
-	OrgUnitEmpCount string `db:"org_unit_emp_count"`
-	Address         string `db:"address"`
-	Country         string `db:"country"`
-	State           string `db:"state"`
-	City            string `db:"city"`
-	PostalCode      string `db:"postal_code"`
-	Status          string `db:"status"`
-	CreatedAt       int64  `db:"created_at"`
-	CreatedBy       string `db:"created_by"`
-	UpdatedAt       int64  `db:"updated_at"`
-	UpdatedBy       string `db:"updated_by"`
+	ID         string `db:"id"`
+	OrgID      string `db:"org_id"`
+	EmpCount   string `db:"emp_count"`
+	Address    string `db:"address"`
+	Country    string `db:"country"`
+	State      string `db:"state"`
+	City       string `db:"city"`
+	PostalCode string `db:"postal_code"`
+	Status     string `db:"status"`
+	CreatedAt  int64  `db:"created_at"`
+	CreatedBy  string `db:"created_by"`
+	UpdatedAt  int64  `db:"updated_at"`
+	UpdatedBy  string `db:"updated_by"`
 }
