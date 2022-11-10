@@ -6,13 +6,13 @@ import "github.com/scylladb/gocqlx/table"
 //	id varchar,
 //	org_id varchar,
 //	org_unit_id varchar,
-//	lsp_name varchar,
-//	lsp_logo_bucket varchar,
-//	lsp_logo_url varchar,
-//	lsp_profile_picture_bucket varchar,
-//	lsp_profile_picture_url varchar,
+//	name varchar,
+//	logo_bucket varchar,
+//	logo_url varchar,
+//	profile_picture_bucket varchar,
+//	profile_picture_url varchar,
 //	no_of_users bigint,
-//	lsp_owners set<varchar>,
+//	owners set<varchar>,
 //	is_default boolean,
 //	status varchar,
 //	created_at bigint,
@@ -29,13 +29,13 @@ var LspTableMeta = table.Metadata{
 		"id",
 		"org_id",
 		"org_unit_id",
-		"lsp_name",
-		"lsp_logo_bucket",
-		"lsp_logo_url",
-		"lsp_profile_picture_bucket",
-		"lsp_profile_picture_url",
+		"name",
+		"logo_bucket",
+		"logo_url",
+		"profile_picture_bucket",
+		"profile_picture_url",
 		"no_of_users",
-		"lsp_owners",
+		"owners",
 		"is_default",
 		"status",
 		"created_at",
@@ -55,20 +55,20 @@ var LspTableMeta = table.Metadata{
 var LspTable = table.New(LspTableMeta)
 
 type Lsp struct {
-	ID                      string   `db:"id"`
-	OrgID                   string   `db:"org_id"`
-	OrgUnitID               string   `db:"org_unit_id"`
-	LspName                 string   `db:"lsp_name"`
-	LspLogoBucket           string   `db:"lsp_logo_bucket"`
-	LspLogoURL              string   `db:"lsp_logo_url"`
-	LspProfilePictureBucket string   `db:"lsp_profile_picture_bucket"`
-	LspProfilePictureURL    string   `db:"lsp_profile_picture_url"`
-	NoOfUsers               int64    `db:"no_of_users"`
-	LspOwners               []string `db:"lsp_owners"`
-	IsDefault               bool     `db:"is_default"`
-	Status                  string   `db:"status"`
-	CreatedAt               int64    `db:"created_at"`
-	CreatedBy               string   `db:"created_by"`
-	UpdatedAt               int64    `db:"updated_at"`
-	UpdatedBy               string   `db:"updated_by"`
+	ID                   string   `db:"id"`
+	OrgID                string   `db:"org_id"`
+	OrgUnitID            string   `db:"org_unit_id"`
+	Name                 string   `db:"name"`
+	LogoBucket           string   `db:"logo_bucket"`
+	LogoURL              string   `db:"logo_url"`
+	ProfilePictureBucket string   `db:"profile_picture_bucket"`
+	ProfilePictureURL    string   `db:"profile_picture_url"`
+	NoOfUsers            int64    `db:"no_of_users"`
+	Owners               []string `db:"owners"`
+	IsDefault            bool     `db:"is_default"`
+	Status               string   `db:"status"`
+	CreatedAt            int64    `db:"created_at"`
+	CreatedBy            string   `db:"created_by"`
+	UpdatedAt            int64    `db:"updated_at"`
+	UpdatedBy            string   `db:"updated_by"`
 }
