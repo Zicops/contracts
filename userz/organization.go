@@ -4,15 +4,15 @@ import "github.com/scylladb/gocqlx/table"
 
 //create table userz.organization (
 //	id varchar,
-//	org_name varchar,
+//	name varchar,
 //
-//	org_logo_bucket varchar,
-//	org_logo_url varchar,
+//	logo_bucket varchar,
+//	logo_url varchar,
 //
 //	industry varchar,
-//	org_type varchar,
+//	type varchar,
 //	zicops_subdomain varchar,
-//	org_emp_count text,
+//	emp_count text,
 //	website varchar,
 //	linkedin varchar,
 //	facebook varchar,
@@ -30,13 +30,13 @@ var OrganizationTableMeta = table.Metadata{
 	Name: "organization",
 	Columns: []string{
 		"id",
-		"org_name",
-		"org_logo_bucket",
-		"org_logo_url",
+		"name",
+		"logo_bucket",
+		"logo_url",
 		"industry",
-		"org_type",
+		"type",
 		"zicops_subdomain",
-		"org_emp_count",
+		"emp_count",
 		"website",
 		"linkedin",
 		"facebook",
@@ -57,13 +57,13 @@ var OrganizationTable = table.New(OrganizationTableMeta)
 
 type Organization struct {
 	ID              string `db:"id"`
-	OrgName         string `db:"org_name"`
-	OrgLogoBucket   string `db:"org_logo_bucket"`
-	OrgLogoURL      string `db:"org_logo_url"`
+	Name            string `db:"name"`
+	LogoBucket      string `db:"logo_bucket"`
+	LogoURL         string `db:"logo_url"`
 	Industry        string `db:"industry"`
-	OrgType         string `db:"org_type"`
+	Type            string `db:"type"`
 	ZicopsSubdomain string `db:"zicops_subdomain"`
-	OrgEmpCount     string `db:"org_emp_count"`
+	EmpCount        string `db:"emp_count"`
 	Website         string `db:"website"`
 	Linkedin        string `db:"linkedin"`
 	Facebook        string `db:"facebook"`
