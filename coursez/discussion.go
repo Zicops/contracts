@@ -6,10 +6,10 @@ import "github.com/scylladb/gocqlx/v2/table"
 // 	discussion_id varchar,
 // 	course_id text,
 // 	reply_id text,
-// 	user text,
+// 	user_id text,
 // 	time bigint,
 // 	content text,
-// 	current_topic topic_object,
+// 	current_topic text,
 // 	likes set< varchar >,
 // 	dislikes set< varchar >,
 // 	is_anonymous boolean,
@@ -30,7 +30,7 @@ var discussionTableMeta = table.Metadata{
 		"discussion_id",
 		"course_id",
 		"reply_id",
-		"user",
+		"user_id",
 		"time",
 		"content",
 		"current_topic",
@@ -47,8 +47,8 @@ var discussionTableMeta = table.Metadata{
 		"status",
 	},
 	PartKey: []string{
-		"discussionId",
-		"courseId",
+		"discussion_id",
+		"course_id",
 	},
 	SortKey: []string{},
 }
@@ -56,9 +56,9 @@ var discussionTableMeta = table.Metadata{
 var discussionTable = table.New(discussionTableMeta)
 
 type discussion struct {
-	DiscussionId   string      `db:"discussionId"`
-	CourseId       string      `db:""`
-	ReplyId        string      `db:"replyId"`
+	DiscussionId   string      `db:"discussion_id"`
+	CourseId       string      `db:"course_id"`
+	ReplyId        string      `db:"reply_id"`
 	User           userdata    `db:"user_id"`
 	Time           int         `db:"time"`
 	Content        string      `db:"content"`
