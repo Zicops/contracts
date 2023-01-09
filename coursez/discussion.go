@@ -76,8 +76,8 @@ type Discussion struct {
 	IsAnnouncement bool   `db:"is_announcement"`
 	ReplyCount     int    `db:"reply_count"`
 	CreatedBy      string `db:"created_by"`
-	Created_at     string `db:"created_at"`
-	Updated_by     string `db:"updated_by"`
-	Updated_at     string `db:"updated_at"`
+	CreatedAt      string `db:"created_at"`
+	UpdatedBy      string `db:"updated_by"`
+	UpdatedAt      string `db:"updated_at"`
 	Status         string `db:"status"`
 }
