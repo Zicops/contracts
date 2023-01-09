@@ -5,7 +5,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 // create table coursez.discussion (
 // 	discussion_id varchar,
 // 	course_id text,
-// 	reply_id text,
+// 	reply_id varchar,
 // 	user_id text,
 // 	time bigint,
 // 	content text,
@@ -63,7 +63,7 @@ type discussion struct {
 	DiscussionId   string `db:"discussion_id"`
 	CourseId       string `db:"course_id"`
 	ReplyId        string `db:"reply_id"`
-	User           string `db:"user_id"`
+	UserId         string `db:"user_id"`
 	Time           int    `db:"time"`
 	Content        string `db:"content"`
 	Module         string `db:"module"`
