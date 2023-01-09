@@ -26,7 +26,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 // 	PRIMARY KEY (id)
 // );
 
-var discussionTableMeta = table.Metadata{
+var DiscussionTableMeta = table.Metadata{
 	Name: "discussion",
 	Columns: []string{
 		"discussion_id",
@@ -57,9 +57,9 @@ var discussionTableMeta = table.Metadata{
 	SortKey: []string{},
 }
 
-var discussionTable = table.New(discussionTableMeta)
+var DiscussionTable = table.New(DiscussionTableMeta)
 
-type discussion struct {
+type Discussion struct {
 	DiscussionId   string `db:"discussion_id"`
 	CourseId       string `db:"course_id"`
 	ReplyId        string `db:"reply_id"`
