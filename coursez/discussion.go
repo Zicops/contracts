@@ -3,28 +3,29 @@ package coursez
 import "github.com/scylladb/gocqlx/v2/table"
 
 // create table coursez.discussion (
-// 	discussion_id varchar,
-// 	course_id text,
-// 	reply_id varchar,
-// 	user_id text,
-// 	time bigint,
-// 	content text,
-// 	module text,
-//  chapter text,
-//  topic text,
-// 	likes set< varchar >,
-// 	dislikes set< varchar >,
-// 	is_anonymous boolean,
-// 	is_pinned boolean,
-// 	is_announcement boolean,
-// 	reply_count int,
-// 	created_by text,
-// 	created_at text,
-// 	updated_by text,
-// 	updated_at text,
-// 	status text,
-// 	PRIMARY KEY (id)
-// );
+//     discussion_id varchar,
+//     course_id varchar,
+//     reply_id varchar,
+//     user_id varchar,
+//     time_stamp bigint,
+//     content text,
+//     module text,
+//     chapter text,
+//     topic text,
+//     topic text,
+//     likes set< varchar >,
+//     dislikes set< varchar >,
+//     is_anonymous boolean,
+//     is_pinned boolean,
+//     is_announcement boolean,
+//     reply_count int,
+//     created_at bigint,
+//     created_by varchar,
+//     updated_at bigint,
+//     updated_by varchar,
+//     status varchar,
+//     PRIMARY KEY((course_id, discussion_id), created_at)
+// )
 
 var DiscussionTableMeta = table.Metadata{
 	Name: "discussion",
@@ -33,7 +34,7 @@ var DiscussionTableMeta = table.Metadata{
 		"course_id",
 		"reply_id",
 		"user_id",
-		"time",
+		"time_stamp",
 		"content",
 		"module",
 		"chapter",
@@ -64,7 +65,7 @@ type Discussion struct {
 	CourseId       string `db:"course_id"`
 	ReplyId        string `db:"reply_id"`
 	UserId         string `db:"user_id"`
-	Time           int64  `db:"time"`
+	Time           int64  `db:"time_stamp"`
 	Content        string `db:"content"`
 	Module         string `db:"module"`
 	Chapter        string `db:"chapter"`
@@ -76,8 +77,8 @@ type Discussion struct {
 	IsAnnouncement bool   `db:"is_announcement"`
 	ReplyCount     int    `db:"reply_count"`
 	CreatedBy      string `db:"created_by"`
-	CreatedAt      string `db:"created_at"`
+	CreatedAt      int64  `db:"created_at"`
 	UpdatedBy      string `db:"updated_by"`
-	UpdatedAt      string `db:"updated_at"`
+	UpdatedAt      int64  `db:"updated_at"`
 	Status         string `db:"status"`
 }
