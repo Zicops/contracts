@@ -64,7 +64,7 @@ type Discussion struct {
 	CourseId       string `db:"course_id"`
 	ReplyId        string `db:"reply_id"`
 	UserId         string `db:"user_id"`
-	Time           int    `db:"time"`
+	Time           int64  `db:"time"`
 	Content        string `db:"content"`
 	Module         string `db:"module"`
 	Chapter        string `db:"chapter"`
