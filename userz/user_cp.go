@@ -23,7 +23,6 @@ var UserCourseProgressTableMeta = table.Metadata{
 		"id",
 		"user_id",
 		"user_cm_id",
-		"lsp_id",
 		"topic_id",
 		"topic_type",
 		"status",
@@ -49,7 +48,6 @@ type UserCourseProgress struct {
 	ID            string `db:"id"`
 	UserID        string `db:"user_id"`
 	UserCmID      string `db:"user_cm_id"`
-	LspID         string `db:"lsp_id"`
 	TopicID       string `db:"topic_id"`
 	TopicType     string `db:"topic_type"`
 	Status        string `db:"status"`
