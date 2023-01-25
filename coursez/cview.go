@@ -7,7 +7,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 ////    date_value varchar,
 ////    users set <varchar>,
 ////    created_at bigint,
-////    count int,
+////    hours bigint,
 ////    PRIMARY KEY ((lsp_id, date_value), created_at)
 ////)
 ////
@@ -20,7 +20,7 @@ var CVMain = table.Metadata{
 		"date_value",
 		"users",
 		"created_at",
-		"count",
+		"hours",
 	},
 	PartKey: []string{
 		"lsp_id",
@@ -38,5 +38,5 @@ type CourseView struct {
 	DateValue string   `db:"date_value"`
 	Users     []string `db:"users"`
 	CreatedAt int64    `db:"created_at"`
-	Count     int      `db:"count"`
+	Hours     int64    `db:"hours"`
 }
