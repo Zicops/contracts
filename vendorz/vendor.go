@@ -5,8 +5,9 @@ import (
 )
 
 // create table vendorz.vendor (
-//     id varchar,     #this is the vendor_id
+//     id varchar,
 //     type varchar,
+//     level varchar,
 //     name text,
 //     photo text,
 //     photo_url varchar,
@@ -29,6 +30,7 @@ var VendorTableMeta = table.Metadata{
 	Columns: []string{
 		"id",
 		"type",
+		"level",
 		"name",
 		"photo",
 		"photo_url",
@@ -57,6 +59,7 @@ var VendorTable = table.New(VendorTableMeta)
 type Vendor struct {
 	VendorId  string `db:"id"`
 	Type      string `db:"type"`
+	Level     string `db:"level"`
 	Name      string `db:"name"`
 	Photo     string `db:"photo"`
 	PhotoUrl  string `db:"photo_url"`
