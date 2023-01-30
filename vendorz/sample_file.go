@@ -10,6 +10,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 //     file_type varchar,
 //     file_url text,
 //     file text,
+//     file_bucket varchar,
 //     created_at bigint,
 //     created_by varchar,
 //     updated_at bigint,
@@ -28,6 +29,7 @@ var SampleFileMeta = table.Metadata{
 		"file_type",
 		"file_url",
 		"file",
+		"file_bucket",
 		"created_at",
 		"created_by",
 		"updated_at",
@@ -52,6 +54,7 @@ var SampleFile struct {
 	FileType    string `db:"file_type"`
 	FileUrl     string `db:"file_url"`
 	File        string `db:"file"`
+	FileBucket  string `db:"file_bucket"`
 	CreatedAt   int64  `db:"created_at"`
 	CreatedBy   string `db:"created_by"`
 	UpdatedAt   int64  `db:"updated_at"`

@@ -10,6 +10,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 //     email varchar,
 //     phone bigint,
 //     photo text,
+//     photo_bucket text,
 //     photo_url text,
 //     description text,
 //     languages set<varchar>,
@@ -35,6 +36,7 @@ var VendorProfileMeta = table.Metadata{
 		"email",
 		"phone",
 		"photo",
+		"photo_bucket",
 		"photo_url",
 		"description",
 		"languages",
@@ -63,6 +65,7 @@ var VendorProfile struct {
 	Email              string   `db:"email"`
 	Phone              int64    `db:"phone"`
 	Photo              string   `db:"photo"`
+	PhotoBucket        string   `db:"photo_bucket"`
 	PhotoURL           string   `db:"photo_url"`
 	Description        string   `db:"description"`
 	Languages          []string `db:"languages"`
