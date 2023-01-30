@@ -6,6 +6,7 @@ import "github.com/scylladb/gocqlx/table"
 //	id varchar,
 //	org_id varchar,
 //	org_unit_id varchar,
+//  type varchar,
 //	name varchar,
 //	logo_bucket varchar,
 //	logo_url varchar,
@@ -29,6 +30,7 @@ var LspTableMeta = table.Metadata{
 		"id",
 		"org_id",
 		"org_unit_id",
+		"type",
 		"name",
 		"logo_bucket",
 		"logo_url",
@@ -58,6 +60,7 @@ type Lsp struct {
 	ID                   string   `db:"id"`
 	OrgID                string   `db:"org_id"`
 	OrgUnitID            string   `db:"org_unit_id"`
+	Type                 string   `db:"type"`
 	Name                 string   `db:"name"`
 	LogoBucket           string   `db:"logo_bucket"`
 	LogoURL              string   `db:"logo_url"`
