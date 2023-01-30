@@ -11,12 +11,14 @@ import (
 //     name text,
 //     photo text,
 //     photo_url varchar,
+//     photo_bucket varchar,
 //     address text,
 //     website varchar,
 //     facebook varchar,
 //     instagram varchar,
 //     twitter varchar,
 //     linkedin varchar,
+//     users varchar,
 //     created_at bigint,
 //     created_by varchar,
 //     updated_at bigint,
@@ -34,12 +36,14 @@ var VendorTableMeta = table.Metadata{
 		"name",
 		"photo",
 		"photo_url",
+		"photo_bucket",
 		"address",
 		"website",
 		"facebook",
 		"instagram",
 		"twitter",
 		"linkedin",
+		"users",
 		"created_at",
 		"created_by",
 		"updated_at",
@@ -57,21 +61,23 @@ var VendorTableMeta = table.Metadata{
 var VendorTable = table.New(VendorTableMeta)
 
 type Vendor struct {
-	VendorId  string `db:"id"`
-	Type      string `db:"type"`
-	Level     string `db:"level"`
-	Name      string `db:"name"`
-	Photo     string `db:"photo"`
-	PhotoUrl  string `db:"photo_url"`
-	Address   string `db:"address"`
-	Website   string `db:"website"`
-	Facebook  string `db:"facebook"`
-	Instagram string `db:"instagram"`
-	Twitter   string `db:"twitter"`
-	LinkedIn  string `db:"linkedin"`
-	CreatedAt int64  `db:"created_at"`
-	CreatedBy string `db:"created_by"`
-	UpdatedAt int64  `db:"updated_at"`
-	UpdatedBy string `db:"updated_by"`
-	Status    string `db:"status"`
+	VendorId    string   `db:"id"`
+	Type        string   `db:"type"`
+	Level       string   `db:"level"`
+	Name        string   `db:"name"`
+	Photo       string   `db:"photo"`
+	PhotoUrl    string   `db:"photo_url"`
+	PhotoBucket string   `db:"photo_bucket"`
+	Address     string   `db:"address"`
+	Website     string   `db:"website"`
+	Facebook    string   `db:"facebook"`
+	Instagram   string   `db:"instagram"`
+	Twitter     string   `db:"twitter"`
+	LinkedIn    string   `db:"linkedin"`
+	Users       []string `db:"users"`
+	CreatedAt   int64    `db:"created_at"`
+	CreatedBy   string   `db:"created_by"`
+	UpdatedAt   int64    `db:"updated_at"`
+	UpdatedBy   string   `db:"updated_by"`
+	Status      string   `db:"status"`
 }
