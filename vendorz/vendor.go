@@ -18,7 +18,8 @@ import (
 //     instagram varchar,
 //     twitter varchar,
 //     linkedin varchar,
-//     users varchar,
+//     users set<varchar>,
+//     description text,
 //     created_at bigint,
 //     created_by varchar,
 //     updated_at bigint,
@@ -44,6 +45,7 @@ var VendorTableMeta = table.Metadata{
 		"twitter",
 		"linkedin",
 		"users",
+		"description",
 		"created_at",
 		"created_by",
 		"updated_at",
@@ -75,6 +77,7 @@ type Vendor struct {
 	Twitter     string   `db:"twitter"`
 	LinkedIn    string   `db:"linkedin"`
 	Users       []string `db:"users"`
+	Description string   `db:"description"`
 	CreatedAt   int64    `db:"created_at"`
 	CreatedBy   string   `db:"created_by"`
 	UpdatedAt   int64    `db:"updated_at"`
