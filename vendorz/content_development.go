@@ -47,7 +47,7 @@ var ContentDevelopmentMeta = table.Metadata{
 
 var ContentDevelopmentTable = table.New(ContentDevelopmentMeta)
 
-var ContentDevelopment struct {
+type ContentDevelopment struct {
 	CdId             string   `db:"cd_id"`
 	VendorId         string   `db:"vendor_id"`
 	Description      string   `db:"description"`

@@ -35,7 +35,7 @@ var VendorUserMapMeta = table.Metadata{
 
 var VendorUserMapTable = table.New(VendorUserMapMeta)
 
-var VendorUserMap struct {
+type VendorUserMap struct {
 	VendorId  string `db:"vendor_id"`
 	UserId    string `db:"user_id"`
 	CreatedAt int64  `db:"created_at"`

@@ -52,7 +52,7 @@ var ClassRoomTrainingMeta = table.Metadata{
 var ClassRoomTrainingTable = table.New(ClassRoomTrainingMeta)
 
 // CRT - class room training
-var CRT struct {
+type CRT struct {
 	CtId              string   `db:"ct_id"`
 	VendorId          string   `db:"vendor_id"`
 	Description       string   `db:"description"`

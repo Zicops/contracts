@@ -47,7 +47,7 @@ var VendorExperienceMeta = table.Metadata{
 
 var VendorExperienceTable = table.New(VendorExperienceMeta)
 
-var VendorExperience struct {
+type VendorExperience struct {
 	ExpId       string `db:"exp_id"`
 	VendorId    string `db:"vendor_id"`
 	PfId        string `db:"pf_id"`

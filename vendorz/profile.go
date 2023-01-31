@@ -57,7 +57,7 @@ var VendorProfileMeta = table.Metadata{
 
 var VendorProfileTable = table.New(VendorProfileMeta)
 
-var VendorProfile struct {
+type VendorProfile struct {
 	PfId               string   `db:"pf_id"`
 	VendorId           string   `db:"vendor_id"`
 	FirstName          string   `db:"first_name"`

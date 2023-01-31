@@ -46,7 +46,7 @@ var SampleFileMeta = table.Metadata{
 
 var SampleFileTable = table.New(SampleFileMeta)
 
-var SampleFile struct {
+type SampleFile struct {
 	SfId        string `db:"sf_id"`
 	Name        string `db:"name"`
 	Description string `db:"description"`
