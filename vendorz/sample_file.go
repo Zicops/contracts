@@ -10,7 +10,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 //     file_type varchar,
 //     file_url text,
 //     file text,
-//     file_bucket varchar,
+//     file_bucket text,
 //     created_at bigint,
 //     created_by varchar,
 //     updated_at bigint,

@@ -30,7 +30,7 @@ var LspTableMeta = table.Metadata{
 		"id",
 		"org_id",
 		"org_unit_id",
-		"type",
+		//"type",
 		"name",
 		"logo_bucket",
 		"logo_url",
@@ -57,10 +57,10 @@ var LspTableMeta = table.Metadata{
 var LspTable = table.New(LspTableMeta)
 
 type Lsp struct {
-	ID                   string   `db:"id"`
-	OrgID                string   `db:"org_id"`
-	OrgUnitID            string   `db:"org_unit_id"`
-	Type                 string   `db:"type"`
+	ID        string `db:"id"`
+	OrgID     string `db:"org_id"`
+	OrgUnitID string `db:"org_unit_id"`
+	//Type                 string   `db:"type"`
 	Name                 string   `db:"name"`
 	LogoBucket           string   `db:"logo_bucket"`
 	LogoURL              string   `db:"logo_url"`
