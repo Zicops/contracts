@@ -30,7 +30,9 @@ var VendorExperienceMeta = table.Metadata{
 		"start_date",
 		"end_date",
 		"title",
-		"description",
+		"location",
+		"location_type",
+		"employement_type",
 		"company",
 		"created_at",
 		"created_by",
@@ -50,17 +52,19 @@ var VendorExperienceMeta = table.Metadata{
 var VendorExperienceTable = table.New(VendorExperienceMeta)
 
 type VendorExperience struct {
-	ExpId       string `db:"exp_id"`
-	VendorId    string `db:"vendor_id"`
-	PfId        string `db:"pf_id"`
-	StartDate   int64  `db:"start_date"`
-	EndDate     int64  `db:"end_date"`
-	Title       string `db:"title"`
-	Description string `db:"description"`
-	Company     string `db:"company"`
-	CreatedAt   int64  `db:"created_at"`
-	CreatedBy   string `db:"created_by"`
-	UpdatedAt   int64  `db:"updated_at"`
-	UpdatedBy   string `db:"updated_by"`
-	Status      string `db:"status"`
+	ExpId           string `db:"exp_id"`
+	VendorId        string `db:"vendor_id"`
+	PfId            string `db:"pf_id"`
+	StartDate       int64  `db:"start_date"`
+	EndDate         int64  `db:"end_date"`
+	Title           string `db:"title"`
+	Location        string `db:"locatioin"`
+	LocationType    string `db:"location_type"`
+	EmployementType string `db:"employement_type"`
+	Company         string `db:"company"`
+	CreatedAt       int64  `db:"created_at"`
+	CreatedBy       string `db:"created_by"`
+	UpdatedAt       int64  `db:"updated_at"`
+	UpdatedBy       string `db:"updated_by"`
+	Status          string `db:"status"`
 }
