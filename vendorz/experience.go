@@ -58,7 +58,7 @@ type VendorExperience struct {
 	StartDate       int64  `db:"start_date"`
 	EndDate         int64  `db:"end_date"`
 	Title           string `db:"title"`
-	Location        string `db:"locatioin"`
+	Location        string `db:"location"`
 	LocationType    string `db:"location_type"`
 	EmployementType string `db:"employement_type"`
 	Company         string `db:"company"`

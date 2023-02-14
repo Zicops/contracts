@@ -4,6 +4,8 @@ import "github.com/scylladb/gocqlx/v2/table"
 
 // create table vendorz.sample_file (
 //     sf_id varchar,
+//     vendor_id varchar,
+//     type varchar,
 //     name varchar,
 //     description text,
 //     pricing int,
