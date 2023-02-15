@@ -17,14 +17,14 @@ import "github.com/scylladb/gocqlx/v2/table"
 //     languages set<varchar>,
 //     sme_expertise set<varchar>,
 //     classroom_expertise set<varchar>,
-//     experience set<varchar>, #experience - years of experience
+//     experience set<varchar>,
 //     is_speaker boolean,
 //     created_at bigint,
 //     created_by varchar,
 //     updated_at bigint,
 //     updated_by varchar,
 //     status varchar,
-//     PRIMARY KEY(pf_id)
+//     PRIMARY KEY((pf_id, vendor_id), type)
 // );
 
 var VendorProfileMeta = table.Metadata{
@@ -54,6 +54,10 @@ var VendorProfileMeta = table.Metadata{
 	},
 	PartKey: []string{
 		"pf_id",
+		"vendor_id",
+	},
+	SortKey: []string{
+		"type",
 	},
 }
 
