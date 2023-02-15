@@ -16,7 +16,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 //     languages set<varchar>,
 //     sme_expertise set<varchar>,
 //     classroom_expertise set<varchar>,
-//     experience int, #experience - years of experience
+//     experience set<varchar>, #experience - years of experience
 //     is_speaker boolean,
 //     created_at bigint,
 //     created_by varchar,
@@ -71,7 +71,7 @@ type VendorProfile struct {
 	Languages          []string `db:"languages"`
 	SMEExpertise       []string `db:"sme_expertise"`
 	ClassroomExpertise []string `db:"classroom_expertise"`
-	Experience         int      `db:"experience"`
+	Experience         []string `db:"experience"`
 	IsSpeaker          bool     `db:"is_speaker"`
 	CreatedAt          int64    `db:"created_at"`
 	CreatedBy          string   `db:"created_by"`
