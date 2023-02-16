@@ -9,7 +9,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 //     first_name varchar,
 //     last_name varchar,
 //     email varchar,
-//     phone bigint,
+//     phone varchar,
 //     photo text,
 //     photo_bucket text,
 //     photo_url text,
@@ -70,7 +70,7 @@ type VendorProfile struct {
 	FirstName          string   `db:"first_name"`
 	LastName           string   `db:"last_name"`
 	Email              string   `db:"email"`
-	Phone              int64    `db:"phone"`
+	Phone              string   `db:"phone"`
 	Photo              string   `db:"photo"`
 	PhotoBucket        string   `db:"photo_bucket"`
 	PhotoURL           string   `db:"photo_url"`
