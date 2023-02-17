@@ -9,7 +9,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 //     first_name varchar,
 //     last_name varchar,
 //     email varchar,
-//     phone varchar,
+//     phone_number varchar,
 //     photo text,
 //     photo_bucket text,
 //     photo_url text,
@@ -37,7 +37,7 @@ var VendorProfileMeta = table.Metadata{
 		"first_name",
 		"last_name",
 		"email",
-		"phone",
+		"phone_number",
 		"photo",
 		"photo_bucket",
 		"photo_url",
@@ -72,7 +72,7 @@ type VendorProfile struct {
 	FirstName          string   `db:"first_name"`
 	LastName           string   `db:"last_name"`
 	Email              string   `db:"email"`
-	Phone              string   `db:"phone"`
+	Phone              string   `db:"phone_number"`
 	Photo              string   `db:"photo"`
 	PhotoBucket        string   `db:"photo_bucket"`
 	PhotoURL           string   `db:"photo_url"`
