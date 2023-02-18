@@ -10,7 +10,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 //     p_type varchar,
 //     vendor_id varchar,
 //     description text,
-//     pricing int,
+//     pricing_rate varchar,
 //     file_type varchar,
 //     file_url text,
 //     file text,
@@ -29,7 +29,7 @@ var SampleFileMeta = table.Metadata{
 		"sf_id",
 		"name",
 		"description",
-		"pricing",
+		"pricing_rate",
 		"file_type",
 		"file_url",
 		"file",
@@ -56,7 +56,7 @@ type SampleFile struct {
 	SfId        string `db:"sf_id"`
 	Name        string `db:"name"`
 	Description string `db:"description"`
-	Pricing     string `db:"pricing"`
+	Pricing     string `db:"pricing_rate"`
 	FileType    string `db:"file_type"`
 	FileUrl     string `db:"file_url"`
 	File        string `db:"file"`
