@@ -7,6 +7,8 @@ import "github.com/scylladb/gocqlx/v2/table"
 //     vendor_id varchar,
 //     type varchar,
 //     name varchar,
+//     p_type varchar,
+//     vendor_id varchar,
 //     description text,
 //     pricing int,
 //     file_type varchar,
@@ -32,6 +34,8 @@ var SampleFileMeta = table.Metadata{
 		"file_url",
 		"file",
 		"file_bucket",
+		"p_type",
+		"vendor_id",
 		"created_at",
 		"created_by",
 		"updated_at",
@@ -57,6 +61,8 @@ type SampleFile struct {
 	FileUrl     string `db:"file_url"`
 	File        string `db:"file"`
 	FileBucket  string `db:"file_bucket"`
+	PType       string `db:"p_type"`
+	VendorId    string `db:"vendor_id"`
 	CreatedAt   int64  `db:"created_at"`
 	CreatedBy   string `db:"created_by"`
 	UpdatedAt   int64  `db:"updated_at"`
