@@ -5,7 +5,6 @@ import "github.com/scylladb/gocqlx/v2/table"
 // create table vendorz.profile (
 //     pf_id varchar,
 //     vendor_id varchar,
-//     type varchar,
 //     first_name varchar,
 //     last_name varchar,
 //     email varchar,
@@ -33,7 +32,6 @@ var VendorProfileMeta = table.Metadata{
 	Columns: []string{
 		"pf_id",
 		"vendor_id",
-		"type",
 		"first_name",
 		"last_name",
 		"email",
@@ -68,7 +66,6 @@ var VendorProfileTable = table.New(VendorProfileMeta)
 type VendorProfile struct {
 	PfId               string   `db:"pf_id"`
 	VendorId           string   `db:"vendor_id"`
-	Type               string   `db:"type"`
 	FirstName          string   `db:"first_name"`
 	LastName           string   `db:"last_name"`
 	Email              string   `db:"email"`
