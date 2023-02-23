@@ -52,7 +52,7 @@ var SMETable = table.New(SMEMeta)
 type SME struct {
 	SMEId            string   `db:"sme_id"`
 	VendorId         string   `db:"vendor_id"`
-	Description      string   `db:"descrption"`
+	Description      string   `db:"description"`
 	IsApplicable     bool     `db:"is_applicable"`
 	Expertise        []string `db:"expertise"`
 	Languages        []string `db:"languages"`
