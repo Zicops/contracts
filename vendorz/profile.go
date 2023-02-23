@@ -24,7 +24,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 //     updated_at bigint,
 //     updated_by varchar,
 //     status varchar,
-//     PRIMARY KEY((pf_id, vendor_id), type)
+//     PRIMARY KEY((pf_id, vendor_id))
 // );
 
 var VendorProfileMeta = table.Metadata{
@@ -55,9 +55,6 @@ var VendorProfileMeta = table.Metadata{
 	PartKey: []string{
 		"pf_id",
 		"vendor_id",
-	},
-	SortKey: []string{
-		"type",
 	},
 }
 
