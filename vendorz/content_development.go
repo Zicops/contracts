@@ -11,6 +11,7 @@ import "github.com/scylladb/gocqlx/table"
 //     languages set<varchar>,
 //     output_deliveries set<varchar>,
 //     sample_files set<varchar>,
+//     profiles set<varchar>,
 //     created_at bigint,
 //     created_by varchar,
 //     updated_at bigint,
@@ -30,6 +31,7 @@ var ContentDevelopmentMeta = table.Metadata{
 		"languages",
 		"output_deliveries",
 		"sample_files",
+		"profiles",
 		"created_at",
 		"created_by",
 		"updated_at",
@@ -56,6 +58,7 @@ type ContentDevelopment struct {
 	Languages        []string `db:"languages"`
 	OutputDeliveries []string `db:"output_deliveries"`
 	SampleFiles      []string `db:"sample_files"`
+	Profiles         []string `db:"profiles"`
 	CreatedAt        int64    `db:"created_at"`
 	CreatedBy        string   `db:"created_by"`
 	UpdatedAt        int64    `db:"updated_at"`
