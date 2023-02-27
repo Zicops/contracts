@@ -16,6 +16,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 //     languages set<varchar>,
 //     sme_expertise set<varchar>,
 //     classroom_expertise set<varchar>,
+//     content_development set<varchar>,
 //     experience set<varchar>,
 //     experience_years varchar,
 //     is_speaker boolean,
@@ -43,6 +44,7 @@ var VendorProfileMeta = table.Metadata{
 		"languages",
 		"sme_expertise",
 		"classroom_expertise",
+		"content_development",
 		"experience",
 		"experience_years",
 		"is_speaker",
@@ -74,6 +76,7 @@ type VendorProfile struct {
 	Languages          []string `db:"languages"`
 	SMEExpertise       []string `db:"sme_expertise"`
 	ClassroomExpertise []string `db:"classroom_expertise"`
+	ContentDevelopment []string `db:"content_development"`
 	Experience         []string `db:"experience"`
 	ExperienceYears    string   `db:"experience_years"`
 	IsSpeaker          bool     `db:"is_speaker"`
