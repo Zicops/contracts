@@ -12,6 +12,11 @@ import "github.com/scylladb/gocqlx/v2/table"
 // 	rate bigint,
 // 	quantity bigint,
 // 	total bigint,
+// 	created_at bigint,
+// 	created_by varchar,
+// 	updated_at bigint,
+// 	updated_by varchar,
+// 	status varchar,
 // 	PRIMARY KEY((id))
 // );
 
@@ -27,6 +32,11 @@ var OrderServiesTableMeta = table.Metadata{
 		"rate",
 		"quantity",
 		"total",
+		"created_at",
+		"created_by",
+		"updated_at",
+		"updated_by",
+		"status",
 	},
 	PartKey: []string{
 		"id",
@@ -45,4 +55,9 @@ type OrderServices struct {
 	Rate        int64  `db:"rate"`
 	Quantity    int64  `db:"quantity"`
 	Total       int64  `db:"total"`
+	CreatedAt   int64  `db:"created_at"`
+	CreatedBy   string `db:"created_by"`
+	UpdatedAt   int64  `db:"updated_at"`
+	UpdatedBy   string `db:"updated_by"`
+	Status      string `db:"status"`
 }
