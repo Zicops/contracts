@@ -5,6 +5,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 // CREATE TABLE vendorz.vendor_order  (
 // 	id varchar,
 // 	vendor_id varchar,
+//  lsp_id varchar,
 // 	total bigint,
 // 	tax bigint,
 // 	grand_total bigint,
@@ -21,6 +22,7 @@ var VendorOrderTableMeta = table.Metadata{
 	Columns: []string{
 		"id",
 		"vendor_id",
+		"lsp_id",
 		"total",
 		"tax",
 		"grand_total",
@@ -44,6 +46,7 @@ var VendorOrderTable = table.New(VendorOrderTableMeta)
 type VendorOrder struct {
 	OrderId    string `db:"id"`
 	VendorId   string `db:"vendor_id"`
+	LspId      string `db:"lsp_id"`
 	Total      int64  `db:"total"`
 	Tax        int64  `db:"tax"`
 	GrandTotal int64  `db:"grand_total"`
