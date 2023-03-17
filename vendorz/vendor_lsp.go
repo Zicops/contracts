@@ -3,7 +3,6 @@ package vendorz
 import "github.com/scylladb/gocqlx/table"
 
 // create table vendorz.vendor_lsp_map (
-//     id varchar,
 //     vendor_id varchar,
 //     lsp_id varchar,
 //     services set<varchar>,
@@ -19,7 +18,6 @@ import "github.com/scylladb/gocqlx/table"
 var VendorLspMapMeta = table.Metadata{
 	Name: "vendor_lsp_map",
 	Columns: []string{
-		"id",
 		"vendor_id",
 		"lsp_id",
 		"services",
@@ -41,7 +39,6 @@ var VendorLspMapMeta = table.Metadata{
 var VendorLspMapTable = table.New(VendorLspMapMeta)
 
 type VendorLspMap struct {
-	Id        string   `db:"id"`
 	VendorId  string   `db:"vendor_id"`
 	LspId     string   `db:"lsp_id"`
 	Services  []string `db:"services"`
