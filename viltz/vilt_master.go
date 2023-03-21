@@ -46,3 +46,19 @@ var ViltMasterMeta = table.Metadata{
 }
 
 var ViltMasterTable = table.New(ViltMasterMeta)
+
+type ViltMaster struct {
+	LspId           string   `db:"lsp_id"`
+	CourseId        string   `db:"course_id"`
+	NoOfLearners    int64    `db:"no_of_learners"`
+	Trainers        []string `db:"trainers"`
+	Moderators      []string `db:"moderators"`
+	CourseStartDate int64    `db:"course_start_date"`
+	CourseEndDate   int64    `db:"course_end_date"`
+	Curriculum      string   `db:"curriculum"`
+	CreatedAt       int64    `db:"created_at"`
+	CreatedBy       string   `db:"created_by"`
+	UpdatedAt       int64    `db:"updated_at"`
+	UpdatedBy       string   `db:"updated_by"`
+	Status          string   `db:"status"`
+}
