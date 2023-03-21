@@ -15,6 +15,10 @@ import "github.com/scylladb/gocqlx/v2/table"
 //     file_url text,
 //     file text,
 //     file_bucket text,
+//     rate bigint,
+//     currency varchar,
+//     unit varchar,
+//     actual_file_type varchar,
 //     created_at bigint,
 //     created_by varchar,
 //     updated_at bigint,
@@ -41,6 +45,10 @@ var SampleFileMeta = table.Metadata{
 		"updated_at",
 		"updated_by",
 		"status",
+		"rate",
+		"currency",
+		"unit",
+		"actual_file_type",
 	},
 	PartKey: []string{
 		"sf_id",
@@ -53,19 +61,23 @@ var SampleFileMeta = table.Metadata{
 var SampleFileTable = table.New(SampleFileMeta)
 
 type SampleFile struct {
-	SfId        string `db:"sf_id"`
-	Name        string `db:"name"`
-	Description string `db:"description"`
-	Pricing     string `db:"pricing_rate"`
-	FileType    string `db:"file_type"`
-	FileUrl     string `db:"file_url"`
-	File        string `db:"file"`
-	FileBucket  string `db:"file_bucket"`
-	PType       string `db:"p_type"`
-	VendorId    string `db:"vendor_id"`
-	CreatedAt   int64  `db:"created_at"`
-	CreatedBy   string `db:"created_by"`
-	UpdatedAt   int64  `db:"updated_at"`
-	UpdatedBy   string `db:"updated_by"`
-	Status      string `db:"status"`
+	SfId           string `db:"sf_id"`
+	Name           string `db:"name"`
+	Description    string `db:"description"`
+	Pricing        string `db:"pricing_rate"`
+	FileType       string `db:"file_type"`
+	FileUrl        string `db:"file_url"`
+	File           string `db:"file"`
+	FileBucket     string `db:"file_bucket"`
+	PType          string `db:"p_type"`
+	VendorId       string `db:"vendor_id"`
+	CreatedAt      int64  `db:"created_at"`
+	CreatedBy      string `db:"created_by"`
+	UpdatedAt      int64  `db:"updated_at"`
+	UpdatedBy      string `db:"updated_by"`
+	Status         string `db:"status"`
+	Rate           int64  `db:"rate"`
+	Currency       string `db:"currency"`
+	Unit           string `db:"unit"`
+	ActualFileType string `db:"actual_file_type"`
 }
