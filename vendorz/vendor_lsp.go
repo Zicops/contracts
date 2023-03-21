@@ -11,6 +11,7 @@ import "github.com/scylladb/gocqlx/table"
 //     updated_at bigint,
 //     updated_by varchar,
 //     status varchar,
+//     words set<varchar>,
 //     PRIMARY KEY((vendor_id, lsp_id), created_at)
 // )
 // WITH CLUSTERING ORDER BY (created_at DESC);
@@ -26,6 +27,7 @@ var VendorLspMapMeta = table.Metadata{
 		"updated_at",
 		"updated_by",
 		"status",
+		"words",
 	},
 	PartKey: []string{
 		"vendor_id",
@@ -47,4 +49,5 @@ type VendorLspMap struct {
 	UpdatedAt int64    `db:"updated_at"`
 	UpdatedBy string   `db:"updated_by"`
 	Status    string   `db:"status"`
+	Words     []string `db:"words"`
 }
