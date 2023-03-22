@@ -63,8 +63,8 @@ type TopicClassroom struct {
 	TopicId              string   `db:"topic_id"`
 	Trainer              []string `db:"trainer"`
 	Moderator            []string `db:"moderator"`
-	TrainingStartTime    []string `db:"training_start_time"`
-	TrainingEndTime      []string `db:"training_end_time"`
+	TrainingStartTime    int64    `db:"training_start_time"`
+	TrainingEndTime      int64    `db:"training_end_time"`
 	Duration             int64    `db:"duration"`
 	Breaktime            string   `db:"breaktime"`
 	Language             string   `db:"language"`
