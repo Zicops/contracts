@@ -94,7 +94,7 @@ type VendorProfile struct {
 	Sme                bool     `db:"sme"`
 	Crt                bool     `db:"crt"`
 	Cd                 bool     `db:"cd"`
-	Name               []string `db:"words"`
+	Name               []string `db:"name"`
 	CreatedAt          int64    `db:"created_at"`
 	CreatedBy          string   `db:"created_by"`
 	UpdatedAt          int64    `db:"updated_at"`
