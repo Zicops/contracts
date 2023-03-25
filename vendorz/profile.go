@@ -24,6 +24,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 //     sme boolean,
 //     crt boolean,
 //     cd boolean,
+//     name set<varchar>,
 //     created_at bigint,
 //     created_by varchar,
 //     updated_at bigint,
@@ -56,6 +57,7 @@ var VendorProfileMeta = table.Metadata{
 		"sme",
 		"crt",
 		"cd",
+		"name",
 		"created_at",
 		"created_by",
 		"updated_at",
@@ -92,6 +94,7 @@ type VendorProfile struct {
 	Sme                bool     `db:"sme"`
 	Crt                bool     `db:"crt"`
 	Cd                 bool     `db:"cd"`
+	Name               []string `db:"words"`
 	CreatedAt          int64    `db:"created_at"`
 	CreatedBy          string   `db:"created_by"`
 	UpdatedAt          int64    `db:"updated_at"`
