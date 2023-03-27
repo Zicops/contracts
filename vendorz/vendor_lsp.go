@@ -5,6 +5,7 @@ import "github.com/scylladb/gocqlx/table"
 // create table vendorz.vendor_lsp_map (
 //     vendor_id varchar,
 //     lsp_id varchar,
+//     is_source boolean,
 //     services set<varchar>,
 //     created_at bigint,
 //     created_by varchar,
@@ -22,6 +23,7 @@ var VendorLspMapMeta = table.Metadata{
 	Columns: []string{
 		"vendor_id",
 		"lsp_id",
+		"is_source",
 		"services",
 		"created_at",
 		"created_by",
@@ -45,6 +47,7 @@ var VendorLspMapTable = table.New(VendorLspMapMeta)
 type VendorLspMap struct {
 	VendorId  string   `db:"vendor_id"`
 	LspId     string   `db:"lsp_id"`
+	IsSource  bool     `db:"is_source"`
 	Services  []string `db:"services"`
 	CreatedAt int64    `db:"created_at"`
 	CreatedBy string   `db:"created_by"`

@@ -8,6 +8,8 @@ import (
 //     id varchar,
 //     type varchar,
 //     level varchar,
+//     lsp_id varchar,
+//     phone varchar,
 //     name text,
 //     photo text,
 //     photo_url varchar,
@@ -34,6 +36,8 @@ var VendorTableMeta = table.Metadata{
 		"id",
 		"type",
 		"level",
+		"lsp_id",
+		"phone",
 		"name",
 		"photo",
 		"photo_url",
@@ -66,6 +70,8 @@ type Vendor struct {
 	VendorId    string   `db:"id"`
 	Type        string   `db:"type"`
 	Level       string   `db:"level"`
+	LspId       string   `db:"lsp_id"`
+	Phone       string   `db:"phone"`
 	Name        string   `db:"name"`
 	Photo       string   `db:"photo"`
 	PhotoUrl    string   `db:"photo_url"`
