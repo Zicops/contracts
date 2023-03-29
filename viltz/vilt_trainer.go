@@ -47,5 +47,5 @@ type ViltTrainer struct {
 	CreatedBy string   `db:"created_by"`
 	UpdatedAt int64    `db:"updated_at"`
 	UpdatedBy string   `db:"updated_by"`
-	status    string   `db:"status"`
+	Status    string   `db:"status"`
 }
