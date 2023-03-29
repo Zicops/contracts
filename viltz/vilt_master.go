@@ -3,6 +3,7 @@ package viltz
 import "github.com/scylladb/gocqlx/v2/table"
 
 // create table viltz.vilt_master (
+//	id varchar,
 // 	lsp_id varchar,
 // 	course_id varchar,
 // 	no_of_learners bigint,
@@ -23,6 +24,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 var ViltMasterMeta = table.Metadata{
 	Name: "vilt_master",
 	Columns: []string{
+		"id",
 		"lsp_id",
 		"course_id",
 		"no_of_learners",
@@ -48,6 +50,7 @@ var ViltMasterMeta = table.Metadata{
 var ViltMasterTable = table.New(ViltMasterMeta)
 
 type ViltMaster struct {
+	Id              string   `db:"id"`
 	LspId           string   `db:"lsp_id"`
 	CourseId        string   `db:"course_id"`
 	NoOfLearners    int64    `db:"no_of_learners"`
