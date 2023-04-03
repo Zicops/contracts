@@ -12,6 +12,8 @@ import "github.com/scylladb/gocqlx/table"
 //     output_deliveries set<varchar>,
 //     sample_files set<varchar>,
 //     profiles set<varchar>,
+//     is_expertise_online boolean,
+//     is_expertise_offline boolean,
 //     created_at bigint,
 //     created_by varchar,
 //     updated_at bigint,
@@ -32,6 +34,8 @@ var ContentDevelopmentMeta = table.Metadata{
 		"output_deliveries",
 		"sample_files",
 		"profiles",
+		"is_expertise_online",
+		"is_expertise_offline",
 		"created_at",
 		"created_by",
 		"updated_at",
@@ -50,18 +54,20 @@ var ContentDevelopmentMeta = table.Metadata{
 var ContentDevelopmentTable = table.New(ContentDevelopmentMeta)
 
 type ContentDevelopment struct {
-	CdId             string   `db:"cd_id"`
-	VendorId         string   `db:"vendor_id"`
-	Description      string   `db:"description"`
-	IsApplicable     bool     `db:"is_applicable"`
-	Expertise        []string `db:"expertise"`
-	Languages        []string `db:"languages"`
-	OutputDeliveries []string `db:"output_deliveries"`
-	SampleFiles      []string `db:"sample_files"`
-	Profiles         []string `db:"profiles"`
-	CreatedAt        int64    `db:"created_at"`
-	CreatedBy        string   `db:"created_by"`
-	UpdatedAt        int64    `db:"updated_at"`
-	UpdatedBy        string   `db:"updated_by"`
-	Status           string   `db:"status"`
+	CdId               string   `db:"cd_id"`
+	VendorId           string   `db:"vendor_id"`
+	Description        string   `db:"description"`
+	IsApplicable       bool     `db:"is_applicable"`
+	Expertise          []string `db:"expertise"`
+	Languages          []string `db:"languages"`
+	OutputDeliveries   []string `db:"output_deliveries"`
+	SampleFiles        []string `db:"sample_files"`
+	Profiles           []string `db:"profiles"`
+	IsExpertiseOffline bool     `db:"is_expertise_offline"`
+	IsExpertiseOnline  bool     `db:"is_expertise_online"`
+	CreatedAt          int64    `db:"created_at"`
+	CreatedBy          string   `db:"created_by"`
+	UpdatedAt          int64    `db:"updated_at"`
+	UpdatedBy          string   `db:"updated_by"`
+	Status             string   `db:"status"`
 }

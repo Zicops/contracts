@@ -12,6 +12,7 @@ import "github.com/scylladb/gocqlx/table"
 //     output_deliveries set<varchar>,
 //     sample_files set<varchar>,
 //     is_expertise_online boolean,
+//     is_expertise_offline boolean,
 //     profiles set<varchar>,
 //     created_at bigint,
 //     created_by varchar,
@@ -33,6 +34,7 @@ var ClassRoomTrainingMeta = table.Metadata{
 		"output_deliveries",
 		"sample_files",
 		"is_expertise_online",
+		"is_expertise_offline",
 		"profiles",
 		"created_at",
 		"created_by",
@@ -53,19 +55,20 @@ var ClassRoomTrainingTable = table.New(ClassRoomTrainingMeta)
 
 // CRT - class room training
 type CRT struct {
-	CtId              string   `db:"ct_id"`
-	VendorId          string   `db:"vendor_id"`
-	Description       string   `db:"description"`
-	IsApplicable      bool     `db:"is_applicable"`
-	Expertise         []string `db:"expertise"`
-	Languages         []string `db:"languages"`
-	OutputDeliveries  []string `db:"output_deliveries"`
-	SampleFiles       []string `db:"sample_files"`
-	IsExpertiseOnline bool     `db:"is_expertise_online"`
-	Profiles          []string `db:"profiles"`
-	CreatedAt         int64    `db:"created_at"`
-	CreatedBy         string   `db:"created_by"`
-	UpdatedAt         int64    `db:"updated_at"`
-	UpdatedBy         string   `db:"updated_by"`
-	Status            string   `db:"status"`
+	CtId               string   `db:"ct_id"`
+	VendorId           string   `db:"vendor_id"`
+	Description        string   `db:"description"`
+	IsApplicable       bool     `db:"is_applicable"`
+	Expertise          []string `db:"expertise"`
+	Languages          []string `db:"languages"`
+	OutputDeliveries   []string `db:"output_deliveries"`
+	SampleFiles        []string `db:"sample_files"`
+	IsExpertiseOnline  bool     `db:"is_expertise_online"`
+	IsExpertiseOffline bool     `db:"is_expertise_offline"`
+	Profiles           []string `db:"profiles"`
+	CreatedAt          int64    `db:"created_at"`
+	CreatedBy          string   `db:"created_by"`
+	UpdatedAt          int64    `db:"updated_at"`
+	UpdatedBy          string   `db:"updated_by"`
+	Status             string   `db:"status"`
 }
