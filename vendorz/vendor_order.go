@@ -9,6 +9,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 // 	total bigint,
 // 	tax bigint,
 // 	grand_total bigint,
+//  description varchar,
 // 	created_at bigint,
 // 	created_by varchar,
 // 	updated_at bigint,
@@ -26,6 +27,7 @@ var VendorOrderTableMeta = table.Metadata{
 		"total",
 		"tax",
 		"grand_total",
+		"description",
 		"created_at",
 		"created_by",
 		"updated_at",
@@ -44,15 +46,16 @@ var VendorOrderTableMeta = table.Metadata{
 var VendorOrderTable = table.New(VendorOrderTableMeta)
 
 type VendorOrder struct {
-	OrderId    string `db:"id"`
-	VendorId   string `db:"vendor_id"`
-	LspId      string `db:"lsp_id"`
-	Total      int64  `db:"total"`
-	Tax        int64  `db:"tax"`
-	GrandTotal int64  `db:"grand_total"`
-	CreatedAt  int64  `db:"created_at"`
-	CreatedBy  string `db:"created_by"`
-	UpdatedAt  int64  `db:"updated_at"`
-	UpdatedBy  string `db:"updated_by"`
-	Status     string `db:"status"`
+	OrderId     string `db:"id"`
+	VendorId    string `db:"vendor_id"`
+	LspId       string `db:"lsp_id"`
+	Total       int64  `db:"total"`
+	Tax         int64  `db:"tax"`
+	GrandTotal  int64  `db:"grand_total"`
+	Description string `db:"description"`
+	CreatedAt   int64  `db:"created_at"`
+	CreatedBy   string `db:"created_by"`
+	UpdatedAt   int64  `db:"updated_at"`
+	UpdatedBy   string `db:"updated_by"`
+	Status      string `db:"status"`
 }
