@@ -11,7 +11,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 // 	created_at bigint,
 // 	created_by varchar,
 // 	updated_at bigint,
-// 	updated_by bigint,
+// 	updatedby varchar,
 // 	status varchar,
 // 	PRIMARY KEY((id))
 // 	);
@@ -27,7 +27,7 @@ var ViltTrainerMeta = table.Metadata{
 		"created_at",
 		"created_by",
 		"updated_at",
-		"updated_by",
+		"updatedby",
 		"status",
 	},
 	PartKey: []string{
@@ -46,6 +46,6 @@ type ViltTrainer struct {
 	CreatedAt int64    `db:"created_at"`
 	CreatedBy string   `db:"created_by"`
 	UpdatedAt int64    `db:"updated_at"`
-	UpdatedBy string   `db:"updated_by"`
+	UpdatedBy string   `db:"updatedby"`
 	Status    string   `db:"status"`
 }
