@@ -13,9 +13,9 @@ import "github.com/scylladb/gocqlx/v2/table"
 // 	created_by varchar,
 // 	updated_at bigint,
 // 	updated_by varchar,
-// 	primary key((course_id), updated_at)
+// 	primary key((course_id), created_at)
 // 	)
-// 	with clustering order by (updated_at desc);
+// 	with clustering order by (created_at desc);
 
 var UserCourseRegisterMeta = table.Metadata{
 	Name: "user_course_register",
@@ -35,7 +35,7 @@ var UserCourseRegisterMeta = table.Metadata{
 		"course_id",
 	},
 	SortKey: []string{
-		"updated_at",
+		"created_at",
 	},
 }
 
