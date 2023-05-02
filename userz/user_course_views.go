@@ -32,9 +32,9 @@ var UserCourseViewsMeta = table.Metadata{
 var UserCourseViewsTable = table.New(UserCourseViewsMeta)
 
 type UserCourseViews struct {
-	CourseId  string   `db:"course_id"`
-	DateValue string   `db:"date_value"`
-	Time      int64    `db:"time"`
-	CreatedAt int64    `db:"created_at"`
-	Users     []string `db:"users"`
+	CourseId  string `db:"course_id"`
+	DateValue string `db:"date_value"`
+	Time      int64  `db:"time"`
+	CreatedAt int64  `db:"created_at"`
+	Users     string `db:"users"`
 }
