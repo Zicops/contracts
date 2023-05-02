@@ -2,29 +2,29 @@ package userz
 
 import "github.com/scylladb/gocqlx/table"
 
+// create table userz.course_consumption_stats (
 //
-//create table userz.course_consumption_stats (
-//	id varchar,
-//	lsp_id varchar,
-//	course_id varchar,
-//	category varchar,
-//	sub_category text,
-//	owner varchar,
-//	duration bigint,
-//	total_learners bigint,
-//	active_learners bigint,
-//	completed_learners bigint,
-//	expected_completion_time bigint,
-//	average_completion_time bigint,
-//	average_compliance_score bigint,
-//	created_at bigint,
-//	updated_at bigint,
-//	created_by varchar,
-//	updated_by varchar,
-//	PRIMARY KEY ((lsp_id, course_id), total_learners)
-//  )
-//  WITH CLUSTERING ORDER BY (total_learners DESC);
-//
+//			id varchar,
+//			lsp_id varchar,
+//			course_id varchar,
+//			category varchar,
+//			sub_category text,
+//			owner varchar,
+//			duration bigint,
+//			total_learners bigint,
+//			active_learners bigint,
+//			completed_learners bigint,
+//			expected_completion_time bigint,
+//			average_completion_time bigint,
+//			average_compliance_score bigint,
+//	        total_time bigint,
+//			created_at bigint,
+//			updated_at bigint,
+//			created_by varchar,
+//			updated_by varchar,
+//			PRIMARY KEY ((lsp_id, course_id), total_learners)
+//		 )
+//		 WITH CLUSTERING ORDER BY (total_learners DESC);
 var CCMain = table.Metadata{
 	Name: "course_consumption_stats",
 	Columns: []string{
@@ -41,6 +41,7 @@ var CCMain = table.Metadata{
 		"expected_completion_time",
 		"average_completion_time",
 		"average_compliance_score",
+		"total_time",
 		"created_at",
 		"updated_at",
 		"created_by",
@@ -71,6 +72,7 @@ type CCStats struct {
 	ExpectedCompletionTime int64  `db:"expected_completion_time"`
 	AverageCompletionTime  int64  `db:"average_completion_time"`
 	AverageComplianceScore int64  `db:"average_compliance_score"`
+	TotalWatchTime         int64  `db:"total_time"`
 	CreatedAt              int64  `db:"created_at"`
 	UpdatedAt              int64  `db:"updated_at"`
 	CreatedBy              string `db:"created_by"`

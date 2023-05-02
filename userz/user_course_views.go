@@ -7,7 +7,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 // 	date_value varchar,
 // 	time bigint,
 // 	created_at bigint,
-// 	users set<varchar>,
+// 	users varchar,
 // 	primary key((course_id), created_at)
 // 	)
 // 	with clustering order by (created_at desc);
