@@ -29,7 +29,7 @@ var ViltTrainerMeta = table.Metadata{
 		"user_id",
 		"vendor_id",
 		"expertise",
-		"years_of_experience",
+		"year_of_experience",
 		"website",
 		"github",
 		"linkedin",
@@ -53,7 +53,7 @@ type ViltTrainer struct {
 	UserId            string   `db:"user_id"`
 	VendorId          string   `db:"vendor_id"`
 	Expertise         []string `db:"expertise"`
-	YearsOfExperience string   `db:"years_of_experience"`
+	YearsOfExperience string   `db:"year_of_experience"`
 	Website           string   `db:"website"`
 	Github            string   `db:"github"`
 	LinkedIn          string   `db:"linkedin"`
