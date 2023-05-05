@@ -48,19 +48,19 @@ var ViltTrainerMeta = table.Metadata{
 var ViltTrainerTable = table.New(ViltTrainerMeta)
 
 type ViltTrainer struct {
-	TrainerId   string   `db:"id"`
-	LspId       string   `db:"lsp_id"`
-	UserId      string   `db:"user_id"`
-	VendorId    string   `db:"vendor_id"`
-	Expertise   []string `db:"expertise"`
-	Experience  string   `db:"years_of_experience"`
-	Website     string   `db:"website"`
-	Github      string   `db:"github"`
-	LinkedIn    string   `db:"linkedin"`
-	Description string   `db:"description"`
-	CreatedAt   int64    `db:"created_at"`
-	CreatedBy   string   `db:"created_by"`
-	UpdatedAt   int64    `db:"updated_at"`
-	UpdatedBy   string   `db:"updatedby"`
-	Status      string   `db:"status"`
+	TrainerId         string   `db:"id"`
+	LspId             string   `db:"lsp_id"`
+	UserId            string   `db:"user_id"`
+	VendorId          string   `db:"vendor_id"`
+	Expertise         []string `db:"expertise"`
+	YearsOfExperience string   `db:"years_of_experience"`
+	Website           string   `db:"website"`
+	Github            string   `db:"github"`
+	LinkedIn          string   `db:"linkedin"`
+	Description       string   `db:"description"`
+	CreatedAt         int64    `db:"created_at"`
+	CreatedBy         string   `db:"created_by"`
+	UpdatedAt         int64    `db:"updated_at"`
+	UpdatedBy         string   `db:"updatedby"`
+	Status            string   `db:"status"`
 }
