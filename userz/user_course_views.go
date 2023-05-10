@@ -11,7 +11,7 @@ import "github.com/scylladb/gocqlx/v2/table"
 //  category varchar,
 //  sub_categories set<varchar>,
 //  topic_id varchar,
-//  updated_at varchar,
+//  updated_at bigint,
 // 	primary key((course_id), created_at)
 // 	)
 // 	with clustering order by (created_at desc);
@@ -48,5 +48,5 @@ type UserCourseViews struct {
 	Category      string   `db:"category"`
 	SubCategories []string `db:"sub_categories"`
 	TopicId       string   `db:"topic_id"`
-	UpdatedAt     string   `db:"updated_at"`
+	UpdatedAt     int64    `db:"updated_at"`
 }
